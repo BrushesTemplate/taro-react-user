@@ -1,27 +1,23 @@
+import Taro from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import * as materials from 's-material-react';
-import get from 'lodash-es/get';
-import noop from 'lodash-es/noop';
+import {usePageConfig} from '../../hooks';
 import './index.scss'
-
-import {usePageConfig} from '../hooks';
+import CommonJsx from '../../common';
 
 const Index = () => {
-  const node = usePageConfig()
+  const node = usePageConfig();
+  console.log(9, node);
+  const switchImpl = () => {
+    Taro.navigateTo({
+      url: '/subpackage/goods/index'
+    })
+  }
   return (
-    <View className={'container'}>
-      {
-        node.map(({id, props, type}) => {
-          const MaterialsComponent = get(materials, type, noop);
-          return (
-            <View key={id} className={'monitor-node'}>
-              <View className={'content'}>
-                <MaterialsComponent {...props}/>
-              </View>
-            </View>
-          );
-        })
-      }
+    <View className='container'>
+      <View onClick={switchImpl}>商品</View>
+      {/*<Suspense fallback={<Text>Loading...</Text>}>*/}
+        <CommonJsx node={node} />
+      {/*</Suspense>*/}
     </View>
   )
 }
