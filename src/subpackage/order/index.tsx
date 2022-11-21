@@ -1,6 +1,6 @@
 import {View} from '@tarojs/components';
 import './index.scss'
-import CommonJsx from '../../common';
+import CommonJsx from '../../components';
 
 const Main = () => {
   const node = [{

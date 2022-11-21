@@ -1,14 +1,14 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-    'pages/cate/index',
-    'pages/cart/index',
+    'pages/shopping/index',
+    'pages/classify/index',
     'pages/my/index',
-    'pages/search/index',
-     // 订单
-    'subpackage/order/index',
-     // 商品
-    'subpackage/goods/index',
+    // 'pages/search/index',
+    //  // 订单
+    // 'subpackage/order/index',
+    //  // 商品
+    // 'subpackage/goods/index',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -17,7 +17,7 @@ export default defineAppConfig({
     navigationBarTextStyle: 'black'
   },
   tabBar: {
-    // custom: true,
+    custom: true,
     color: '#444',
     selectedColor: '#DC143C',
     backgroundColor: '#fff',
@@ -29,13 +29,13 @@ export default defineAppConfig({
         text: '首页'
       },
       {
-        pagePath: 'pages/cate/index',
+        pagePath: 'pages/classify/index',
         selectedIconPath: 'images/tabbar_cate_on.png',
         iconPath: 'images/tabbar_cate.png',
         text: '分类'
       },
       {
-        pagePath: 'pages/cart/index',
+        pagePath: 'pages/shopping/index',
         selectedIconPath: 'images/tabbar_cart_on.png',
         iconPath: 'images/tabbar_cart.png',
         text: '购物车'

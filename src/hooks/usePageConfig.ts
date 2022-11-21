@@ -1,32 +1,37 @@
 import {useEffect, useState} from 'react';
 import Taro from '@tarojs/taro';
+import {getPfsModelTagValueByTginfo} from '../../../../qj/lerna-repo/packages/api';
 
-export function usePageConfig() {
+export function usePageConfig(route: string) {
   const [node, setNode] = useState([]);
+
+  console.log(6, route)
+
   useEffect(() => {
-    Taro.request({
-      url: `${HOST}/web/pfs/pfsmodeltagvalue/getPfsModelTagValueByTginfo.json`,
-      data: {
-        menuOpcode: 'index_one'
-      },
-      method: 'POST',
-      header: {
-        "content-type":"application/x-www-form-urlencoded",
-        "Saas-Agent": 'qj-wemini',
-      }
-    })
-      .then(res => res.data)
-      .then(json => {
-        try{
-          const list = JSON.parse(json.modelTagvalueJson);
-          setNode(list.nodeGraph);
-        } catch (err) {
-          console.log(err)
+    const menu = Taro.getStorageSync('menu');
+    const menuOpcode = menu.find(item => item.menuJspath === route).menuOpcode;
+    (async () => {
+      const pageConfig = await getPfsModelTagValueByTginfo({
+        menuOpcode: menuOpcode
+      });
+
+      let data = JSON.parse(pageConfig.modelTagvalueJson);
+      if(!data.hasOwnProperty('nodeGraph')) {
+        Taro.showToast({
+          title: '脏数据, 初始化默认数据',
+          icon: 'error',
+          duration: 1500
+        });
+        data = {
+          nodeGraph: [],
+          page: '',
+          version: '',
+          pageConfig: {}
         }
-      }).catch(err=> {
-      console.log(err)
-    })
-  }, []);
+      }
+      setNode(data.nodeGraph)
+    })()
+  }, [route]);
 
   return node
 }

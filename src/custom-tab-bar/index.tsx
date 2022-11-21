@@ -1,45 +1,59 @@
 import {useEffect, useState} from 'react'
 import Taro from '@tarojs/taro'
 import { CoverView, CoverImage } from '@tarojs/components'
-
+import { menuDefaultValue } from './basic';
 import './index.scss'
+import {queryTginfoMenuTree} from '@brushes/api';
 
 const Index = () => {
-  const [list, ] = useState([
-    // {
-    //   pagePath: '/pages/index/index',
-    //   selectedIconPath: '../images/tabbar_home_on.png',
-    //   iconPath: '../images/tabbar_home.png',
-    //   text: '首页'
-    // },
-    {
-      pagePath: '/pages/cate/index',
-      selectedIconPath: '../images/tabbar_cate_on.png',
-      iconPath: '../images/tabbar_cate.png',
-      text: '分类'
-    },
-    {
-      pagePath: '/pages/cart/index',
-      selectedIconPath: '../images/tabbar_cart_on.png',
-      iconPath: '../images/tabbar_cart.png',
-      text: '购物车'
-    },
-    {
-      pagePath: '/pages/my/index',
-      selectedIconPath: '../images/tabbar_my_on.png',
-      iconPath: '../images/tabbar_my.png',
-      text: '个人中心'
-    }
-  ]);
+  const [menuList, setMenuList] = useState([]);
   const [activePath, setPath] = useState('/pages/index/index');
   const [color,] = useState('#444')
   const [selectedColor,] = useState('#DC143C')
 
   useEffect(() => {
     // @ts-ignore
+    (async () => {
+      const menuData = Taro.getStorageSync('taroMenu')
+      if(menuData) {
+        setMenuList(menuData);
+        initPath()
+        return;
+      }
+      try {
+        const result = await queryTginfoMenuTree({
+          tginfoCode: '6f91dfb2775547aea82eca67bd568239',
+          rows: 30,
+          page: 1
+        })
+        const menu = result.map(item => {
+          return menuDefaultValue[item.menuJspath]
+        })
+        console.log(26, menu, result)
+        if([[], undefined, null, ''].includes(menu)) {
+          Taro.showToast({
+            title: '租户菜单配置不正确',
+            icon: 'error',
+            duration: 1500
+          });
+          return;
+        }
+        setMenuList(menu);
+        Taro.setStorageSync('taroMenu', menu);
+        Taro.setStorageSync('menu', result.concat(result[0].children));
+        initPath()
+      } catch (err) {
+
+      }
+
+    })()
+
+  }, []);
+
+  const initPath = () => {
     const { path = '/pages/index/index' } = Taro.getCurrentInstance().router;
     setPath(path)
-  }, []);
+  }
 
   const switchTab = (url) => {
     Taro.switchTab({ url })
@@ -48,7 +62,7 @@ const Index = () => {
   return (
     <CoverView className='tab-bar'>
       <CoverView className='tab-bar-border'></CoverView>
-      {list.map((item, index) => {
+      {menuList.map((item, index) => {
         return (
           <CoverView key={index} className='tab-bar-item' onClick={() => switchTab(item.pagePath)}>
             <CoverImage className='tab-bar-item-img' src={activePath === item.pagePath ? item.selectedIconPath : item.iconPath} />

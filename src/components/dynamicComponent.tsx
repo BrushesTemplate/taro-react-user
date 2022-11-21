@@ -2,9 +2,9 @@ import get from 'lodash-es/get';
 import noop from 'lodash-es/noop';
 import {View} from '@tarojs/components';
 import * as materials from 's-material-react';
+import {useEffect} from 'react';
 
-const CommonJsx = ({node}: { node : Array<any>}) => {
-
+const DynamicComponent = ({node}: { node : Array<any>}) => {
   return (
     <>
       {
@@ -23,4 +23,4 @@ const CommonJsx = ({node}: { node : Array<any>}) => {
   )
 }
 
-export default CommonJsx;
+export default DynamicComponent;
