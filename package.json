@@ -53,9 +53,11 @@
     "@tarojs/shared": "3.5.7",
     "@tarojs/taro": "3.5.7",
     "@tarojs/taro-h5": "3.5.7",
+    "antd-mobile": "^5.25.1",
     "dotenv": "^16.0.3",
     "lodash-es": "^4.17.21",
     "react": "^18.0.0",
+    "react-dom": "^18.2.0",
     "s-material-react": "^0.1.0"
   },
   "devDependencies": {

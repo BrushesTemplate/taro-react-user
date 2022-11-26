@@ -5,10 +5,15 @@ export default defineAppConfig({
     'pages/classify/index',
     'pages/my/index',
     // 'pages/search/index',
-    //  // 订单
-    // 'subpackage/order/index',
-    //  // 商品
-    // 'subpackage/goods/index',
+     // 订单
+    'subpackage/orderlist/index',
+     // 商品
+    'subpackage/goodlist/index',
+
+
+
+    // 后面需要扩充的页面
+    'append/bindIphone/index'
   ],
   window: {
     backgroundTextStyle: 'light',

@@ -17,7 +17,7 @@ const config = {
     }]
   ],
   defineConstants: {
-    "HOST": '"http://b2cwechatdd72f28bce2a41249aa1a7715fd9dcf8.saas.qjclouds.com/"'
+    "HOST": '"http://b2cweapp40673927e2a14ea49df338dc06bd4e9a.saas.qjclouds.com/"'
   },
   copy: {
     patterns: [

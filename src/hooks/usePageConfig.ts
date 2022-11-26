@@ -1,16 +1,37 @@
 import {useEffect, useState} from 'react';
+import {isEmpty} from 'lodash-es';
 import Taro from '@tarojs/taro';
-import {getPfsModelTagValueByTginfo} from '../../../../qj/lerna-repo/packages/api';
+import {getPfsModelTagValueByTginfo} from '@brushes/api';
+import {useMenuGraph, menuGraph} from '../utils/menuData';
 
 export function usePageConfig(route: string) {
   const [node, setNode] = useState([]);
-
+  const menuRx = useMenuGraph(route);
   console.log(6, route)
 
   useEffect(() => {
     const menu = Taro.getStorageSync('menu');
-    const menuOpcode = menu.find(item => item.menuJspath === route).menuOpcode;
+    const {menuOpcode} = menu.find(item => item.menuJspath === route);
+
+    if(!menuOpcode) {
+      Taro.showToast({
+        title: '菜单配置有问题',
+        icon: 'error',
+        duration: 1500
+      });
+      return;
+    }
+
     (async () => {
+
+      const isExister = menuGraph.get(route);
+
+      if(isExister && !isEmpty(isExister.lowCodeGraph)) {
+        const nodeResource = isExister.lowCodeGraph;
+        setNode(nodeResource.nodeGraph)
+        return;
+      }
+
       const pageConfig = await getPfsModelTagValueByTginfo({
         menuOpcode: menuOpcode
       });
@@ -29,6 +50,7 @@ export function usePageConfig(route: string) {
           pageConfig: {}
         }
       }
+      menuRx.init(data);
       setNode(data.nodeGraph)
     })()
   }, [route]);

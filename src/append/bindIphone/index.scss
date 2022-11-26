@@ -1,0 +1,24 @@
+.extraPart {
+  border-left: solid 1px #eeeeee;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.adm-list-item-content{
+  border-bottom: solid 1px #eee;
+}
+.adm-form-item-label .adm-form-item-required-asterisk{
+  --adm-color-danger: #f00
+}
+
+.adm-form-item-feedback-error {
+  --adm-color-danger: #f00
+}
+.adm-button-disabled {
+  cursor: not-allowed;
+  opacity: .4;
+  color: #444 !important;
+}
+.adm-button:not(.adm-button-default).adm-button-fill-none{
+  --border-width: 0;
+}

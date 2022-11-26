@@ -1,13 +1,20 @@
-import Taro from '@tarojs/taro';
-import { View } from '@tarojs/components';
+import Taro, {useDidShow} from '@tarojs/taro';
+import {Button, View} from '@tarojs/components';
 import './index.scss'
 import CommonJsx from '../../components';
+import {useLogin} from '../../hooks';
 
 const Index = () => {
   const { path = '/pages/index/index' } = Taro.getCurrentInstance().router;
-  console.log(8, path)
+  const loginImpl = useLogin();
+
+  useDidShow(() => {
+    console.log(13, '页面重新加载',)
+  })
+
   return (
     <View className='container'>
+      <Button onClick={loginImpl}>登录</Button>
       <CommonJsx route={path} />
     </View>
   )
