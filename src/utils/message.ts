@@ -7,3 +7,12 @@ export const sucMessage = (res) => {
     duration: 1000
   })
 }
+
+
+export const errMessage = (err) => {
+  Taro.showToast({
+    title: err,
+    icon: 'error',
+    duration: 1500
+  });
+}

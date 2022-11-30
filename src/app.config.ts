@@ -7,13 +7,18 @@ export default defineAppConfig({
     // 'pages/search/index',
      // 订单
     'subpackage/orderlist/index',
-     // 商品
-    'subpackage/goodlist/index',
+    'subpackage/orderdetail/index',
 
+    // 商品
+    'subpackage/goodlist/index',
+    'subpackage/gooddetail/index',
+    'subpackage/orderconfirm/index',
+    'subpackage/result/index',
+    'subpackage/rate/index',
 
 
     // 后面需要扩充的页面
-    'append/bindIphone/index'
+    // 'append/bindIphone/index'
   ],
   window: {
     backgroundTextStyle: 'light',

@@ -1,6 +1,8 @@
 @import "s-material-react/css";
+
 page{
   color: #333333;
   font-size: 13px;
+  box-sizing: border-box !important;
   font-family: -apple-system, blinkmacsystemfont, "Helvetica Neue", helvetica, segoe ui, arial, roboto, "PingFang SC", "miui", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }

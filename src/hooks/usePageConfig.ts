@@ -3,27 +3,16 @@ import {isEmpty} from 'lodash-es';
 import Taro from '@tarojs/taro';
 import {getPfsModelTagValueByTginfo} from '@brushes/api';
 import {useMenuGraph, menuGraph} from '../utils/menuData';
+import {loadMenu} from './useMenu';
+import {errMessage} from '../utils/message';
 
 export function usePageConfig(route: string) {
   const [node, setNode] = useState([]);
   const menuRx = useMenuGraph(route);
-  console.log(6, route)
 
   useEffect(() => {
-    const menu = Taro.getStorageSync('menu');
-    const {menuOpcode} = menu.find(item => item.menuJspath === route);
-
-    if(!menuOpcode) {
-      Taro.showToast({
-        title: '菜单配置有问题',
-        icon: 'error',
-        duration: 1500
-      });
-      return;
-    }
-
     (async () => {
-
+      const menuOpcode = await init(route)
       const isExister = menuGraph.get(route);
 
       if(isExister && !isEmpty(isExister.lowCodeGraph)) {
@@ -31,18 +20,15 @@ export function usePageConfig(route: string) {
         setNode(nodeResource.nodeGraph)
         return;
       }
-
+      console.log(menuOpcode)
       const pageConfig = await getPfsModelTagValueByTginfo({
         menuOpcode: menuOpcode
       });
 
       let data = JSON.parse(pageConfig.modelTagvalueJson);
       if(!data.hasOwnProperty('nodeGraph')) {
-        Taro.showToast({
-          title: '脏数据, 初始化默认数据',
-          icon: 'error',
-          duration: 1500
-        });
+        errMessage('脏数据, 初始化默认数据');
+
         data = {
           nodeGraph: [],
           page: '',
@@ -55,5 +41,21 @@ export function usePageConfig(route: string) {
     })()
   }, [route]);
 
+
+  async function init(path: string) {
+    let menu = Taro.getStorageSync('menu') || [];
+    if(isEmpty(menu)) {
+      menu = await loadMenu()
+    }
+    const {menuOpcode} = menu.find(item => item.menuJspath === path) || {};
+
+    if(!menuOpcode) {
+      errMessage('菜单配置有问题');
+      return;
+    }
+    return menuOpcode
+  }
+
   return node
 }
+
