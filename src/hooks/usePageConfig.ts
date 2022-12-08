@@ -1,11 +1,10 @@
 import {useEffect, useState} from 'react';
-import {isEmpty} from 'lodash-es';
+import {isEmpty, get} from 'lodash-es';
 import Taro from '@tarojs/taro';
 import {getPfsModelTagValueByTginfo} from '@brushes/api';
 import {useMenuGraph, menuGraph} from '../utils/menuData';
 import {loadMenu} from './useMenu';
 import {errMessage} from '../utils/message';
-
 export function usePageConfig(route: string) {
   const [node, setNode] = useState([]);
   const menuRx = useMenuGraph(route);
@@ -25,7 +24,8 @@ export function usePageConfig(route: string) {
         menuOpcode: menuOpcode
       });
 
-      let data = JSON.parse(pageConfig.modelTagvalueJson);
+      const dataStr = get(pageConfig, 'modelTagvalueJson', '{}')
+      let data = JSON.parse(dataStr);
       if(!data.hasOwnProperty('nodeGraph')) {
         errMessage('脏数据, 初始化默认数据');
 

@@ -4,10 +4,11 @@ export default defineAppConfig({
     'pages/shopping/index',
     'pages/classify/index',
     'pages/my/index',
-    // 'pages/search/index',
      // 订单
     'subpackage/orderlist/index',
     'subpackage/orderdetail/index',
+
+    'subpackage/search/index',
 
     // 商品
     'subpackage/goodlist/index',
