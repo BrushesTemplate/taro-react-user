@@ -17,6 +17,9 @@ export default defineAppConfig({
     'subpackage/result/index',
     'subpackage/rate/index',
 
+    // demo
+    'pages/demo/index',
+
 
     // 后面需要扩充的页面
     // 'append/bindIphone/index'

@@ -7,6 +7,7 @@ const Index = () => {
   const { path = '/pages/index/index', params } = useRouter();
   const { skuCode } = params;
   console.log(8, path, params)
+
   return (
     <View className='container'>
       <CommonJsx route={path} skuCode={skuCode} />

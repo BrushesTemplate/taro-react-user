@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <View className='container'>
       <Button onClick={loginImpl}>登录</Button>
-      <CommonJsx route={path} />
+      <CommonJsx route={path} topPage />
     </View>
   )
 }
