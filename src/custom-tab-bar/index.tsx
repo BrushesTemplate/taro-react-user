@@ -21,7 +21,7 @@ const Index = () => {
         return (
           <CoverView key={index} className='tab-bar-item' onClick={() => switchTab(item.menuJspath)}>
             <CoverImage className='tab-bar-item-img' src={activePath === item.menuJspath ? item.selectedIconPath : item.iconPath} />
-            <CoverView className='tab-bar-item-view' style={{ color: activePath === item.menuJspath ? selectedColor : color }}>{item.text}</CoverView>
+            {/*<CoverView className='tab-bar-item-view' style={{ color: activePath === item.menuJspath ? selectedColor : color }}>{item.text}</CoverView>*/}
           </CoverView>
         )
       })}
