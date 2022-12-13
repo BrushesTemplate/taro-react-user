@@ -20,6 +20,9 @@ export default defineAppConfig({
     // demo
     'pages/demo/index',
 
+    // 地址
+    'subpackage/addresseditor/index',
+
 
     // 后面需要扩充的页面
     // 'append/bindIphone/index'

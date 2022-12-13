@@ -7,7 +7,6 @@ import Taro from "@tarojs/taro";
 const DynamicComponent = ({node, topPage, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
   const safeArea = Taro.getStorageSync('safeArea');
   const tabBarH = topPage ? Taro.getStorageSync('tabBarHeight') : 0;
-  console.log('888', `100vh - ${safeArea}px - ${tabBarH}px`)
   return (
     <>
       {

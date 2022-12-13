@@ -6,43 +6,21 @@ import { View } from '@tarojs/components';
 import './index.scss';
 
 const Demo = () => {
-  const [visible1, setVisible1] = useState(false)
 
-  useEffect(() => {
-    savaSafeArea()
-  }, [])
-
-  const savaSafeArea = () => {
-    try {
-      const systemInfo = Taro.getSystemInfoSync();
-      const screenHeight = systemInfo.screenHeight;
-      const safeHeight = systemInfo.safeArea?.bottom || 0;
-      Taro.setStorageSync('safeArea', screenHeight-safeHeight);
-    }catch (e) {
-      console.log(e)
-    }
+  const handle = (a) => {
+    console.log(11, a);
   }
+
+
   return (
-    <View
-      className={'demo'}
-      style={{
-        height: `calc(100vh - ${Taro.getStorageSync('safeArea')}px)`
-      }}
-    >123
-
-      {/*<Button onClick={() => {*/}
-      {/*  setVisible1(true)*/}
-      {/*}}>ant</Button>*/}
-      {/*<Popup*/}
-      {/*  visible={visible1}*/}
-      {/*  onMaskClick={() => {*/}
-      {/*    setVisible1(false)*/}
-      {/*  }}*/}
-      {/*  bodyStyle={{ height: '40vh' }}*/}
-      {/*>*/}
-      {/* 123123123123123123123123123123123123123123123123123123123123123*/}
-      {/*</Popup>*/}
-
+    <View>
+      23
+      <View className="section__title">省市区选择器</View>
+      <picker mode="region" bindchange={handle}>
+        <View className="picker">
+          当前选择：123
+        </View>
+      </picker>
     </View>
   )
 }

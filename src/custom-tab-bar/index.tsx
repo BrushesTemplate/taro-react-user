@@ -5,8 +5,8 @@ import './index.scss'
 import {useMenu} from '../hooks';
 
 const Index = () => {
-  const [color,] = useState('#444');
-  const [selectedColor,] = useState('#DC143C');
+  const [color,] = useState('#b8b8b8');
+  const [selectedColor,] = useState('#000000');
 
   const { menuList, activePath } = useMenu();
 
@@ -21,7 +21,7 @@ const Index = () => {
         return (
           <CoverView key={index} className='tab-bar-item' onClick={() => switchTab(item.menuJspath)}>
             <CoverImage className='tab-bar-item-img' src={activePath === item.menuJspath ? item.selectedIconPath : item.iconPath} />
-            {/*<CoverView className='tab-bar-item-view' style={{ color: activePath === item.menuJspath ? selectedColor : color }}>{item.text}</CoverView>*/}
+            <CoverView className='tab-bar-item-view' style={{ color: activePath === item.menuJspath ? selectedColor : color }}>{item.text}</CoverView>
           </CoverView>
         )
       })}
