@@ -8,7 +8,6 @@ export const safeArea = () => {
     const screenWidth = systemInfo.screenWidth;
     Taro.setStorageSync('safeArea', screenHeight - safeHeight);
     Taro.setStorageSync('tabBarHeight', Math.floor(50 * screenWidth / 375))
-    console.log('<-------->', systemInfo)
   } catch (e) {
     console.log(e)
   }

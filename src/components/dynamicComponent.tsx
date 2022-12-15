@@ -14,8 +14,7 @@ const DynamicComponent = ({node, topPage, ...rest}: { node: Array<any>; [v: stri
           const MaterialsComponent = get(materials, type, noop);
           return (
             <View key={id} className='monitor-node' style={{
-              height: `calc(100vh - ${safeArea}px - ${tabBarH}px)`,
-              overflow: 'scroll'
+              height: `calc(100vh - ${safeArea}px - ${tabBarH}px)`
             }}
             >
               <View className='content' style={{height: '100%'}}>

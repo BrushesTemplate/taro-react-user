@@ -22,6 +22,7 @@ export default defineAppConfig({
 
     // 地址
     'subpackage/addresseditor/index',
+    'subpackage/addresslist/index',
 
 
     // 后面需要扩充的页面

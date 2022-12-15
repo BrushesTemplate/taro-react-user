@@ -4,12 +4,12 @@ import './index.scss'
 import CommonJsx from '../../components';
 
 const Index = () => {
-  const { path = '/pages/index/index', params } = useRouter();
-  const { addressId } = params;
+  const { path = '/pages/index/index' } = useRouter();
+  console.log(8, path)
 
   return (
     <View className='container'>
-      <CommonJsx route={path} addressId={addressId} />
+      <CommonJsx route={path} />
     </View>
   )
 }
