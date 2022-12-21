@@ -4,7 +4,7 @@ import {View} from '@tarojs/components';
 import * as materials from 's-material-react';
 import Taro from "@tarojs/taro";
 
-const DynamicComponent = ({node, topPage, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
+const DynamicComponent = ({node, base, topPage, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
   const safeArea = Taro.getStorageSync('safeArea');
   const tabBarH = topPage ? Taro.getStorageSync('tabBarHeight') : 0;
   return (
@@ -14,7 +14,7 @@ const DynamicComponent = ({node, topPage, ...rest}: { node: Array<any>; [v: stri
           const MaterialsComponent = get(materials, type, noop);
           return (
             <View key={id} className='monitor-node' style={{
-              height: `calc(100vh - ${safeArea}px - ${tabBarH}px)`
+              height: base ? '' : `calc(100vh - ${safeArea}px - ${tabBarH}px)`
             }}
             >
               <View className='content' style={{height: '100%'}}>

@@ -16,6 +16,7 @@ export default defineAppConfig({
     'subpackage/orderconfirm/index',
     'subpackage/result/index',
     'subpackage/rate/index',
+    'subpackage/paymentmode/index',
 
     // demo
     'pages/demo/index',
@@ -23,6 +24,7 @@ export default defineAppConfig({
     // 地址
     'subpackage/addresseditor/index',
     'subpackage/addresslist/index',
+
 
 
     // 后面需要扩充的页面
