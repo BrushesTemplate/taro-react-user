@@ -3,6 +3,7 @@ import {Button, View} from '@tarojs/components';
 import './index.scss'
 import CommonJsx from '../../components';
 import {useLogin} from '../../hooks';
+import {BaseWrapCommon} from "../../components/baseWrapCommon";
 
 const Index = () => {
   const { path = '/pages/index/index' } = useRouter();
@@ -14,8 +15,10 @@ const Index = () => {
 
   return (
     <View className='container'>
-      <Button onClick={loginImpl}>登录</Button>
-      <CommonJsx route={path} />
+      <BaseWrapCommon>
+        <Button onClick={loginImpl}>登录</Button>
+        <CommonJsx route={path} topPage base />
+      </BaseWrapCommon>
     </View>
   )
 }

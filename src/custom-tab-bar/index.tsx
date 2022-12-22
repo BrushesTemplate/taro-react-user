@@ -5,8 +5,8 @@ import './index.scss'
 import {useMenu} from '../hooks';
 
 const Index = () => {
-  const [color,] = useState('#444');
-  const [selectedColor,] = useState('#DC143C');
+  const [color,] = useState('#b8b8b8');
+  const [selectedColor,] = useState('#000000');
 
   const { menuList, activePath } = useMenu();
 

@@ -16,9 +16,18 @@ export default defineAppConfig({
     'subpackage/orderconfirm/index',
     'subpackage/result/index',
     'subpackage/rate/index',
+    'subpackage/paymentmode/index',
+
+    // demo
+    'pages/demo/index',
+
+    // 地址
+    'subpackage/addresseditor/index',
+    'subpackage/addresslist/index',
+
 
     // 后面需要扩充的页面
-    // 'append/bindIphone/index'
+    'subpackage/bindPhone/index'
   ],
   window: {
     backgroundTextStyle: 'light',
