@@ -3,5 +3,25 @@
   "projectname": "taro-mobile-react",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "subpackage/orderconfirm/index",
+          "query": "skuId=1138309&goodsNum=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "subpackage/addresseditor/index",
+          "query": "skuId=1138309&goodsNum=1",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }
