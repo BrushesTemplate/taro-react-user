@@ -8,7 +8,7 @@ const Index = () => {
   console.log(8, params);
   return (
     <View className='container'>
-      <CommonJsx route={path} {...params}/>
+      <CommonJsx route={path} {...params} />
     </View>
   )
 }

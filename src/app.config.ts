@@ -27,7 +27,7 @@ export default defineAppConfig({
 
 
     // 后面需要扩充的页面
-    'subpackage/bindPhone/index'
+    // 'subpackage/bindPhone/index'
   ],
   window: {
     backgroundTextStyle: 'light',

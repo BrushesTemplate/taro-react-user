@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Button  } from 'antd-mobile';
+import { Button } from 'antd-mobile';
 import { FormInstance } from 'antd-mobile/es/components/form'
 import { sendPhone } from '@brushes/api';
 import { useMountedRef } from '../../../hooks';
