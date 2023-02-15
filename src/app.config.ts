@@ -1,3 +1,4 @@
+import {mine} from './routerMap/mine'
 export default defineAppConfig({
   pages: [
     'pages/index/index',
@@ -22,9 +23,7 @@ export default defineAppConfig({
     'pages/demo/index',
 
     // 地址
-    'subpackage/addresseditor/index',
-    'subpackage/addresslist/index',
-
+    ...mine
 
     // 后面需要扩充的页面
     // 'subpackage/bindPhone/index'
