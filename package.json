@@ -36,7 +36,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@brushes/api": "^0.3.11",
+    "@brushes/api": "^0.3.12",
     "@brushes/tools": "^1.0.31",
     "@tarojs/components": "3.5.7",
     "@tarojs/helper": "3.5.7",

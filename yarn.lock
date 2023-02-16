@@ -1263,7 +1263,20 @@
     qs "^6.11.0"
     typescript ">4.0.0"
 
-"@brushes/api@^0.3.11", "@brushes/api@^0.3.7", "@brushes/api@latest":
+"@brushes/api@^0.3.12":
+  version "0.3.12"
+  resolved "https://registry.npmjs.org/@brushes/api/-/api-0.3.12.tgz#1bb5d5bab587ca6ae93387026e57ec592015a85c"
+  integrity sha512-hkaUZU9VmVoESHdce7YsYxVP9NTPz6lXoHfRwQ0cD/l5P1g0XIreipAU5/KZ+sXFxY9SwN4IQ1D4j/ozgLH0FA==
+  dependencies:
+    "@tarojs/taro" "^3.5.7"
+    "@types/node" ">18.0.0"
+    flyio "^0.6.14"
+    lodash-es "^4.17.21"
+    prettier "^2.7.1"
+    qs "^6.11.0"
+    typescript ">4.0.0"
+
+"@brushes/api@^0.3.7", "@brushes/api@latest":
   version "0.3.11"
   resolved "https://registry.npmjs.org/@brushes/api/-/api-0.3.11.tgz#b22314e5721c01b97807b6661136f1de74567e68"
   integrity sha512-SfSuh/3J31zjv6SlW6M8gW4OyDYxomIe2UL6Fc8z5YBC8zFqYAdpS5Wcud8b7IL0GwqAOuV2PMdpIoYoIWWq3w==

@@ -9,7 +9,7 @@ const DynamicComponent = ({node, base, topPage, ...rest}: { node: Array<any>; [v
   const tabBarH = topPage ? Taro.getStorageSync('tabBarHeight') : 0;
   return (
     <>
-        {
+      {
         node.map(({id, props = {}, type}) => {
           const MaterialsComponent = get(materials, type, noop);
           return (

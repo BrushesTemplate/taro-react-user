@@ -25,6 +25,10 @@ export default defineAppConfig({
     'subpackage/addresseditor/index',
     'subpackage/addresslist/index',
 
+    // 我的
+    'subpackage/setting/index',
+    'subpackage/couponlist/index',
+
 
     // 后面需要扩充的页面
     // 'subpackage/bindPhone/index'
