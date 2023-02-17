@@ -6,5 +6,5 @@ export const mine =  [
 
   // coupon
   'subpackage/couponlist/index',
-  // 'subpackage/couponlist/index',
+  'subpackage/setting/index',
 ]
