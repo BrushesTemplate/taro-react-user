@@ -1296,6 +1296,19 @@
     qs "^6.11.0"
     typescript ">4.0.0"
 
+"@brushes/api@^0.4.6":
+  version "0.4.6"
+  resolved "https://registry.npmjs.org/@brushes/api/-/api-0.4.6.tgz#3b26df21e4200e918a30ab5cdfb2a06bb38b5ae0"
+  integrity sha512-o2G0D5j5TIE42OBYTpj+1Yh899eMvs3TtUU2myRA52XL5UvaT8QX7H3BsAC1Dl3sQzop2SMhvWizaWSo+M9Rbw==
+  dependencies:
+    "@tarojs/taro" "^3.5.7"
+    "@types/node" ">18.0.0"
+    flyio "^0.6.14"
+    lodash-es "^4.17.21"
+    prettier "^2.7.1"
+    qs "^6.11.0"
+    typescript ">4.0.0"
+
 "@brushes/components@^0.0.40":
   version "0.0.40"
   resolved "https://registry.npmjs.org/@brushes/components/-/components-0.0.40.tgz#0286d52e9181ad8e11ede8a25cef6a79ebeb2df6"
@@ -11805,12 +11818,12 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
   integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
 
-qj-mobile-store@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.5.tgz#9d1f6537543f4b7b2056e91696a1cce13a3b9261"
-  integrity sha512-3Ra8bEy0ZIlwB/uunmbqLwdcMyp6EhSXXSUgGs8DwaVDhLOVOlmBLFlHH7QSOGps7lwAMt4eG6TlKS/dYR/OyA==
+qj-mobile-store@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.6.tgz#d574460dbb3830320e41f28d6e5a4ac0def5878e"
+  integrity sha512-uIGhn6WTTXggT/7lI2Z7m+ZoTzaz8HqZDoaOe7a168qJJA1XwuIGIwwFlqQnLqLHmSMcJn05XCj/FZF6u2d4Aw==
   dependencies:
-    "@brushes/api" "^0.4.1"
+    "@brushes/api" "^0.4.6"
     "@brushes/qj-simulate-component" "^0.0.10"
 
 qrcode.react@^3.1.0:
@@ -13011,10 +13024,10 @@ rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^0.1.21:
-  version "0.1.21"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.21.tgz#dd823b51cfd74c1401bb979db2b0f1f37596e81d"
-  integrity sha512-ooMsNP+0q2rxxoyn50z1t3W9qmzuGeVO9InV9VH3JU2RudRPqtliRFRQCOlXkITU5oln2K2DGImiRYpzZkzqeg==
+s-material-react@^0.1.22:
+  version "0.1.22"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.22.tgz#2925528974cc98f7efbdfec6800d62772b1683a9"
+  integrity sha512-cjmv3Zr6tZR/rJ09H/rclKNgBcsF4X7+0+Zi/Gjy80/dIOH+sohZk5sziSxKvEAsMz6OWbNqtSzdjf5+FJ/7oA==
   dependencies:
     "@brushes/api" "^0.4.1"
     "@brushes/components" "^0.0.40"
@@ -13023,7 +13036,7 @@ s-material-react@^0.1.21:
     "@stencil/core" "^2.19.1"
     china-division "^2.5.0"
     classnames "^2.3.2"
-    qj-mobile-store "^1.0.5"
+    qj-mobile-store "^1.0.6"
     react "^18.0.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:

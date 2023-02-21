@@ -4,10 +4,10 @@ import './index.scss'
 import CommonJsx from '../../components';
 
 const Index = () => {
-  const { path = '/pages/index/index' } = useRouter();
+  const { path = '/pages/index/index', params } = useRouter();
   return (
     <View className='container'>
-      <CommonJsx route={path} />
+      <CommonJsx route={path} {...params}/>
     </View>
   )
 }

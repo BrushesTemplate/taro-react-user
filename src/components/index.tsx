@@ -1,4 +1,4 @@
-import {usePageConfig} from '../hooks';
+import {usePageConfig} from '@/hooks';
 import DynamicComponent from './dynamicComponent';
 
 const CommonJsx = ({route, ...rest}: { route : string; [v:string]: any}) => {

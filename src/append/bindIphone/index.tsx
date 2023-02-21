@@ -1,10 +1,10 @@
 import './index.scss';
 import {View, CheckboxGroup, Label, Checkbox} from '@tarojs/components';
 import { msgInfo } from './hooks'
-import {useState} from 'react';
+// import {useState} from 'react';
 
 export default () => {
-  const [value, setValue] = useState();
+  // const [value, setValue] = useState();
   const onChange = (e) => {
     console.log(9, e.detail.value)
   }
