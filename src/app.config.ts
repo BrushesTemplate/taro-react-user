@@ -25,6 +25,9 @@ export default defineAppConfig({
     // 地址
     ...mine,
 
+    // 收藏列表
+    'subpackage/collectList/index',
+
     // 后面需要扩充的页面
     'subpackage/bindPhone/index'
   ],
