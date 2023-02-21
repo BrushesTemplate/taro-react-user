@@ -16,8 +16,8 @@ const config = {
       pxtransformBlackList: [/am-/, /demo-/, /^body/]
     }]
   ],
-  defineConstants: {
-    "HOST": '"http://b2cweapp40673927e2a14ea49df338dc06bd4e9a.saas.qjclouds.com/"'
+  alias: {
+    '@': path.resolve(__dirname, '..', 'src'),
   },
   copy: {
     patterns: [
@@ -60,6 +60,9 @@ const config = {
     }
   },
   h5: {
+    devServer: {
+      hot: false,
+    },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {

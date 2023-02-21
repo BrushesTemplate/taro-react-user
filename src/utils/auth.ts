@@ -41,11 +41,11 @@ async function checkHasLogined() {
     Taro.removeStorageSync('saas-token')
     return false
   }
-  const checkTokenRes = await WXAPI.checkToken(token)
-  if (checkTokenRes.code != 0) {
-    wx.removeStorageSync('token')
-    return false
-  }
+  // const checkTokenRes = await WXAPI.checkToken(token)
+  // if (checkTokenRes.code != 0) {
+  //   wx.removeStorageSync('token')
+  //   return false
+  // }
   return true
 }
 
@@ -105,67 +105,67 @@ export function login(bindImpl){
 
 }
 
-// async function authorize() {
-//   // const code = await wxaCode()
-//   // const resLogin = await WXAPI.login_wx(code)
-//   // if (resLogin.code == 0) {
-//   //   wx.setStorageSync('token', resLogin.data.token)
-//   //   wx.setStorageSync('uid', resLogin.data.uid)
-//   //   return resLogin
-//   // }
-//   return new Promise((resolve, reject) => {
-//     Taro.login({
-//       success: function (res) {
-//         const code = res.code
-//         let referrer = '' // 推荐人
-//         let referrer_storge = wx.getStorageSync('referrer');
-//         if (referrer_storge) {
-//           referrer = referrer_storge;
-//         }
-//         // 下面开始调用注册接口
-//         const extConfigSync = wx.getExtConfigSync()
-//         if (extConfigSync.subDomain) {
-//           WXAPI.wxappServiceAuthorize({
-//             code: code,
-//             referrer: referrer
-//           }).then(function (res) {
-//             if (res.code == 0) {
-//               wx.setStorageSync('token', res.data.token)
-//               wx.setStorageSync('uid', res.data.uid)
-//               resolve(res)
-//             } else {
-//               wx.showToast({
-//                 title: res.msg,
-//                 icon: 'none'
-//               })
-//               reject(res.msg)
-//             }
-//           })
-//         } else {
-//           WXAPI.authorize({
-//             code: code,
-//             referrer: referrer
-//           }).then(function (res) {
-//             if (res.code == 0) {
-//               wx.setStorageSync('token', res.data.token)
-//               wx.setStorageSync('uid', res.data.uid)
-//               resolve(res)
-//             } else {
-//               wx.showToast({
-//                 title: res.msg,
-//                 icon: 'none'
-//               })
-//               reject(res.msg)
-//             }
-//           })
-//         }
-//       },
-//       fail: err => {
-//         reject(err)
-//       }
-//     })
-//   })
-// }
+async function authorize() {
+  // const code = await wxaCode()
+  // const resLogin = await WXAPI.login_wx(code)
+  // if (resLogin.code == 0) {
+  //   wx.setStorageSync('token', resLogin.data.token)
+  //   wx.setStorageSync('uid', resLogin.data.uid)
+  //   return resLogin
+  // }
+  return new Promise((resolve, reject) => {
+    Taro.login({
+      success: function (res) {
+        const code = res.code
+        let referrer = '' // 推荐人
+        let referrer_storge = wx.getStorageSync('referrer');
+        if (referrer_storge) {
+          referrer = referrer_storge;
+        }
+        // 下面开始调用注册接口
+        const extConfigSync = wx.getExtConfigSync()
+        if (extConfigSync.subDomain) {
+          WXAPI.wxappServiceAuthorize({
+            code: code,
+            referrer: referrer
+          }).then(function (res) {
+            if (res.code == 0) {
+              wx.setStorageSync('token', res.data.token)
+              wx.setStorageSync('uid', res.data.uid)
+              resolve(res)
+            } else {
+              wx.showToast({
+                title: res.msg,
+                icon: 'none'
+              })
+              reject(res.msg)
+            }
+          })
+        } else {
+          WXAPI.authorize({
+            code: code,
+            referrer: referrer
+          }).then(function (res) {
+            if (res.code == 0) {
+              wx.setStorageSync('token', res.data.token)
+              wx.setStorageSync('uid', res.data.uid)
+              resolve(res)
+            } else {
+              wx.showToast({
+                title: res.msg,
+                icon: 'none'
+              })
+              reject(res.msg)
+            }
+          })
+        }
+      },
+      fail: err => {
+        reject(err)
+      }
+    })
+  })
+}
 
 function loginOut(){
   Taro.removeStorageSync('token')
@@ -218,12 +218,12 @@ async function checkAndAuthorize (scope) {
   })
 }
 
-// export default {
-//   // checkHasLogined: checkHasLogined,
-//   // wxaCode: wxaCode,
-//   login: login,
-//   // loginOut: loginOut,
-//   // checkAndAuthorize: checkAndAuthorize,
-//   // authorize: authorize,
-//   // bindSeller: bindSeller
-// }
+export default {
+  checkHasLogined,
+  // wxaCode: wxaCode,
+  // login: login,
+  // loginOut: loginOut,
+  checkAndAuthorize,
+  // authorize: authorize,
+  // bindSeller: bindSeller
+}

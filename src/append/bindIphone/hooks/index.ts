@@ -1,9 +1,16 @@
 import {saveUmuserPhoneByWX} from '@brushes/api';
 import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
-import {sucMessage} from '../../../utils/message';
+import {sucMessage} from '@/utils/message';
 import { last } from 'lodash-es';
 
+export const msgInfo = [
+  {
+    value: '1',
+    text: '阅读并同意XXXXXX',
+    checked: false
+  }
+];
 export function useBindPhone() {
   return useCallback(async (values: any) => {
     console.log(13, values)

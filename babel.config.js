@@ -4,6 +4,7 @@ module.exports = {
   presets: [
     ['taro', {
       framework: 'react',
+      host: false,
       // 'dynamic-import-node': false,
       ts: true
     }]
