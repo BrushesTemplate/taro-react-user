@@ -23,10 +23,13 @@ export default defineAppConfig({
     'pages/demo/index',
 
     // 地址
-    ...mine
+    ...mine,
+
+    // 收藏列表
+    'subpackage/collectList/index',
 
     // 后面需要扩充的页面
-    // 'subpackage/bindPhone/index'
+    'subpackage/bindPhone/index'
   ],
   window: {
     backgroundTextStyle: 'light',
