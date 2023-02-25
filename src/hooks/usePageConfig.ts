@@ -21,7 +21,8 @@ export function usePageConfig(route: string) {
       }
       console.log(menuOpcode)
       const pageConfig = await getPfsModelTagValueByTginfo({
-        menuOpcode: menuOpcode
+        menuOpcode: menuOpcode,
+        proappCode: '025'
       });
 
       const dataStr = get(pageConfig, 'modelTagvalueJson', '{}')

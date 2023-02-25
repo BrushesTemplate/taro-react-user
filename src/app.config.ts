@@ -18,7 +18,9 @@ export default defineAppConfig({
     'subpackage/result/index',
     'subpackage/rate/index',
     'subpackage/paymentmode/index',
-
+    'subpackage/collectionList/index',
+    'subpackage/bindPhone/index',
+    'append/bindIphone/index',
     // demo
     'pages/demo/index',
 
@@ -26,10 +28,10 @@ export default defineAppConfig({
     ...mine,
 
     // 收藏列表
-    'subpackage/collectionList/index',
+
 
     // 后面需要扩充的页面
-    'subpackage/bindPhone/index'
+    //
   ],
   window: {
     backgroundTextStyle: 'light',
