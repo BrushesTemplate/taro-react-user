@@ -3,8 +3,7 @@ import {View, Button, Image, CheckboxGroup, Checkbox} from '@tarojs/components';
 import {useState} from 'react';
 import './index.scss'
 
-import logo from './logo.png';
-import bg from './bg.png';
+const logo = 'https://b2cweapp7f8524e86a9049b5a18ac4176a51f672.weidian.cdinghuo.com/paas/shop-master/c-static/images/wx/au.png';
 
 const Index = () => {
   const [agree, setAgree] = useState(false);
@@ -48,10 +47,7 @@ const Index = () => {
   }
 
   return (
-    <View className='bindPhone' style={{
-      backgroundImage: `url(${bg})`
-    }}
-    >
+    <View className='bindPhone'>
       <View className='logoWrap'>
         <Image src={logo} className='logo' mode='widthFix' />
       </View>
