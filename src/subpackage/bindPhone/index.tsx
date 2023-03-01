@@ -1,9 +1,11 @@
 import Taro from '@tarojs/taro';
 import {View, Button, Image, CheckboxGroup, Checkbox} from '@tarojs/components';
 import {useState} from 'react';
+import {saveUmuserPhoneByWX, warrantyLogin} from '@brushes/api'
 import './index.scss'
 
 const logo = 'https://b2cweapp7f8524e86a9049b5a18ac4176a51f672.weidian.cdinghuo.com/paas/shop-master/c-static/images/wx/au.png';
+
 
 const Index = () => {
   const [agree, setAgree] = useState(false);
@@ -42,7 +44,77 @@ const Index = () => {
     })
   }
 
+  const bindPhone = async (phone, code) => {
+    try {
+      const data = await saveUmuserPhoneByWX({
+        userPhone: phone,
+        code,
+        userOpenid: Taro.getStorageSync('userOpenid')
+      })
+      // 异常情况
+      if (!data.dataObj) {
+        // 登录错误
+        Taro.showToast({
+          title: '无法登录',
+          icon: "error",
+          duration: 1000
+        })
+        return;
+      }
+
+      if(data.success) {
+        sucMessage(data);
+      }
+
+      Taro.setStorageSync('saas-token', JSON.stringify(data.dataObj));
+      Taro.navigateBack({
+        delta: 1,
+        complete: () => {
+          const activePage = last(Taro.getCurrentPages())
+          // @ts-ignore
+          activePage.onLoad();
+        }
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   const getPhoneNumber = (e) => {
+    console.log(888, e);
+    Taro.login({
+      success: async function (result: { code: string }) {
+        const response = await warrantyLogin({
+          js_code: result.code
+        })
+        const res = response.data;
+        // 异常情况
+        if (!res.dataObj) {
+          // 登录错误
+          Taro.showToast({
+            title: '无法登录',
+            icon: 'error',
+            duration: 1500
+          });
+          return;
+        }
+
+        const isReister = get(res, 'dataObj.register', '') as string;
+        const userOpenid = get(res, 'dataObj.userOpenid', '');
+        Taro.setStorageSync('userOpenid', userOpenid);
+
+        if (isReister === 'true') {
+          // 去绑定
+          bindPhone(12, 12)
+          return;
+        }
+
+        const token = get(res, 'dataObj.userInfo', '{}');
+        Taro.setStorageSync('saas-token', token);
+      },
+      complete: function () {
+      }
+    });
     console.log(e, e.detail.code)
   }
 

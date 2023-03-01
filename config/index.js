@@ -60,9 +60,9 @@ const config = {
     }
   },
   h5: {
-    devServer: {
-      hot: false,
-    },
+    // devServer: {
+    //   hot: false,
+    // },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
@@ -79,19 +79,6 @@ const config = {
         }
       }
     },
-    // webpackChain (chain, webpack) {
-    //   chain.merge({
-    //     plugins: [
-    //       new webpack.DefinePlugin({
-    //         "process.env": {
-    //           REACT_APP_BASE_URL: JSON.stringify(process.env.REACT_APP_BASE_URL),
-    //           REACT_APP_SESSION_KEY: JSON.stringify(process.env.REACT_APP_SESSION_KEY),
-    //           REACT_APP_APPLICATION: JSON.stringify(process.env.REACT_APP_APPLICATION),
-    //         },
-    //       })
-    //     ]
-    //   })
-    // }
   },
   rn: {
     appName: 'taroDemo',

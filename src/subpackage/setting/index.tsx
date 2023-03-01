@@ -24,6 +24,9 @@ const Index = () => {
     const val = e.detail.value.nickName;
     Taro.setStorageSync('userNickname', val);
     setNickname(val);
+    Taro.switchTab({
+      url: '/pages/my/index'
+    })
   }
 
   return (

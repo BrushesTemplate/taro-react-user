@@ -2,7 +2,7 @@ import {saveUmuserPhoneByWX} from '@brushes/api';
 import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
 import {sucMessage} from '@/utils/message';
-import { last } from 'lodash-es';
+// import { last } from 'lodash-es';
 
 export const msgInfo = [
   {
@@ -12,8 +12,7 @@ export const msgInfo = [
   }
 ];
 export function useBindPhone() {
-  return useCallback(async (values: any) => {
-    console.log(13, values)
+  return useCallback(async (callback, values: any) => {
     try {
       const data = await saveUmuserPhoneByWX({
         ...values,
@@ -38,9 +37,7 @@ export function useBindPhone() {
       Taro.navigateBack({
         delta: 1,
         complete: () => {
-          const activePage = last(Taro.getCurrentPages())
-          // @ts-ignore
-          activePage.onLoad();
+          callback()
         }
       })
     } catch (err) {

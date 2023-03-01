@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react';
 import Taro from '@tarojs/taro';
 import {queryTginfoMenuTree} from '@brushes/api';
-import {menuDefaultValue} from '../custom-tab-bar/basic';
-import {errMessage} from '../utils/message';
+import {menuDefaultValue} from '@/custom-tab-bar/basic';
+import {errMessage} from '@/utils/message';
 
 export function useMenu() {
   const [menuList, setMenuList] = useState([]);
@@ -43,7 +43,7 @@ export function useMenu() {
 
 export async function loadMenu() {
   const result = await queryTginfoMenuTree({
-    tginfoCode: '6f91dfb2775547aea82eca67bd568239',
+    proappCode: '025',
     rows: 30,
     page: 1
   })
