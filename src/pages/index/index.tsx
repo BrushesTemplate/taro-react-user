@@ -7,8 +7,15 @@ import {BaseWrapCommon} from "@/components/baseWrapCommon";
 const Index = () => {
   const { path } = useRouter();
 
+  const isWeixin = function () { //判断是否是微信
+    var ua = navigator.userAgent.toLowerCase();
+    return ua.match(/MicroMessenger/i) == "micromessenger";
+  };
+
   useDidShow(async () => {
-    console.log(13, '页面重新加载')
+
+    console.log('navigator.userAgent.toLowerCase()', navigator.userAgent.toLowerCase())
+    console.log(13, '页面重新加载', isWeixin(), 'wx', wx)
   })
 
   return (

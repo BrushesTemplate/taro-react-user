@@ -5,17 +5,29 @@ import {
 } from 'antd-mobile'
 import './index.scss';
 import {checkMobile} from '@/utils';
-import CodeJsx from '../components/code';
+import CodeJsx from './components/code';
 import {useBindPhone} from './hooks';
+import {getCurrentPages, useDidShow} from '@tarojs/taro';
+import {useRef} from 'react';
 
 export default () => {
   const [form] = Form.useForm();
-  const onFinish = useBindPhone()
+  const onFinish = useBindPhone();
+  const callback = useRef();
+  useDidShow(() => {
+    const pages= getCurrentPages()
+    const current = pages[pages.length - 1];
+    const event = current.getOpenerEventChannel();
+    event.on('handler', params => {
+      callback.current = params
+    });
+  });
+
   return (
     <>
       <Form
         form={form}
-        onFinish={onFinish}
+        onFinish={(values) => onFinish(callback.current, values)}
         layout='horizontal'
         footer={
           <Button block type='submit' color='primary' size='large'>

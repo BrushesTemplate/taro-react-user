@@ -18,17 +18,18 @@ export default defineAppConfig({
     'subpackage/result/index',
     'subpackage/rate/index',
     'subpackage/paymentmode/index',
-    'subpackage/collectionList/index',
-    'subpackage/bindPhone/index',
+
+    // 'subpackage/collectionlist/index',
+    // 'subpackage/bindPhone/index',
     'append/bindIphone/index',
     // demo
     'pages/demo/index',
 
     // 地址
-    ...mine,
 
     // 收藏列表
 
+    ...mine,
 
     // 后面需要扩充的页面
     //
