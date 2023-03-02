@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button  } from 'antd-mobile';
 import { FormInstance } from 'antd-mobile/es/components/form'
-import { sendPhone } from '@brushes/api';
+import { sendPhone } from 'qj-b2c-api';
 import { useMountedRef } from '@/hooks';
 import {sucMessage} from '@/utils/message';
 

@@ -1,10 +1,10 @@
 import {useEffect, useState} from 'react';
 import {isEmpty, get} from 'lodash-es';
 import Taro from '@tarojs/taro';
-import {getPfsModelTagValueByTginfo} from '@brushes/api';
-import {useMenuGraph, menuGraph} from '../utils/menuData';
+import {getPfsModelTagValueByTginfo} from 'qj-b2c-api';
+import {useMenuGraph, menuGraph} from '@/utils/menuData';
 import {loadMenu} from './useMenu';
-import {errMessage} from '../utils/message';
+import {errMessage} from '@/utils/message';
 export function usePageConfig(route: string) {
   const [node, setNode] = useState([]);
   const menuRx = useMenuGraph(route);

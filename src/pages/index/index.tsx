@@ -1,4 +1,4 @@
-import {useDidShow, useRouter} from '@tarojs/taro';
+import Taro, {useDidShow, useRouter} from '@tarojs/taro';
 import {View} from '@tarojs/components';
 import './index.scss'
 import CommonJsx from '@/components';
@@ -13,9 +13,8 @@ const Index = () => {
   };
 
   useDidShow(async () => {
-
     console.log('navigator.userAgent.toLowerCase()', navigator.userAgent.toLowerCase())
-    console.log(13, '页面重新加载', isWeixin(), 'wx', wx)
+    console.log(13, '123123123页面重新加载', isWeixin(), Taro.getEnv());
   })
 
   return (

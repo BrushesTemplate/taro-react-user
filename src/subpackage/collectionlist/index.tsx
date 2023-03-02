@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 // import Taro from "@tarojs/taro";
 import {View, ScrollView,  CheckboxGroup} from '@tarojs/components';
-import {queryCollectPage} from '@brushes/api';
+import {queryCollectPage} from 'qj-b2c-api';
 import CollectItem from './components/collectItem';
 
 import './index.scss';

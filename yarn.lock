@@ -1222,19 +1222,6 @@
     qs "^6.11.0"
     typescript ">4.0.0"
 
-"@brushes/api@^0.4.19":
-  version "0.4.19"
-  resolved "https://registry.npmjs.org/@brushes/api/-/api-0.4.19.tgz#87e7eb15a1085cc5b49a57586fa755916c79c046"
-  integrity sha512-H4KFheS0w5VdTsPjHD+Zcr4ljETyTlOFk+UsA+irlenL+O+2jUWv2rJpC1/5h/Le0mCm8Qeh4g7+lYTx8qSTWA==
-  dependencies:
-    "@tarojs/taro" "^3.5.7"
-    "@types/node" ">18.0.0"
-    flyio "^0.6.14"
-    lodash-es "^4.17.21"
-    prettier "^2.7.1"
-    qs "^6.11.0"
-    typescript ">4.0.0"
-
 "@brushes/api@^0.4.9":
   version "0.4.18"
   resolved "https://registry.npmjs.org/@brushes/api/-/api-0.4.18.tgz#116575301744389ee7fa6a2ff091c8034ec8cfb6"
@@ -1271,6 +1258,15 @@
     antd-mobile "^5.24.2"
     lodash-es "^4.17.21"
     react "^18.0.0"
+
+"@brushes/request@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.1.tgz#21a79a8f2120dca221a9915cc9b9e4c6f2ceb9d3"
+  integrity sha512-w4AaYQ5WXF5oWh0nSIZfpVvhh+39GA7annHqdnm7aI+48cPj37FmcXPQ6jBe6fpWfuDrjU2BhIDxjd2jasWZkA==
+  dependencies:
+    "@tarojs/taro" "^3.6.2"
+    lodash-es "^4.17.21"
+    qs "^6.11.0"
 
 "@brushes/tools@^1.0.29", "@brushes/tools@^1.0.31":
   version "1.0.31"
@@ -2306,7 +2302,7 @@
     "@tarojs/api" "3.6.1"
     "@tarojs/runtime" "3.6.1"
 
-"@tarojs/taro@3.6.2":
+"@tarojs/taro@3.6.2", "@tarojs/taro@^3.6.2":
   version "3.6.2"
   resolved "https://registry.npmjs.org/@tarojs/taro/-/taro-3.6.2.tgz#a3822bce792e5132412f0643770fdf2fa19ff154"
   integrity sha512-eggPEXwRvpj2Co6+qbpL+/8DXg+fKKjckeKJlfXLuiPkd2Y9CTWKBjRgJg9nbov2sNDpZ8N+YnWJ1G9Fg/5MHA==
@@ -11767,13 +11763,20 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.0.tgz#f67fa67c94da8f4d0cfff981aee4118064199b8f"
   integrity sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==
 
-qj-mobile-store@^1.0.20:
-  version "1.0.20"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.20.tgz#ca64515685fe04b6f9c42a66501e2f0008be7546"
-  integrity sha512-/CPNQ8qncWmB/clkaLyHvOjxmZC5bEaPXVjGNOeGOItCWOv3y0LSrWuqrfQsv7XtPwwOy2AVBpyyCim75Dpjbg==
+qj-b2c-api@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.0.tgz#fe55206692e4045a043679c7920ba1ec9dcdc6bd"
+  integrity sha512-JTSTwTW602TQYNNfuIQyC/42t2t7urFVueJEHJJYKfSxIF+quNW3Cb3U64bHbFXOlA988SjsNSr5G7B5+dWa+Q==
   dependencies:
-    "@brushes/api" "^0.4.19"
+    "@brushes/request" "^0.0.1"
+
+qj-mobile-store@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.21.tgz#9722bcbb998069892c3d46a1bad9eac8de0a896b"
+  integrity sha512-wcV7Vx0+S6hfR5pmciKN92grmBBFOk4KGLR5bXb/rlpfKGWdrwIw4+3vKwm3C8dLf++EpXBRvcFhiXu4T+smQA==
+  dependencies:
     "@brushes/qj-simulate-component" "^0.0.10"
+    qj-b2c-api "^1.0.0"
 
 qs@6.11.0, qs@^6.11.0:
   version "6.11.0"
@@ -12812,18 +12815,19 @@ rxjs@^6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^0.1.38:
-  version "0.1.38"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.38.tgz#074eb99c032e5d38d203a36aefdbcb7a9736bc88"
-  integrity sha512-Dm87S/1euDlAEXcVLd3T9ygbIEKge/fuTYluJxv+EtKSlabbD8yUHsBkaPsW5WF2UfZO1jur0QsUJylVoZ1vDw==
+s-material-react@^0.1.39:
+  version "0.1.39"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.39.tgz#4997c482fe27383d5655b6405cc94b925c4a4774"
+  integrity sha512-l9aN6P4/Jts+2DoXZrHINLueIsUKj4tMGgfKUWFfFjbASMlbr5bdiQw32RJw/2qYF4o6JPkAyjBki+tqJY/dnQ==
   dependencies:
-    "@brushes/api" "^0.4.19"
     "@brushes/qj-simulate-component" "^0.1.2"
+    "@brushes/request" "^0.0.1"
     "@brushes/tools" "^1.0.31"
     "@stencil/core" "^2.19.1"
     china-division "^2.5.0"
     classnames "^2.3.2"
-    qj-mobile-store "^1.0.20"
+    qj-b2c-api "^1.0.0"
+    qj-mobile-store "^1.0.21"
     react "^18.0.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:

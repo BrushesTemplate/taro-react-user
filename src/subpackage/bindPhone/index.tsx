@@ -1,7 +1,7 @@
 import Taro from '@tarojs/taro';
 import {View, Button, Image, CheckboxGroup, Checkbox} from '@tarojs/components';
 import {useState} from 'react';
-import {saveUmuserPhoneByWX, warrantyLogin} from '@brushes/api'
+import {saveUmuserPhoneByWX, warrantyLogin} from 'qj-b2c-api'
 import './index.scss'
 import logo from './logo.png';
 import bg from './bg.png';

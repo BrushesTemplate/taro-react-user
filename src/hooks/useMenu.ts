@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import Taro from '@tarojs/taro';
-import {queryTginfoMenuTree} from '@brushes/api';
+import {queryTginfoMenuTree} from 'qj-b2c-api';
 import {menuDefaultValue} from '@/custom-tab-bar/basic';
 import {errMessage} from '@/utils/message';
 

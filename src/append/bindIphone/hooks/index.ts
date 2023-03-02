@@ -1,4 +1,4 @@
-import {saveUmuserPhoneByWX} from '@brushes/api';
+import {saveUmuserPhoneByWX} from 'qj-b2c-api';
 import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
 import {sucMessage} from '@/utils/message';

@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro';
-import { warrantyLogin } from '@brushes/api';
+import { warrantyLogin } from 'qj-b2c-api';
 import get from 'lodash-es/get';
 
 async function checkSession(){

@@ -1,6 +1,6 @@
 // import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
-import {wxLogin} from '@brushes/api';
+import {wxLogin} from '@brushes/request';
 
 export function useLogin() {
   // const bindImpl = () => {
