@@ -7,14 +7,21 @@
     .goodsImg {
       width: 90px;
       height: 90px;
-      background-color: #ccc;
       margin-right: 20px;
       position: relative;
+      background: no-repeat center;
+      background-size: cover;
+
 
       .tip {
-        height: 35px;
-        line-height: 35px;
-        background-color: rgba(0, 0, 0, 0.3);
+        height: 28px;
+        line-height: 28px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        text-align: center;
       }
     }
 
