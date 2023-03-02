@@ -1,0 +1,30 @@
+.expressInfo {
+  .expressInfoTop {
+    padding: 22px 16px;
+    display: flex;
+    border-bottom: 10px solid #fafafa;
+
+    .goodsImg {
+      width: 90px;
+      height: 90px;
+      background-color: #ccc;
+      margin-right: 20px;
+      position: relative;
+
+      .tip {
+        height: 35px;
+        line-height: 35px;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .list {
+      flex: 1;
+
+      .listItem {
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+  }
+}
