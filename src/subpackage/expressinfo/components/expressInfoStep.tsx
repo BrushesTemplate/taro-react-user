@@ -5,11 +5,23 @@ import {get} from "lodash-es";
 export const ExpressInfoStep = ({code}) => {
   const { detail} = useExpressInfo(code);
 
-  const state = get(detail, 'message');
+  const message = get(detail, 'message');
+  const list = get(detail, 'data');
 
   return (
     <View className='expressInfoStep'>
-      {state}
+      {
+        message === 'ok' ?
+          list.map((item, index) => {
+            return (
+              <View key={index} className='step'>
+                <View className='time'>{item.time}</View>
+                <View >{item.context}</View>
+              </View>
+            )
+          })
+          :<View className='noInfo'>{message}</View>
+      }
     </View>
   )
 }
