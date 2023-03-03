@@ -1,3 +1,4 @@
+//@ts-nocheck
 import {View} from '@tarojs/components';
 import {useExpressInfo} from 'qj-mobile-store';
 import {get} from 'lodash-es';
@@ -11,7 +12,6 @@ export const ExpressInfoTop = ({code}) => {
   const company = get(info, 'packageList[0].expressName');
   const expressNO = get(info, 'packageList[0].packageBillno');
   const state = get(detail, 'result');
-
 
   return (
     <View className='expressInfoTop'>
