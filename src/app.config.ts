@@ -21,7 +21,7 @@ export default defineAppConfig({
 
     'subpackage/expressinfo/index',
 
-    // 'subpackage/collectionlist/index',
+    'subpackage/collectionlist/index',
     // 'subpackage/bindPhone/index',
     // 'append/bindIphone/index',
     // demo
