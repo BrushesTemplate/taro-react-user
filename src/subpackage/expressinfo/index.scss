@@ -7,14 +7,21 @@
     .goodsImg {
       width: 90px;
       height: 90px;
-      background-color: #ccc;
       margin-right: 20px;
       position: relative;
+      background: center no-repeat;
+      background-size: cover;
 
       .tip {
-        height: 35px;
-        line-height: 35px;
-        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #fff;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
       }
     }
 
@@ -26,5 +33,10 @@
         line-height: 30px;
       }
     }
+  }
+
+  .expressInfoStep {
+    padding: 40px 30px;
+    text-align: center;
   }
 }
