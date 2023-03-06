@@ -20,10 +20,9 @@ export default defineAppConfig({
     'subpackage/paymentmode/index',
 
     'subpackage/expressinfo/index',
-
     // 'subpackage/collectionList/index',
     // 'subpackage/bindPhone/index',
-    'append/bindIphone/index',
+    // 'append/bindIphone/index',
     // demo
     'pages/demo/index',
     // 收藏列表

@@ -1,10 +1,19 @@
 import { Component, PropsWithChildren } from 'react'
 import './app.scss'
+import Taro from '@tarojs/taro';
+import { fly } from '@brushes/request';
 import {safeArea} from "./utils";
-
 class App extends Component<PropsWithChildren> {
 
   componentDidMount () {
+    // fly.interceptors.request.use((config) => {
+    //   //给所有请求添加自定义header
+    //   config.headers = {'saas-token': JSON.parse(Taro.getStorageSync('saas-token') || '{}').ticketTokenid}
+    //   config.baseURL = process.env.REACT_APP_BASE_URL
+    //   config.headers['Saas-Agent'] = 'qj-wemini';
+    //   return config;
+    // })
+    fly.config.baseURL = process.env.REACT_APP_BASE_URL
     // /**
     //  * 初次加载判断网络情况
     //  * 无网络状态下根据实际情况进行调整
