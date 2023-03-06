@@ -1,12 +1,15 @@
 import {View, Image, Checkbox} from '@tarojs/components';
-import {navigatorImpl} from '@brushes/qj-simulate-component';
-// import {routerMap} from "../../../routerMap";
+import {navigatorImpl} from '@brushes/utils';
+
 import '../index.scss';
 
-const CollectItem = ({item}) => {
+const CollectItem = ({item, edit}) => {
+
   return (
     <View className='collectItem'>
-      <Checkbox className='lPart' value={'123'}></Checkbox>
+      {
+        edit?<Checkbox className='lPart' value={item.collectCode}></Checkbox>:null
+      }
       <View className='rPart' onClick={() => navigatorImpl(`/subpackage/gooddetail/index?skuCode=${item.skuCode}`)}>
         <Image src={item.collectOppic} className='img' />
         <View className='info'>
