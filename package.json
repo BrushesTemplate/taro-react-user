@@ -56,7 +56,7 @@
     "dotenv": "^16.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.2.0",
-    "s-material-react": "^0.1.51"
+    "s-material-react": "^0.1.52"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",
