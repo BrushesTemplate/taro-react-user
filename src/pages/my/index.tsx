@@ -3,7 +3,6 @@ import { View } from '@tarojs/components';
 import { useState } from 'react';
 import CommonJsx from '../../components';
 
-
 const Index = () => {
   const { path } = useRouter();
   const [userNickname, setName] = useState(Taro.getStorageSync('userNickname'))
