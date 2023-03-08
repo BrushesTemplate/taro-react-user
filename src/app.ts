@@ -1,6 +1,5 @@
 import { Component, PropsWithChildren } from 'react'
 import './app.scss'
-import Taro from '@tarojs/taro';
 import { fly } from '@brushes/request';
 import {safeArea} from "./utils";
 class App extends Component<PropsWithChildren> {

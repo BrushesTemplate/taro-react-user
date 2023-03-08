@@ -1,5 +1,4 @@
-import get from 'lodash-es/get';
-import noop from 'lodash-es/noop';
+import { get, noop } from 'lodash-es';
 import {View} from '@tarojs/components';
 import * as materials from 's-material-react';
 import Taro from "@tarojs/taro";

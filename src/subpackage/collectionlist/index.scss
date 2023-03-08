@@ -1,4 +1,13 @@
 .collectList {
+  .noDate {
+    .img {
+      display: block;
+      margin: 100px auto 0;
+      width: 203px;
+      height: 165px;
+    }
+  }
+
   .topBar {
     height: 50px;
     line-height: 50px;
@@ -17,6 +26,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .checkAll {
+      margin-left: 20px;
+      .wx-checkbox-input {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+
+      .wx-checkbox-input.wx-checkbox-input-checked {
+        background-color: #000000;
+      }
+
+      .wx-checkbox-input.wx-checkbox-input-checked::before {
+        color: #ffffff;
+        font-size: 14px;
+      }
+    }
 
     .btn {
       margin: 0 20px 0 0;
@@ -56,6 +83,7 @@
 
     .info {
       flex: 1;
+
       .title {
         font-size: 14px;
       }

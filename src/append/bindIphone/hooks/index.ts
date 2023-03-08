@@ -2,7 +2,6 @@ import {saveUmuserPhoneByWX} from 'qj-b2c-api';
 import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
 import {sucMessage} from '@/utils/message';
-// import { last } from 'lodash-es';
 
 export const msgInfo = [
   {
