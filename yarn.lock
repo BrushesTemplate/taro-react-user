@@ -1179,23 +1179,23 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@brushes/request@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.7.tgz#d8d735cc4a2ee8db1244b37b52686d8e992f1185"
-  integrity sha512-YbK1tZTOcJTsc8n/9dNZx627006oC/oLgoWOIcPOmC6SW4I6kauFxdpG1CfwM+4vT23suC7D93dlHQDX2APWoA==
+"@brushes/request@^0.0.8":
+  version "0.0.8"
+  resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.8.tgz#e74f6b6a8c429d015b3496ebdfe91fa260bb9691"
+  integrity sha512-iFfiGFKlaDtOaL9hvJfjxRsd6YusZOwx8NU22PruU889WYyGTcn7lEaYrHT8HuyUE1MmM6vl+EKeK9ryvvrqYw==
   dependencies:
-    "@brushes/utils" "^0.0.11"
+    "@brushes/utils" "^0.0.12"
     "@tarojs/taro" "^3.6.2"
     flyio "^0.6.14"
     lodash-es "^4.17.21"
     qs "^6.11.0"
 
-"@brushes/simulate-component@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.npmjs.org/@brushes/simulate-component/-/simulate-component-0.1.10.tgz#ec53e28b9dadd91a09c8fa077e5653b3ff32041b"
-  integrity sha512-psp7htUGT4jIWefm1CmvzZgE/ZgaNN0asQ8vvj08Fhf6EyBSVvN24dft+O/FZiZeV7geIuA6UAEQ6+qud2Gifg==
+"@brushes/simulate-component@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.npmjs.org/@brushes/simulate-component/-/simulate-component-0.1.11.tgz#8e1430153bd9f7966487f8b9e01f2811b8556690"
+  integrity sha512-mMR2ICSH8Q+5JzfOI82zImQ/2oKUlH0kvVbWg68lN9Ex6fmBNYB/qiWIP1v8XZBTIygvkNe39iVfMfPOJw+mcA==
   dependencies:
-    "@brushes/utils" "^0.0.10"
+    "@brushes/utils" "^0.0.12"
     "@tarojs/components" "^3.5.7"
     "@tarojs/plugin-platform-weapp" "^3.5.7"
     antd-mobile "^5.24.2"
@@ -1203,19 +1203,10 @@
     lodash-es "^4.17.21"
     react "^18.0.0"
 
-"@brushes/utils@^0.0.10":
-  version "0.0.10"
-  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.10.tgz#efc1dd6d6e8d732ea63d6975be42ac213db1fb3c"
-  integrity sha512-/1GqI0s/PYOIo380zu4h27X98K9VbMI7I6+StJ2TNlTCpYXw3vOdYx0kO7m9QOYBKIE6tBhB55RBqeV2hN3/aQ==
-  dependencies:
-    "@tarojs/taro" "^3.6.2"
-    lodash-es "^4.17.21"
-    react "^18.2.0"
-
-"@brushes/utils@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.11.tgz#df7fd31c0e7514073cd2568f74fe21498e7bb9b6"
-  integrity sha512-KoyX5aJZb0+hw8LpW3Cyk5s2KUpI0eOxwY69mU3hmBVU+O0QikYDlfztbz0NCdK1DdQWIFRx60pIR6bj2UYn/Q==
+"@brushes/utils@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.12.tgz#dc189a3a6268a080bb8ef925ff8b305ea9d712d9"
+  integrity sha512-l5OoDX9tx10//uYr6ee2momOHN1cHQgktOLE5ddUGnZ6cwnpXnISFJUUja8DTNkpL9KDA/n5c6OpMBw2L6Ci7g==
   dependencies:
     "@tarojs/taro" "^3.6.2"
     lodash-es "^4.17.21"
@@ -9791,21 +9782,21 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
-qj-b2c-api@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.15.tgz#3bcd9f2dd71b2c51070893606db98913756551d4"
-  integrity sha512-NpXilSXJbDoA0GALW2E84DdpgcI6lqFh9md/GhS8nQqU5DpKwGUiyP6S83SYUbVVJTOjxQ4UPaq8JgOQEA6jrQ==
+qj-b2c-api@^1.0.17, qj-b2c-api@^1.0.18:
+  version "1.0.18"
+  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.18.tgz#821a4af0c62b1e0a5424bbdda4182b8f073ac622"
+  integrity sha512-8GmeyyeHQMod9CAIOLeYZCI5GFvmutWafsNU0rd7Q+88/DRB4xZY/IC5GrT18ryP/AfUGltXUByygcLhZEN+Mw==
   dependencies:
-    "@brushes/request" "^0.0.7"
+    "@brushes/request" "^0.0.8"
 
-qj-mobile-store@^1.0.33:
-  version "1.0.33"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.33.tgz#4b4e29d8b1eacf700c45a1587399a864534e84ec"
-  integrity sha512-iBaXankht0Wxnda88FZM3Qdf9fNDN4Gf8rrzJFdV1+6ZFhKBOCQR7UZ0dExqnCXFm5NKkcNUIuQItrticwGuXA==
+qj-mobile-store@^1.0.36:
+  version "1.0.38"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.38.tgz#ac3ab86281fe5dffd996123504cc056bc29e7cb2"
+  integrity sha512-JA2zNQ8eAD8icUpa1yJ3JBIjYh96QElu6P+21YnYIL8jQJElJvpN6w6tjHKdxq/m4ep96W1RGbRUZEzAlQDqvQ==
   dependencies:
-    "@brushes/utils" "^0.0.10"
+    "@brushes/utils" "^0.0.12"
     lodash-es "^4.17.21"
-    qj-b2c-api "^1.0.15"
+    qj-b2c-api "^1.0.18"
     react "^18.0.0"
 
 qs@6.11.0:
@@ -10373,19 +10364,19 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^0.1.61:
-  version "0.1.61"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.61.tgz#067e95874d00ae676c44cea5fcc82071e176b1ce"
-  integrity sha512-EBxr43ZELlb2mGugXBBEh8N9kMcs1XleTQhaxHUlb8hx+MahgMc//trUaCnmzDmrw+aPXbwktMd2UzPDF+2wEA==
+s-material-react@^0.1.65:
+  version "0.1.65"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.65.tgz#bee3782e0b5248074b01ad936bc498a204aeefff"
+  integrity sha512-swtm1gqmpZLk9FBoXqKZy82uMCe6ghWkyq6addE21JFWYsYOoy1uti3iLwmbYs/6RCU1xqp1wPWk7F9VqXbztQ==
   dependencies:
-    "@brushes/simulate-component" "^0.1.10"
-    "@brushes/utils" "^0.0.11"
+    "@brushes/simulate-component" "^0.1.11"
+    "@brushes/utils" "^0.0.12"
     "@stencil/core" "^3.1.0"
     china-division "^2.6.0"
     classnames "^2.3.2"
     lodash-es "^4.17.21"
-    qj-b2c-api "^1.0.15"
-    qj-mobile-store "^1.0.33"
+    qj-b2c-api "^1.0.17"
+    qj-mobile-store "^1.0.36"
     react "^18.2.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
@@ -12098,10 +12089,10 @@ webpack-virtual-modules@^0.4.3:
   resolved "https://registry.npmjs.org/webpack-virtual-modules/-/webpack-virtual-modules-0.4.6.tgz#3e4008230731f1db078d9cb6f68baf8571182b45"
   integrity sha512-5tyDlKLqPfMqjT3Q9TAqf2YqjwmnUleZwzJi1A5qXnlBCdj2AtOJ6wAWdglTIDOPgOiOrXeBeFcsQ8+aGQ6QbA==
 
-webpack@5.75.0:
-  version "5.75.0"
-  resolved "https://registry.npmjs.org/webpack/-/webpack-5.75.0.tgz#1e440468647b2505860e94c9ff3e44d5b582c152"
-  integrity sha512-piaIaoVJlqMsPtX/+3KTTO6jfvrSYgauFVdt8cr9LTHKmcq/AMd4mhzsiP7ZF/PGRNPGA8336jldh9l2Kt2ogQ==
+webpack@5.76.0:
+  version "5.76.0"
+  resolved "https://registry.npmjs.org/webpack/-/webpack-5.76.0.tgz#f9fb9fb8c4a7dbdcd0d56a98e56b8a942ee2692c"
+  integrity sha512-l5sOdYBDunyf72HW8dF23rFtWq/7Zgvt/9ftMof71E/yUb1YLOBmTgA2K4vQthB3kotMrSj609txVE0dnr2fjA==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^0.0.51"
