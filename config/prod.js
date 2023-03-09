@@ -1,5 +1,6 @@
 module.exports = {
   env: {
+    platform: 'user',
     NODE_ENV: '"production"',
     REACT_APP_BASE_URL: '"https://b2cweapp40673927e2a14ea49df338dc06bd4e9a.saas.qjclouds.com/"',
     REACT_APP_SESSION_KEY: '"saas-token"',

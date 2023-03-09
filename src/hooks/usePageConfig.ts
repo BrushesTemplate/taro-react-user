@@ -48,7 +48,7 @@ export function usePageConfig(route: string) {
     if(isEmpty(menu)) {
       menu = await loadMenu()
     }
-    const {menuOpcode} = menu.find(item => item.menuJspath === path) || {};
+    const {menuOpcode} = menu.find(item => path.includes(item.menuJspath)) || {};
 
     if(!menuOpcode) {
       errMessage('菜单配置有问题');

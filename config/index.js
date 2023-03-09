@@ -29,9 +29,17 @@ const config = {
   compiler: {
     type: 'webpack5',
     prebundle: {
-      // force: true,
-      // enable: false
-      exclude: ['antd-mobile', '@brushes/simulate-component', 's-material-react', "qj-mobile-store", "qj-b2c-api"]
+      force: true,
+      // enable: false,
+      exclude: [
+        'antd-mobile',
+        '@brushes/utils',
+        'lodash-es',
+        '@brushes/simulate-component',
+        's-material-react',
+        "qj-mobile-store",
+        "qj-b2c-api"
+      ]
     }
   },
   cache: {
@@ -61,9 +69,12 @@ const config = {
     }
   },
   h5: {
-    devServer: {
-      hot: false,
-    },
+    // compiler: {
+    //   type: 'webpack5',
+    //   prebundle: {
+    //     enable: false
+    //   }
+    // },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
