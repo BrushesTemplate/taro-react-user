@@ -38,9 +38,9 @@
     "@babel/runtime": "^7.7.7",
     "@tarojs/components": "3.5.7",
     "@tarojs/helper": "3.5.7",
-    "@tarojs/mini-runner": "^3.5.7",
+    "@tarojs/mini-runner": "3.5.7",
     "@tarojs/plugin-framework-react": "3.5.7",
-    "@tarojs/plugin-html": "^3.5.7",
+    "@tarojs/plugin-html": "3.5.7",
     "@tarojs/plugin-platform-alipay": "3.5.7",
     "@tarojs/plugin-platform-jd": "3.5.7",
     "@tarojs/plugin-platform-qq": "3.5.7",
@@ -56,7 +56,7 @@
     "dotenv": "^16.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.2.0",
-    "s-material-react": "^0.1.52"
+    "s-material-react": "^0.1.54"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro';
 import { warrantyLogin } from 'qj-b2c-api';
-import get from 'lodash-es/get';
+import {get} from 'lodash-es';
 
 async function checkSession(){
   return new Promise((resolve, reject) => {

@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '商品2评价',
+  navigationBarTitleText: '商品评价',
 })

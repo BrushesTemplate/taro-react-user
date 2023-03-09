@@ -23,8 +23,6 @@ export default defineAppConfig({
     'subpackage/collectionlist/index',
     'subpackage/ratedetail/index',
     'append/bindIphone/index',
-    // demo
-    'pages/demo/index',
     // 收藏列表
     ...mine,
   ],

@@ -31,7 +31,7 @@ const config = {
     prebundle: {
       // force: true,
       // enable: false
-      exclude: ['antd-mobile', '@brushes/simulate-component', 's-material-react']
+      exclude: ['antd-mobile', '@brushes/simulate-component', 's-material-react', "qj-mobile-store", "qj-b2c-api"]
     }
   },
   cache: {
@@ -61,9 +61,9 @@ const config = {
     }
   },
   h5: {
-    // devServer: {
-    //   hot: false,
-    // },
+    devServer: {
+      hot: false,
+    },
     publicPath: '/',
     staticDirectory: 'static',
     postcss: {
