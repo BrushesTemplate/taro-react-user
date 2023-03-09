@@ -2,7 +2,6 @@ import { Component, PropsWithChildren } from 'react'
 import './app.scss'
 import Taro from '@tarojs/taro';
 import {safeArea} from "./utils";
-import { getEnv } from '@brushes/utils';
 import { fly } from "@brushes/request";
 class App extends Component<PropsWithChildren> {
 
@@ -10,7 +9,7 @@ class App extends Component<PropsWithChildren> {
     fly.interceptors.request.use((config) => {
       //给所有请求添加自定义header
       config.headers = {'saas-token': Taro.getStorageSync('saas-token')}
-      config.baseURL = process.env.REACT_APP_BASE_URL
+      config.baseURL = 'https://b2cweapp635ca015077d45b3ae16c164407bf0bf.saas.qjclouds.cn/'
       config.headers['Saas-Agent'] = 'qj-wemini';
       return config;
     })
