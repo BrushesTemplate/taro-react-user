@@ -21,6 +21,8 @@ export default defineAppConfig({
 
     'subpackage/expressinfo/index',
     'subpackage/collectionlist/index',
+    'subpackage/footprint/index',
+    'subpackage/ratedetail/index',
     'append/bindIphone/index',
     // 收藏列表
     ...mine,
