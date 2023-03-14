@@ -5,7 +5,7 @@ import HeaderJsx from '@/components/header';
 const CommonJsx = ({route, ...rest}: { route : string; [v:string]: any}) => {
   const node = usePageConfig(route);
   return (
-    <View>
+    <View className={'wrapper'}>
       <HeaderJsx />
       <DynamicComponent node={node} {...rest} />
     </View>
