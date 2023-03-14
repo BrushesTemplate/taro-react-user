@@ -13,7 +13,7 @@ class App extends Component<PropsWithChildren> {
       }
       if(Taro.getEnv() === 'WEAPP') {
         config.headers['Saas-Agent'] = 'qj-wemini';
-        config.baseURL = process.env.WEAPP
+        config.baseURL = 'https://b2cweapp40673927e2a14ea49df338dc06bd4e9a.saas.qjclouds.com/'
       } else {
         config.baseURL = process.env.REACT_APP_BASE_URL
       }

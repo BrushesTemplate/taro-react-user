@@ -218,6 +218,8 @@ async function checkAndAuthorize (scope) {
   })
 }
 
+const mobileRex = /^1[3456789]\d{9}$/
+
 export default {
   checkHasLogined,
   // wxaCode: wxaCode,
@@ -226,4 +228,5 @@ export default {
   checkAndAuthorize,
   // authorize: authorize,
   // bindSeller: bindSeller
+  mobileRex
 }

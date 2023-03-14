@@ -1179,21 +1179,21 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@brushes/request@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.8.tgz#e74f6b6a8c429d015b3496ebdfe91fa260bb9691"
-  integrity sha512-iFfiGFKlaDtOaL9hvJfjxRsd6YusZOwx8NU22PruU889WYyGTcn7lEaYrHT8HuyUE1MmM6vl+EKeK9ryvvrqYw==
+"@brushes/request@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.11.tgz#909b4fab8e8499f61597c8aac60388659428c624"
+  integrity sha512-mT5+czm6GjmDqmrN9hAa3A1T9lm7kzg/H9n5WKBPUADpnnTX103BvT80GFgeK7pVgq7kut2ObFbkJM/xuDaecQ==
   dependencies:
-    "@brushes/utils" "^0.0.12"
+    "@brushes/utils" "^0.0.13"
     "@tarojs/taro" "^3.6.2"
     flyio "^0.6.14"
     lodash-es "^4.17.21"
     qs "^6.11.0"
 
-"@brushes/simulate-component@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.npmjs.org/@brushes/simulate-component/-/simulate-component-0.1.11.tgz#8e1430153bd9f7966487f8b9e01f2811b8556690"
-  integrity sha512-mMR2ICSH8Q+5JzfOI82zImQ/2oKUlH0kvVbWg68lN9Ex6fmBNYB/qiWIP1v8XZBTIygvkNe39iVfMfPOJw+mcA==
+"@brushes/simulate-component@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.npmjs.org/@brushes/simulate-component/-/simulate-component-0.1.12.tgz#d7c8876cefc17596bd4adbf32393043ff584baf7"
+  integrity sha512-3H5rfUJH6HmDSErGrZT8Q3PUPJ5HGuPqN86DKZNZN9R0Q93dAK3vDELNOrRLvWzsCPUSnU/pAdooB66YqJ1Jnw==
   dependencies:
     "@brushes/utils" "^0.0.12"
     "@tarojs/components" "^3.5.7"
@@ -1207,6 +1207,15 @@
   version "0.0.12"
   resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.12.tgz#dc189a3a6268a080bb8ef925ff8b305ea9d712d9"
   integrity sha512-l5OoDX9tx10//uYr6ee2momOHN1cHQgktOLE5ddUGnZ6cwnpXnISFJUUja8DTNkpL9KDA/n5c6OpMBw2L6Ci7g==
+  dependencies:
+    "@tarojs/taro" "^3.6.2"
+    lodash-es "^4.17.21"
+    react "^18.2.0"
+
+"@brushes/utils@^0.0.13":
+  version "0.0.13"
+  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.13.tgz#b3c784e0762fcdab7e214646b6ae4160aaeb3064"
+  integrity sha512-vA0pc3PH9jPqnjcny9K0Vz407MzI38n9JxfQrSV53nkzq9/32w5tg1/2KOb0RXBC7Tz3KL7T/UTkkAXWGM1Pkg==
   dependencies:
     "@tarojs/taro" "^3.6.2"
     lodash-es "^4.17.21"
@@ -9782,21 +9791,21 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
-qj-b2c-api@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.19.tgz#6006251e6292fd53c9a7c80345d3988c1f177495"
-  integrity sha512-tuwqUY3CVCuLf4NT/e9se7Sv7pptgjnT2rvMXlHnB23iBAU0sMbVksb9cK0ZcA3aZp5igEOYTq1hmfhT+B9xFQ==
+qj-b2c-api@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.22.tgz#badd755dcdb6db63eaebdc1d8717c200e4def59a"
+  integrity sha512-SfdrWH87l7W10ypxf1/9oCJ8/Ns/c3Wv7gYA18yhPoFHeCvs/buQg96A7CxeTEh9bHwIG/H6wjtoYD4q0kzY7g==
   dependencies:
-    "@brushes/request" "^0.0.8"
+    "@brushes/request" "^0.0.11"
 
-qj-mobile-store@^1.0.42:
-  version "1.0.42"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.42.tgz#4b28dc7ef21f134ba579b6daf5a9a135601397f4"
-  integrity sha512-a+LHAD4dxbDvdAFhY3APsKW1rjcgGQ+hHFeTUGZBe/mRPd0sOEBR3YYxbMCCFfS1s0ch7j0NW7SxFnbGzbQFLA==
+qj-mobile-store@^1.0.44:
+  version "1.0.44"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.44.tgz#8cfcddcc3e70fb140d08109ba982db12d32a6991"
+  integrity sha512-uwZ5PaR6+CDnJUO5LkmX0PAHPAwnktX5VBp8NUUt8AgPRk1Q2DxM4VyVy4oH4pgS8ZDGoW1HMIBQGfw29Oh68w==
   dependencies:
     "@brushes/utils" "^0.0.12"
     lodash-es "^4.17.21"
-    qj-b2c-api "^1.0.19"
+    qj-b2c-api "^1.0.22"
     react "^18.0.0"
 
 qs@6.11.0:
@@ -10364,20 +10373,20 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^0.1.72:
-  version "0.1.72"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.72.tgz#868985fe1fa3c2f0b22019983b907389803edd97"
-  integrity sha512-wVP3hwUeK6fMilIKqzZUhcgYWz7IjXJX4BszhBGxjZkU3EHtSKzpLEb6AHsKgyLmdHwIRlv4pXRLT58BkPEUkA==
+s-material-react@^0.1.74:
+  version "0.1.74"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-0.1.74.tgz#bc927cb19e11b418dfb76e3e2d9fbbc8a12a4609"
+  integrity sha512-c4rp5qaOqNLeARCb/bykO9gv4I6u7LkdBf/GUexY4NKab2TS/EN+pHynSn3uWW86Jgy/8Exaa9jZLxJbXlFVQA==
   dependencies:
-    "@brushes/simulate-component" "^0.1.11"
+    "@brushes/simulate-component" "^0.1.12"
     "@brushes/utils" "^0.0.12"
     "@stencil/core" "^3.1.0"
     china-division "^2.6.0"
     classnames "^2.3.2"
     dayjs "^1.11.7"
     lodash-es "^4.17.21"
-    qj-b2c-api "^1.0.19"
-    qj-mobile-store "^1.0.42"
+    qj-b2c-api "^1.0.22"
+    qj-mobile-store "^1.0.44"
     react "^18.2.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:

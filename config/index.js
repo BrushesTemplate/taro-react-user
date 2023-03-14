@@ -1,4 +1,5 @@
 const path = require("path");
+console.log(2, process.env)
 const config = {
   projectName: 'taro-mobile-react',
   date: '2022-10-21',
@@ -10,7 +11,7 @@ const config = {
     375: 2 / 1
   },
   sourceRoot: 'src',
-  outputRoot: 'dist',
+  outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: [
     ['@tarojs/plugin-html', {
       pxtransformBlackList: [/am-/, /demo-/, /^body/]
@@ -70,7 +71,6 @@ const config = {
     }
   },
   h5: {
-    outputRoot: 'h5',
     // compiler: {
     //   type: 'webpack5',
     //   prebundle: {

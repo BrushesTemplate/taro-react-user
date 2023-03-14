@@ -1,4 +1,4 @@
-import { useRouter} from '@tarojs/taro';
+import { useRouter } from '@tarojs/taro';
 import {View} from '@tarojs/components';
 import './index.scss'
 import CommonJsx from '@/components';
