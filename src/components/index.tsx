@@ -1,11 +1,14 @@
 import {usePageConfig} from '@/hooks';
 import DynamicComponent from './dynamicComponent';
-
+import {View} from '@tarojs/components';
+import HeaderJsx from '@/components/header';
 const CommonJsx = ({route, ...rest}: { route : string; [v:string]: any}) => {
-  console.log(5, route);
-  const node = usePageConfig(route)
+  const node = usePageConfig(route);
   return (
-    <DynamicComponent node={node} {...rest} />
+    <View>
+      <HeaderJsx />
+      <DynamicComponent node={node} {...rest} />
+    </View>
   )
 }
 

@@ -2,15 +2,17 @@ import {useDidShow, useRouter} from '@tarojs/taro';
 import { View } from '@tarojs/components';
 import './index.scss'
 import CommonJsx from '../../components';
+import {useState} from 'react';
 
 const Index = () => {
+  const [refreshNum, setRefresh] = useState(0);
   const { path } = useRouter();
   useDidShow(() => {
-    console.log('9', path)
+    setRefresh(prevState => prevState+1)
   })
   return (
     <View className='container'>
-      <CommonJsx route={path} topPage />
+      <CommonJsx refreshNum={refreshNum} route={path} topPage />
     </View>
   )
 }

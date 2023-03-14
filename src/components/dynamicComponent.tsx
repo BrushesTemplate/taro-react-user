@@ -16,7 +16,7 @@ const DynamicComponent = ({node, base, topPage, ...rest}: { node: Array<any>; [v
               height: base ? '' : `calc(100vh - ${safeArea}px - ${tabBarH}px)`
             }}
             >
-              <View className='content' style={{height: '100%'}}>
+              <View className='content'>
                 <MaterialsComponent {...props} {...rest} />
               </View>
             </View>
