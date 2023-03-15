@@ -11,12 +11,13 @@ import {getCurrentPages, useDidShow} from '@tarojs/taro';
 import {useRef} from 'react';
 
 export default () => {
-  const [form] = Form.useForm();
   const onFinish = useBindPhone();
+  const [form] = Form.useForm();
   const callback = useRef();
   useDidShow(() => {
     const pages= getCurrentPages()
     const current = pages[pages.length - 1];
+    console.log('1111current=====>', current)
     const event = current.getOpenerEventChannel();
     event.on('handler', params => {
       callback.current = params

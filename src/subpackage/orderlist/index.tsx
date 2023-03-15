@@ -12,7 +12,7 @@ const Index = () => {
     setRefreshNum(prevState => ++prevState)
   })
   return (
-    <View className='container'>
+    <View className='container-order'>
       <CommonJsx route={path} refreshNum={refreshNum} />
     </View>
   )

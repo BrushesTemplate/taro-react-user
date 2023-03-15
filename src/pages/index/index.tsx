@@ -1,7 +1,6 @@
-import {useDidShow, useRouter} from '@tarojs/taro';
+import { useRouter } from '@tarojs/taro';
 import {View} from '@tarojs/components';
 import './index.scss'
-import {getEnv, getTaro} from '@brushes/utils';
 import CommonJsx from '@/components';
 import {BaseWrapCommon} from "@/components/baseWrapCommon";
 

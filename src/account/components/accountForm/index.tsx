@@ -5,7 +5,6 @@ import {MobileItem, CodeItem, PasswordItem, SubmitBtn, AccountItem} from "./comp
 import {useAccountForm} from "../../hooks";
 
 export const AccountForm = ({type, btnText, txt}: {type: string; btnText: string; txt?: string}) => {
-
   const {form, onFinish} = useAccountForm(type)
 
   return (

@@ -2,7 +2,6 @@ import {Form, Input} from 'antd-mobile'
 import {mobileRex} from "@/utils";
 
 export const MobileItem = ({txt = '手机号'}) => {
-
   return (
     <Form.Item
       name='mobile'
