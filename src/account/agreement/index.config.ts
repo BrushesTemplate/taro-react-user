@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '忘记密码',
+  navigationBarTitleText: '平台协议',
 })
