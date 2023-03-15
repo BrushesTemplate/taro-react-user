@@ -1,14 +1,12 @@
 import {View} from '@tarojs/components';
 import {Form} from 'antd-mobile';
 
-import {MobileItem, CodeItem, PasswordItem, SubmitBtn} from "./components";
-import {UseAccountForm} from "./hooks";
+import {MobileItem, CodeItem, PasswordItem, SubmitBtn, AccountItem} from "./components";
+import {useAccountForm} from "../../hooks";
 
-export const AccountForm = ({type, btnText}) => {
+export const AccountForm = ({type, btnText, txt}: {type: string; btnText: string; txt?: string}) => {
 
-  console.log(9, type)
-
-  const {form, onFinish} = UseAccountForm(type)
+  const {form, onFinish} = useAccountForm(type)
 
   return (
     <View>
@@ -20,13 +18,16 @@ export const AccountForm = ({type, btnText}) => {
         onFinish={onFinish}
       >
         {
-          type === 'reg' || type ==='mobileLogin' ? <MobileItem /> : null
+          type === 'accountLogin' ? <AccountItem /> : null
         }
         {
-          type === 'reg' || type ==='mobileLogin' ? <CodeItem form={form} type={type} /> : null
+          type === 'reg' || type === 'mobileLogin' || type === 'forgetPwd' ? <MobileItem /> : null
         }
         {
-          type === 'reg' ? <PasswordItem /> : null
+          type === 'reg' || type === 'mobileLogin' || type === 'forgetPwd' ? <CodeItem form={form} type={type} /> : null
+        }
+        {
+          type === 'reg' || type === 'accountLogin' || type === 'forgetPwd' ? <PasswordItem txt={txt} /> : null
         }
       </Form>
     </View>

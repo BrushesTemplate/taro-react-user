@@ -1,11 +1,7 @@
 import {Form, Input} from 'antd-mobile'
 import {mobileRex} from "@/utils";
-import {UseAccountForm} from "../../hooks";
 
 export const MobileItem = ({txt = '手机号'}) => {
-
-  const {setMobile} = UseAccountForm();
-
 
   return (
     <Form.Item
@@ -25,7 +21,6 @@ export const MobileItem = ({txt = '手机号'}) => {
         maxLength={11}
         clearable
         placeholder={`请输入${txt}`}
-        onChange={() => setMobile}
       />
     </Form.Item>
   )
