@@ -1,5 +1,4 @@
 const path = require("path");
-console.log(2, process.env)
 const config = {
   projectName: 'taro-mobile-react',
   date: '2022-10-21',

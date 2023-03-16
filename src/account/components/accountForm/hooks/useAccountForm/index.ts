@@ -3,7 +3,6 @@ import {Form} from 'antd-mobile';
 import Taro from '@tarojs/taro';
 import {saveUmuserPhone, saveUmuserPhoneVCode} from 'qj-b2c-api';
 import { errorCallback } from '@brushes/request'
-
 export const useAccountForm = (type) => {
   const [form] = Form.useForm();
   const [mobile, setMobile] = useState();
