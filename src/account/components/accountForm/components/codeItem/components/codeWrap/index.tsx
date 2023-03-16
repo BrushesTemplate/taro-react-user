@@ -27,7 +27,7 @@ export const CodeWrap = ({form, type}) => {
         const phone = {
           userPhone: mobile
         }
-        if(type !== 'mobileLogin') {
+        if(type === 'reg') {
           const checkResult = await checkUserPhone(phone);
           if(!checkResult.success) {
             errMessage(checkResult.msg);

@@ -24,9 +24,12 @@ export default defineAppConfig({
     'subpackage/footprint/index',
     'subpackage/ratedetail/index',
     'append/bindIphone/index',
+
     'account/register/index',
     'account/accountLogin/index',
     'account/mobileLogin/index',
+    'account/forgetPwd/index',
+    'account/agreement/index',
     // 收藏列表
     ...mine,
   ],

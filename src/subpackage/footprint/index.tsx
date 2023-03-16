@@ -3,12 +3,14 @@ import {useRef} from 'react';
 import Taro from "@tarojs/taro";
 import {View, ScrollView,  CheckboxGroup, Checkbox, Button, Image} from '@tarojs/components';
 import {useFootprint} from 'qj-mobile-store';
+import HeaderJsx from "@/components/header";
 import CollectItem from './components/collectItem';
 import {Footprint} from "./components/footprint";
 
 
 import './index.scss';
 import {FootprintGroup} from "./components/footprintGroup";
+
 
 const Index = () => {
   // @ts-ignore
@@ -17,7 +19,7 @@ const Index = () => {
 
   return (
     <View className='collectList'>
-      {edit}
+      <HeaderJsx />
 
       {
         footprintList.length === 0?
