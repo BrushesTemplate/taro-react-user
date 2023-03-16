@@ -1,0 +1,30 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/@tarojs/webpack5-runner/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/append/bindIphone/index.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.extraPart {
+  border-left: solid 2rpx #eeeeee;
+  padding-left: 24rpx;
+  font-size: 28rpx;
+  line-height: 44rpx;
+}
+
+.adm-list-item-content {
+  border-bottom: solid 2rpx #eee;
+}
+
+.adm-form-item-label .adm-form-item-required-asterisk {
+  --adm-color-danger: #f00 ;
+}
+
+.adm-form-item-feedback-error {
+  --adm-color-danger: #f00 ;
+}
+
+.adm-button-disabled {
+  opacity: 0.4;
+  color: #444 !important;
+}
+
+.adm-button:not(.adm-button-default).adm-button-fill-none {
+  --border-width: 0;
+}
