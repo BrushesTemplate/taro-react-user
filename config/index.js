@@ -38,7 +38,7 @@ const config = {
         '@brushes/utils',
         'lodash-es',
         '@brushes/simulate-component',
-        's-material-react',
+        '@brushes/react-material',
         "qj-mobile-store",
         "qj-b2c-api"
       ]
@@ -77,7 +77,7 @@ const config = {
     //     enable: false
     //   }
     // },
-    publicPath: '/',
+    publicPath: './',
     staticDirectory: 'static',
     postcss: {
       autoprefixer: {

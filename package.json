@@ -36,6 +36,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.21.0",
+    "@brushes/react-material": "^0.1.1",
     "@tarojs/components": "3.6.2",
     "@tarojs/helper": "3.6.2",
     "@tarojs/plugin-framework-react": "3.6.2",
@@ -52,8 +53,7 @@
     "@tarojs/shared": "3.6.2",
     "@tarojs/taro": "3.6.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "s-material-react": "^0.1.74"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",

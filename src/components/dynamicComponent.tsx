@@ -1,6 +1,6 @@
 import { get, noop } from 'lodash-es';
 import {View} from '@tarojs/components';
-import * as materials from 's-material-react';
+import * as materials from '@brushes/react-material';
 import Taro from "@tarojs/taro";
 import {useMemo} from 'react';
 
