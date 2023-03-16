@@ -6,14 +6,13 @@ import CommonJsx from '../../components';
 
 const Index = () => {
   const [refreshNum, setRefreshNum] = useState(0);
-  const { path = '/pages/index/index' } = useRouter();
+  const { path = '/pages/index/index', params } = useRouter();
   useDidShow(() => {
-    console.log('did show')
     setRefreshNum(prevState => ++prevState)
   })
   return (
     <View className='container-order'>
-      <CommonJsx route={path} refreshNum={refreshNum} />
+      <CommonJsx route={path} refreshNum={refreshNum} {...params} />
     </View>
   )
 }
