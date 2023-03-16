@@ -1,7 +1,8 @@
 import {View} from '@tarojs/components';
+import HeaderJsx from "@/components/header";
 import {AccountForm, AgreementEntry, TopLogo} from "../components";
-import {useAccountForm} from "../hooks";
 
+import {useAccountForm} from "../hooks";
 import './index.scss'
 
 const Index = () => {
@@ -10,6 +11,7 @@ const Index = () => {
 
   return (
     <View>
+      <HeaderJsx />
       <TopLogo />
       <AccountForm type='accountLogin' btnText='登录' />
       <View className='tip'>

@@ -13,7 +13,6 @@ export const useAgreement = (type?:string) => {
       const result = await queryProappConfigByChannel();
       const resultArr = get(result, 'list');
       for(let i =0; i< resultArr.length; i++) {
-        console.log(16, resultArr[i], proappCode.current, type)
         if(resultArr[i].proappCode === proappCode.current && resultArr[i].proappConfigType === type) {
           setAgreementData(resultArr[i].proappConfigText2)
           break;

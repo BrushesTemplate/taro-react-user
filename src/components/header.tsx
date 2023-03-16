@@ -29,7 +29,7 @@ const HeaderJsx = ({slot}: { slot?: ReactNode }) => {
         <View className='header'>
           {
             isTopPage() ? <View></View> :
-              <IconMobile style={{fontSize: 20}} value='xiangzuo' onClick={() => navigatorBackImpl(-1)}/>
+              <IconMobile style={{fontSize: 20}} value='xiangzuo' onClick={() => navigatorBackImpl(-1)} />
           }
           <View className='title'>{title}</View>
           <View>{slot}</View>

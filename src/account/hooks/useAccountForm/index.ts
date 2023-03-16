@@ -38,7 +38,7 @@ export const useAccountForm = (type?: string) => {
       setSubmitLock(true)
       await saveUmuserPhone(params);
       Taro.navigateBack({
-        delta: 1,
+        delta: stackLength()-1,
       })
     } catch (err) {
       console.log(27, err);
@@ -57,10 +57,10 @@ export const useAccountForm = (type?: string) => {
       setSubmitLock(true)
       const result = await saveUmuserPhoneVCode(params);
       console.log(51, result);
-      // Taro.navigateBack({
-      //   delta: 1,
-      // })
-      Taro.setStorageSync('saasToken', result.dataObj.ticketTokenid);
+      Taro.navigateBack({
+        delta: stackLength()-1,
+      })
+      Taro.setStorageSync('saas-token', result.dataObj.ticketTokenid);
     } catch (err) {
       console.log(27, err);
     } finally {
@@ -78,10 +78,10 @@ export const useAccountForm = (type?: string) => {
     try {
       setSubmitLock(true)
       const result = await login(params);
-      // Taro.navigateBack({
-      //   delta: 1,
-      // })
-      Taro.setStorageSync('saasToken', result.dataObj.ticketTokenid);
+      Taro.navigateBack({
+        delta: stackLength()-1,
+      })
+      Taro.setStorageSync('saas-token', result.dataObj.ticketTokenid);
     } catch (err) {
       console.log(27, err);
     } finally {
@@ -99,9 +99,9 @@ export const useAccountForm = (type?: string) => {
     try {
       setSubmitLock(true)
       await updateUmuserPw(params);
-      // Taro.navigateBack({
-      //   delta: 1,
-      // })
+      Taro.navigateBack({
+        delta: stackLength()-1,
+      })
     } catch (err) {
       console.log(27, err);
     } finally {
@@ -109,27 +109,31 @@ export const useAccountForm = (type?: string) => {
     }
   }
 
+  const stackLength = () => {
+    return Taro.getCurrentPages().length;
+  }
+
 
   const goRegister = () => {
-    Taro.redirectTo({
+    Taro.navigateTo({
       url: 'account/register/index'
     })
   }
 
   const goAccountLogin = () => {
-    Taro.redirectTo({
+    Taro.navigateTo({
       url: 'account/accountLogin/index'
     })
   }
 
   const goMobileLogin = () => {
-    Taro.redirectTo({
+    Taro.navigateTo({
       url: 'account/mobileLogin/index'
     })
   }
 
   const goForgetPwd = () => {
-    Taro.redirectTo({
+    Taro.navigateTo({
       url: 'account/forgetPwd/index'
     })
   }
