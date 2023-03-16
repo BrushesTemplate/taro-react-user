@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {Form} from 'antd-mobile';
 import Taro from '@tarojs/taro';
+import { setStorage } from '@brushes/utils'
 import {saveUmuserPhone, saveUmuserPhoneVCode} from 'qj-b2c-api';
 import { errorCallback } from '@brushes/request'
 export const useAccountForm = (type) => {
@@ -60,7 +61,7 @@ export const useAccountForm = (type) => {
         }
       })
       console.log(59, result.dataObj.ticketTokenid)
-      Taro.setStorageSync('saas-token', result.dataObj.ticketTokenid);
+      setStorage('saas-token', result.dataObj.ticketTokenid);
     } catch (err) {
       console.log(27, err);
     } finally {

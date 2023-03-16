@@ -2,10 +2,22 @@ import { get, noop } from 'lodash-es';
 import {View} from '@tarojs/components';
 import * as materials from 's-material-react';
 import Taro from "@tarojs/taro";
+import {useMemo} from 'react';
 
+const env = Taro.getEnv()
 const DynamicComponent = ({node, base, topPage, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
   const safeArea = Taro.getStorageSync('safeArea');
-  const tabBarH = topPage ? Taro.getStorageSync('tabBarHeight') : 0;
+  const tabBarH = useMemo(() => {
+    let heightDefault = 0
+
+    // h5 非tab页面
+    if (env === 'WEB' && !topPage) {
+      heightDefault = 37
+    }
+
+    return topPage ? Taro.getStorageSync('tabBarHeight') : heightDefault;
+  }, [])
+
   return (
     <>
       {

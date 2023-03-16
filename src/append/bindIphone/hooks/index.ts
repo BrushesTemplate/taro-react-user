@@ -2,7 +2,7 @@ import {saveUmuserPhoneByWX} from 'qj-b2c-api';
 import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
 import {sucMessage} from '@/utils/message';
-
+import { get } from 'lodash-es'
 export const msgInfo = [
   {
     value: '1',
@@ -31,8 +31,9 @@ export function useBindPhone() {
       if(data.success) {
         sucMessage(data);
       }
-
-      Taro.setStorageSync('saas-token', JSON.stringify(data.dataObj));
+      const token = get(data, 'dataObj.ticketTokenid', '')
+      Taro.setStorageSync('saas-token', token);
+      Taro.setStorageSync('user-info', data.dataObj);
       Taro.navigateBack({
         delta: 1,
         complete: () => {

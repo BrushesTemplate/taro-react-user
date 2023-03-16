@@ -17,7 +17,6 @@ export default () => {
   useDidShow(() => {
     const pages= getCurrentPages()
     const current = pages[pages.length - 1];
-    console.log('1111current=====>', current)
     const event = current.getOpenerEventChannel();
     event.on('handler', params => {
       callback.current = params

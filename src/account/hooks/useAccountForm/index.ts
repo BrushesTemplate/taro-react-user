@@ -2,6 +2,8 @@ import {useState} from "react";
 import {Form} from 'antd-mobile';
 import Taro from '@tarojs/taro';
 import {saveUmuserPhone, saveUmuserPhoneVCode, login, updateUmuserPw} from 'qj-b2c-api';
+import {errorCallback} from '@brushes/request';
+import {setStorage} from '@brushes/utils';
 
 
 export const useAccountForm = (type?: string) => {
@@ -39,6 +41,10 @@ export const useAccountForm = (type?: string) => {
       await saveUmuserPhone(params);
       Taro.navigateBack({
         delta: stackLength()-1,
+        success: (res) => {
+          console.log('调用前', res);
+          errorCallback();
+        }
       })
     } catch (err) {
       console.log(27, err);
@@ -56,11 +62,10 @@ export const useAccountForm = (type?: string) => {
     try {
       setSubmitLock(true)
       const result = await saveUmuserPhoneVCode(params);
-      console.log(51, result);
       Taro.navigateBack({
         delta: stackLength()-1,
       })
-      Taro.setStorageSync('saas-token', result.dataObj.ticketTokenid);
+      setStorage('saas-token', result.dataObj.ticketTokenid)
     } catch (err) {
       console.log(27, err);
     } finally {
@@ -81,7 +86,7 @@ export const useAccountForm = (type?: string) => {
       Taro.navigateBack({
         delta: stackLength()-1,
       })
-      Taro.setStorageSync('saas-token', result.dataObj.ticketTokenid);
+      setStorage('saas-token', result.dataObj.ticketTokenid);
     } catch (err) {
       console.log(27, err);
     } finally {

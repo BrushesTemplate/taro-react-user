@@ -33,6 +33,7 @@ const config = {
       force: true,
       // enable: false,
       exclude: [
+        '@brushes/request',
         'antd-mobile',
         '@brushes/utils',
         'lodash-es',
