@@ -1,8 +1,9 @@
 module.exports = {
+  outputRoot: `unpackage/dist/build/${process.env.TARO_ENV}`,
   env: {
     platform: 'user',
     NODE_ENV: '"production"',
-    REACT_APP_BASE_URL: '"https://b2cweappc8272439ae7e48118caa1fb227246b9a.saas.qjclouds.cn/"',
+    REACT_APP_BASE_URL: '"https://b2ch5cbaf0d729c1b4c7285b05271a454a4ff.saas.qjclouds.com/"',
     REACT_APP_SESSION_KEY: '"saas-token"',
     REACT_APP_APPLICATION: '""',
   },
