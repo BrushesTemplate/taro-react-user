@@ -2,6 +2,7 @@ import {useRef} from 'react';
 import Taro from "@tarojs/taro";
 import {View, ScrollView,  CheckboxGroup, Checkbox, Button, Image} from '@tarojs/components';
 import {useCollectionList} from 'qj-mobile-store';
+import HeaderJsx from "@/components/header";
 import CollectItem from './components/collectItem';
 
 import './index.scss';
@@ -14,6 +15,7 @@ const Index = () => {
 
   return (
     <View className='collectList'>
+      <HeaderJsx />
       {
         collectionList.length === 0?
           <View className='noDate'>
