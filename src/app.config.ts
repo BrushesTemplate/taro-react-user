@@ -23,6 +23,8 @@ export default defineAppConfig({
     'subpackage/collectionlist/index',
     'subpackage/footprint/index',
     'subpackage/ratedetail/index',
+    'subpackage/myagreementlist/index',
+    'subpackage/mysetting/index',
     'append/bindIphone/index',
 
     'account/register/index',
