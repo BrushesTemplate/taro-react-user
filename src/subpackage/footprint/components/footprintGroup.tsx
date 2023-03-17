@@ -33,9 +33,7 @@ export const FootprintGroup = ({footprintList, edit}) => {
       {
         list.map((item, index) => {
           return (
-            <>
-              <Footprint key={index} item={item} edit={edit} />
-            </>
+             <Footprint key={index} item={item} edit={edit} />
           )
         })
       }

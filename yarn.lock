@@ -1180,22 +1180,6 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@brushes/react-material@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.npmjs.org/@brushes/react-material/-/react-material-0.1.3.tgz#fee3006519845939e93b8b283606aeb1b035c38a"
-  integrity sha512-o07f574V8b2IHajCSdx4J/DMm4KL/xkntHYC+i88T7sOSeTmEcpNeZ/Nk9+MGIOS6VWJdhklt5v3nBLW89zxQw==
-  dependencies:
-    "@brushes/simulate-component" "^0.1.12"
-    "@brushes/utils" "^0.0.14"
-    "@stencil/core" "^3.2.0"
-    china-division "^2.6.0"
-    classnames "^2.3.2"
-    dayjs "^1.11.7"
-    lodash-es "^4.17.21"
-    qj-b2c-api "^1.0.24"
-    qj-mobile-store "^1.0.46"
-    react "^18.2.0"
-
 "@brushes/request@^0.0.12":
   version "0.0.12"
   resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.12.tgz#92b8d24a2f0c6f4ee90fac2938162de081c513f4"
@@ -9822,14 +9806,14 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
-qj-b2c-api@^1.0.24:
+qj-b2c-api@^1.0.23, qj-b2c-api@^1.0.24:
   version "1.0.24"
   resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.24.tgz#fe0eb51f3ba677892023b2ba0854c5f53810f42d"
   integrity sha512-FrL08oF1zLlUKzmkLd3LdjJPZXi67+xNKMpZyGJcf9pgg2otP7Nv7fA5HhKcuWUPNQgS149BEHPSTPMGUeE3WQ==
   dependencies:
     "@brushes/request" "^0.0.12"
 
-qj-mobile-store@^1.0.46:
+qj-mobile-store@^1.0.44:
   version "1.0.46"
   resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.46.tgz#a930ae75b2d4ec1c06069fbbd5dd430b8074942f"
   integrity sha512-e60iUk5APCeiL6phrjEgAoGVeizvdmJA0KecjjF6+EVNjBzYvAi1PINxyEsoj3dT+mgkIe6TtzVdXq+ijhyTCg==
@@ -10398,6 +10382,22 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
   dependencies:
     tslib "^1.9.0"
+
+s-material-react@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.2.5.tgz#35dae14206c9b4d3a1ba87ba3b392d2e690399f4"
+  integrity sha512-oJLAwRqt5r3Ntk9Xn+riv8fwRRwBL6EUO2LuxyXQMRCxj/+XPdtE32ArVP0gjYHzZN2HZn/cqepern2+abtLxg==
+  dependencies:
+    "@brushes/simulate-component" "^0.1.12"
+    "@brushes/utils" "^0.0.14"
+    "@stencil/core" "^3.2.0"
+    china-division "^2.6.0"
+    classnames "^2.3.2"
+    dayjs "^1.11.7"
+    lodash-es "^4.17.21"
+    qj-b2c-api "^1.0.23"
+    qj-mobile-store "^1.0.44"
+    react "^18.2.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"

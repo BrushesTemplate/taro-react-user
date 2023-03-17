@@ -38,7 +38,7 @@ const config = {
         '@brushes/utils',
         'lodash-es',
         '@brushes/simulate-component',
-        '@brushes/react-material',
+        's-material-react',
         "qj-mobile-store",
         "qj-b2c-api"
       ]

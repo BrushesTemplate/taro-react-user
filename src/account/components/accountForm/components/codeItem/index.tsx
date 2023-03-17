@@ -16,7 +16,6 @@ export const CodeItem = ({txt = '验证码', form, type}) => {
       ]}
     >
       <Input
-        type='number'
         maxLength={6}
         clearable
         placeholder={`请输入${txt}`}

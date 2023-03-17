@@ -40,11 +40,7 @@ export const useAccountForm = (type?: string) => {
       setSubmitLock(true)
       await saveUmuserPhone(params);
       Taro.navigateBack({
-        delta: stackLength()-1,
-        success: (res) => {
-          console.log('调用前', res);
-          errorCallback();
-        }
+        delta: stackLength()-1
       })
     } catch (err) {
       console.log(27, err);
@@ -64,6 +60,10 @@ export const useAccountForm = (type?: string) => {
       const result = await saveUmuserPhoneVCode(params);
       Taro.navigateBack({
         delta: stackLength()-1,
+        success: (res) => {
+          console.log('调用前', res);
+          errorCallback();
+        }
       })
       setStorage('saas-token', result.dataObj.ticketTokenid)
     } catch (err) {
@@ -74,7 +74,6 @@ export const useAccountForm = (type?: string) => {
   }
 
   const accountLoginSubmit = async (formVal) => {
-    console.log(70, formVal)
     const params = {
       loginName: formVal.account,
       passwd: formVal.password,
@@ -85,6 +84,9 @@ export const useAccountForm = (type?: string) => {
       const result = await login(params);
       Taro.navigateBack({
         delta: stackLength()-1,
+        success: function () {
+          errorCallback()
+        }
       })
       setStorage('saas-token', result.dataObj.ticketTokenid);
     } catch (err) {

@@ -20,7 +20,7 @@ export const AccountForm = ({type, btnText, txt}: {type: string; btnText: string
           type === 'accountLogin' ? <AccountItem /> : null
         }
         {
-          type === 'reg' || type === 'mobileLogin' || type === 'forgetPwd' ? <MobileItem /> : null
+          ['forgetPwd', 'reg', 'mobileLogin'].includes(type) ? <MobileItem /> : null
         }
         {
           type === 'reg' || type === 'mobileLogin' || type === 'forgetPwd' ? <CodeItem form={form} type={type} /> : null
