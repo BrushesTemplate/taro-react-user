@@ -40,7 +40,7 @@ export const useAccountForm = (type?: string) => {
       setSubmitLock(true)
       await saveUmuserPhone(params);
       Taro.navigateBack({
-        delta: stackLength()-1
+        delta: 1
       })
     } catch (err) {
       console.log(27, err);
@@ -58,6 +58,7 @@ export const useAccountForm = (type?: string) => {
     try {
       setSubmitLock(true)
       const result = await saveUmuserPhoneVCode(params);
+      setStorage('saas-token', result.dataObj.ticketTokenid)
       Taro.navigateBack({
         delta: stackLength()-1,
         success: (res) => {
@@ -65,7 +66,6 @@ export const useAccountForm = (type?: string) => {
           errorCallback();
         }
       })
-      setStorage('saas-token', result.dataObj.ticketTokenid)
     } catch (err) {
       console.log(27, err);
     } finally {
@@ -82,13 +82,13 @@ export const useAccountForm = (type?: string) => {
     try {
       setSubmitLock(true)
       const result = await login(params);
+      setStorage('saas-token', result.dataObj.ticketTokenid);
       Taro.navigateBack({
         delta: stackLength()-1,
         success: function () {
           errorCallback()
         }
       })
-      setStorage('saas-token', result.dataObj.ticketTokenid);
     } catch (err) {
       console.log(27, err);
     } finally {
@@ -107,7 +107,7 @@ export const useAccountForm = (type?: string) => {
       setSubmitLock(true)
       await updateUmuserPw(params);
       Taro.navigateBack({
-        delta: stackLength()-1,
+        delta: 1,
       })
     } catch (err) {
       console.log(27, err);
