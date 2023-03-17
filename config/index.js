@@ -77,7 +77,7 @@ const config = {
     //     enable: false
     //   }
     // },
-    publicPath: './',
+    publicPath: '/',
     staticDirectory: 'static',
     postcss: {
       autoprefixer: {

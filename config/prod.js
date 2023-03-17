@@ -11,6 +11,7 @@ module.exports = {
   },
   mini: {},
   h5: {
+    publicPath: './',
     /**
      * WebpackChain 插件配置
      * @docs https://github.com/neutrinojs/webpack-chain
