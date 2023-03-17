@@ -9813,10 +9813,10 @@ qj-b2c-api@^1.0.25:
   dependencies:
     "@brushes/request" "^0.0.12"
 
-qj-mobile-store@^1.0.47:
-  version "1.0.47"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.47.tgz#ca8a8aeac717bc4eeb77e835bd58ee60ec5f7a71"
-  integrity sha512-P2/hqhF1uvKcaJz1l57VQvyQMsjuC5Vnul3jp7xM+nIKceKZD8v5VPadROE1Cxvk9x9gH5ERml92MppxhFtdSA==
+qj-mobile-store@^1.0.48:
+  version "1.0.48"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.48.tgz#c6806e13bb9c1477e36be4c346da603d23e5637e"
+  integrity sha512-am9vKKbQmnZ5waDIEFVyXhBGEc8AU+zO9zejynB8wqV+IB3edUgM02JC0JfCrJOV+x/mWVMopqFa1PyaRk3W6g==
   dependencies:
     "@brushes/utils" "^0.0.14"
     lodash-es "^4.17.21"
@@ -10383,10 +10383,10 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.0.tgz#c4e9e5db22548a51083f474e62debf07a80af390"
-  integrity sha512-CafMtn9t9CaGC6YRW59cGySzgYyGQfo8+eNYs/59sHDe5iyEMVDZeW0SpapNwlhhvxcuYQcVZQ+5yoNhR5vhYA==
+s-material-react@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.1.tgz#0b3aeafc7af752c1d72a81e32390d02e04835eba"
+  integrity sha512-JHY6c3Cjr8SZNZ6/jSqj+lLPLRHY3OFn423/aWrZzhiO/KhlLYPwy/NsYipYa69B7e1z8VWCTXg4QdVa+rVnyA==
   dependencies:
     "@brushes/simulate-component" "^0.1.12"
     "@brushes/utils" "^0.0.14"
@@ -10396,7 +10396,7 @@ s-material-react@^1.3.0:
     dayjs "^1.11.7"
     lodash-es "^4.17.21"
     qj-b2c-api "^1.0.25"
-    qj-mobile-store "^1.0.47"
+    qj-mobile-store "^1.0.48"
     react "^18.2.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
