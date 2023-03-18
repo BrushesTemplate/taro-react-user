@@ -9814,9 +9814,9 @@ qj-b2c-api@^1.0.26:
     "@brushes/request" "^0.0.13"
 
 qj-mobile-store@^1.0.49:
-  version "1.0.50"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.50.tgz#cbb7678191e2265ed688f41ba7f93e1f051cebd4"
-  integrity sha512-niq3MN5iRX91WlZwPcMSlFYy06rxKIsiKX+1t7zmzkfbWrLvJm5IRa8T8kM7x7XPukKmzrZwVq0QNKc0oddaNg==
+  version "1.0.51"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.51.tgz#c6725f4ca6c9b3bfcec01bf5d8e7bddb1536a5c4"
+  integrity sha512-yy4LTDxgkfEZqOYnPUuelFdXMjffShZUG21pRIZGdlIQyC7rwj6mgfnf0SjHCwRxKIVrDOHfB1TTWWsEpqpymg==
   dependencies:
     "@brushes/utils" "^0.0.14"
     lodash-es "^4.17.21"
