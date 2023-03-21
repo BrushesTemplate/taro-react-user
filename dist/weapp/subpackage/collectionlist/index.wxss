@@ -1,0 +1,115 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/@tarojs/webpack5-runner/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/subpackage/collectionlist/index.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.collectList .noDate .img {
+  display: block;
+  margin: 200rpx auto 0;
+  width: 406rpx;
+  height: 330rpx;
+}
+.collectList .topBar {
+  height: 100rpx;
+  line-height: 100rpx;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.collectList .topBar .edit {
+  margin-right: 30rpx;
+  padding: 0 40rpx;
+}
+.collectList .handleBar {
+  height: 108rpx;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.collectList .handleBar .checkAll {
+  margin-left: 40rpx;
+}
+.collectList .handleBar .checkAll .wx-checkbox-input {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+}
+.collectList .handleBar .checkAll .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: #000000;
+}
+.collectList .handleBar .checkAll .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #ffffff;
+  font-size: 28rpx;
+}
+.collectList .handleBar .btn {
+  margin: 0 40rpx 0 0;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 0 50rpx;
+  font-size: 28rpx;
+}
+.collectItem {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40rpx 40rpx 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+.collectItem .lPart {
+  padding-left: 0;
+  padding-right: 20rpx;
+}
+.collectItem .rPart {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.collectItem .rPart .img {
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 40rpx;
+}
+.collectItem .rPart .info {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.collectItem .rPart .info .title {
+  font-size: 28rpx;
+}
+.collectItem .rPart .info .price {
+  color: #d66377;
+  font-size: 32rpx;
+}
+.collectItem .wx-checkbox-input {
+  width: 28rpx;
+  height: 28rpx;
+  border-radius: 50%;
+}
+.collectItem .wx-checkbox-input.wx-checkbox-input-checked {
+  background-color: #000000;
+}
+.collectItem .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #ffffff;
+  font-size: 28rpx;
+}

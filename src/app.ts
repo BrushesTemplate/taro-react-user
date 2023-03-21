@@ -7,6 +7,11 @@ import { fly } from "@brushes/request";
 class App extends Component<PropsWithChildren> {
 
   componentDidMount () {
+    safeArea()
+    console.log(11, process.env.NODE_ENV);
+    if(process.env.NODE_ENV === 'development' || Taro.getEnv() === 'WEAPP') {
+      return
+    }
     fly.interceptors.request.use((config) => {
       //给所有请求添加自定义header
       config.headers = {
@@ -51,10 +56,12 @@ class App extends Component<PropsWithChildren> {
     //     wx.hideToast()
     //   }
     // })
-    safeArea()
+
   }
 
-  componentDidShow () {}
+  componentDidShow () {
+    console.log(63, Taro);
+  }
 
   componentDidHide () {}
 
