@@ -3,7 +3,7 @@ import Taro from '@tarojs/taro';
 import {useCallback} from 'react';
 import {sucMessage} from '@/utils/message';
 import { get } from 'lodash-es'
-export const msgInfo = [
+ const msgInfo = [
   {
     value: '1',
     text: '阅读并同意XXXXXX',

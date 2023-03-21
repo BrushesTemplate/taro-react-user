@@ -35,7 +35,7 @@ export const useAgreement = (type?:string) => {
 
   const goDetail = (agreeType: string) => {
     Taro.navigateTo({
-      url: `account/agreement/index?type=${agreeType}`
+      url: `/account/agreement/index?type=${agreeType}`
     })
   }
 
