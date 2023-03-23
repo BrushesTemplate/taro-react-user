@@ -60,7 +60,7 @@ export const useAccountForm = (type?: string) => {
       const result = await saveUmuserPhoneVCode(params);
       setStorage('saas-token', result.dataObj.ticketTokenid)
       Taro.navigateBack({
-        delta: stackLength()-1,
+        delta: stackLength(),
         success: (res) => {
           console.log('调用前', res);
           errorCallback();
@@ -84,7 +84,7 @@ export const useAccountForm = (type?: string) => {
       const result = await login(params);
       setStorage('saas-token', result.dataObj.ticketTokenid);
       Taro.navigateBack({
-        delta: stackLength()-1,
+        delta: stackLength(),
         success: function () {
           errorCallback()
         }
@@ -117,7 +117,21 @@ export const useAccountForm = (type?: string) => {
   }
 
   const stackLength = () => {
-    return Taro.getCurrentPages().length;
+    const arr = Taro.getCurrentPages();
+    const obj = {
+      pageIndex: 0
+    }
+    for(let i=0; i<arr.length; i++) {
+      if(arr[i]['$taroPath'].indexOf('/account/')>=0) {
+        if(i===0) {
+          obj.pageIndex = 0
+        }else {
+          obj.pageIndex = arr.length-i
+        }
+        break
+      }
+    }
+    return obj.pageIndex;
   }
 
 

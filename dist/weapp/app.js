@@ -35,7 +35,7 @@ require("./runtime");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _brushes_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @brushes/utils */ "./node_modules/@brushes/utils/dist/index.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/utils/index.ts");
-/* harmony import */ var _brushes_request__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @brushes/request */ "../../2023-qj/qj-request-tools/packages/request/dist/index.js");
+/* harmony import */ var _brushes_request__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @brushes/request */ "./node_modules/@brushes/request/dist/index.js");
 /* provided dependency */ var location = __webpack_require__(/*! @tarojs/runtime */ "webpack/container/remote/@tarojs/runtime")["location"];
 
 
@@ -57,7 +57,7 @@ var App = /*#__PURE__*/function (_Component) {
   (0,_Users_devil_Desktop_taro_taro_mobile_react_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_8__["default"])(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      console.log(11, "development");
+      (0,_utils__WEBPACK_IMPORTED_MODULE_3__.safeArea)();
       if (true) {
         return;
       }
@@ -105,7 +105,6 @@ var App = /*#__PURE__*/function (_Component) {
       //     wx.hideToast()
       //   }
       // })
-      (0,_utils__WEBPACK_IMPORTED_MODULE_3__.safeArea)();
     }
   }, {
     key: "componentDidShow",
@@ -161,7 +160,7 @@ var App = /*#__PURE__*/function (_Component) {
 
 
 
-var config = {"pages":["pages/index/index","pages/shopping/index","pages/classify/index","pages/my/index","subpackage/orderlist/index","subpackage/orderdetail/index","subpackage/search/index","subpackage/goodlist/index","subpackage/gooddetail/index","subpackage/orderconfirm/index","subpackage/result/index","subpackage/rate/index","subpackage/paymentmode/index","subpackage/expressinfo/index","subpackage/collectionlist/index","subpackage/footprint/index","subpackage/ratedetail/index","subpackage/myagreementlist/index","subpackage/mysetting/index","append/bindIphone/index","account/register/index","account/accountLogin/index","account/mobileLogin/index","account/forgetPwd/index","account/agreement/index","subpackage/addresseditor/index","subpackage/addresslist/index","subpackage/couponlist/index","subpackage/setting/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"custom":true,"color":"#444","selectedColor":"#DC143C","backgroundColor":"#fff","list":[{"pagePath":"pages/index/index","selectedIconPath":"images/tabbar_home_on.png","iconPath":"images/tabbar_home.png","text":"首页"},{"pagePath":"pages/classify/index","selectedIconPath":"images/tabbar_cate_on.png","iconPath":"images/tabbar_cate.png","text":"分类"},{"pagePath":"pages/shopping/index","selectedIconPath":"images/tabbar_cart_on.png","iconPath":"images/tabbar_cart.png","text":"购物车"},{"pagePath":"pages/my/index","selectedIconPath":"images/tabbar_my_on.png","iconPath":"images/tabbar_my.png","text":"个人中心"}]}};
+var config = {"pages":["pages/index/index","pages/shopping/index","pages/classify/index","pages/my/index","subpackage/orderlist/index","subpackage/orderdetail/index","subpackage/search/index","subpackage/goodlist/index","subpackage/gooddetail/index","subpackage/orderconfirm/index","subpackage/result/index","subpackage/rate/index","subpackage/paymentmode/index","subpackage/expressinfo/index","subpackage/collectionlist/index","subpackage/footprint/index","subpackage/ratedetail/index","subpackage/myagreementlist/index","subpackage/mysetting/index","append/bindIphone/index","account/register/index","account/accountLogin/index","account/mobileLogin/index","account/forgetPwd/index","account/agreement/index","account/auth/index","subpackage/addresseditor/index","subpackage/addresslist/index","subpackage/couponlist/index","subpackage/setting/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"custom":true,"color":"#444","selectedColor":"#DC143C","backgroundColor":"#fff","list":[{"pagePath":"pages/index/index","selectedIconPath":"images/tabbar_home_on.png","iconPath":"images/tabbar_home.png","text":"首页"},{"pagePath":"pages/classify/index","selectedIconPath":"images/tabbar_cate_on.png","iconPath":"images/tabbar_cate.png","text":"分类"},{"pagePath":"pages/shopping/index","selectedIconPath":"images/tabbar_cart_on.png","iconPath":"images/tabbar_cart.png","text":"购物车"},{"pagePath":"pages/my/index","selectedIconPath":"images/tabbar_my_on.png","iconPath":"images/tabbar_my.png","text":"个人中心"}]}};
 _tarojs_runtime__WEBPACK_IMPORTED_MODULE_2__.window.__taroAppConfig = config
 var inst = App((0,_tarojs_plugin_framework_react_dist_runtime__WEBPACK_IMPORTED_MODULE_3__.createReactApp)(_node_modules_babel_loader_lib_index_js_ruleSet_1_rules_5_use_0_app_ts__WEBPACK_IMPORTED_MODULE_5__["default"], react__WEBPACK_IMPORTED_MODULE_6__, (react_dom__WEBPACK_IMPORTED_MODULE_7___default()), config))
 

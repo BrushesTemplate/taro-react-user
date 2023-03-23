@@ -132,65 +132,20 @@ var ChannelLive = 'channel-live';
   \*****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Ad": function() { return /* binding */ Ad; },
-/* harmony export */   "AdCustom": function() { return /* binding */ AdCustom; },
-/* harmony export */   "Audio": function() { return /* binding */ Audio; },
-/* harmony export */   "Block": function() { return /* binding */ Block; },
 /* harmony export */   "Button": function() { return /* binding */ Button; },
-/* harmony export */   "Camera": function() { return /* binding */ Camera; },
-/* harmony export */   "Canvas": function() { return /* binding */ Canvas; },
-/* harmony export */   "ChannelLive": function() { return /* binding */ ChannelLive; },
-/* harmony export */   "ChannelVideo": function() { return /* binding */ ChannelVideo; },
 /* harmony export */   "Checkbox": function() { return /* binding */ Checkbox; },
 /* harmony export */   "CheckboxGroup": function() { return /* binding */ CheckboxGroup; },
 /* harmony export */   "CoverImage": function() { return /* binding */ CoverImage; },
 /* harmony export */   "CoverView": function() { return /* binding */ CoverView; },
-/* harmony export */   "CustomWrapper": function() { return /* binding */ CustomWrapper; },
-/* harmony export */   "Editor": function() { return /* binding */ Editor; },
 /* harmony export */   "Form": function() { return /* binding */ Form; },
-/* harmony export */   "FunctionalPageNavigator": function() { return /* binding */ FunctionalPageNavigator; },
-/* harmony export */   "Icon": function() { return /* binding */ Icon; },
 /* harmony export */   "Image": function() { return /* binding */ Image; },
 /* harmony export */   "Input": function() { return /* binding */ Input; },
-/* harmony export */   "KeyboardAccessory": function() { return /* binding */ KeyboardAccessory; },
 /* harmony export */   "Label": function() { return /* binding */ Label; },
-/* harmony export */   "LivePlayer": function() { return /* binding */ LivePlayer; },
-/* harmony export */   "LivePusher": function() { return /* binding */ LivePusher; },
-/* harmony export */   "Map": function() { return /* binding */ Map; },
-/* harmony export */   "MatchMedia": function() { return /* binding */ MatchMedia; },
-/* harmony export */   "MovableArea": function() { return /* binding */ MovableArea; },
-/* harmony export */   "MovableView": function() { return /* binding */ MovableView; },
-/* harmony export */   "NativeSlot": function() { return /* binding */ NativeSlot; },
-/* harmony export */   "NavigationBar": function() { return /* binding */ NavigationBar; },
-/* harmony export */   "Navigator": function() { return /* binding */ Navigator; },
-/* harmony export */   "OfficialAccount": function() { return /* binding */ OfficialAccount; },
-/* harmony export */   "OpenData": function() { return /* binding */ OpenData; },
-/* harmony export */   "PageContainer": function() { return /* binding */ PageContainer; },
-/* harmony export */   "PageMeta": function() { return /* binding */ PageMeta; },
-/* harmony export */   "Picker": function() { return /* binding */ Picker; },
-/* harmony export */   "PickerView": function() { return /* binding */ PickerView; },
-/* harmony export */   "PickerViewColumn": function() { return /* binding */ PickerViewColumn; },
-/* harmony export */   "Progress": function() { return /* binding */ Progress; },
-/* harmony export */   "Radio": function() { return /* binding */ Radio; },
-/* harmony export */   "RadioGroup": function() { return /* binding */ RadioGroup; },
-/* harmony export */   "RichText": function() { return /* binding */ RichText; },
-/* harmony export */   "RootPortal": function() { return /* binding */ RootPortal; },
 /* harmony export */   "ScrollView": function() { return /* binding */ ScrollView; },
-/* harmony export */   "ShareElement": function() { return /* binding */ ShareElement; },
-/* harmony export */   "Slider": function() { return /* binding */ Slider; },
-/* harmony export */   "Slot": function() { return /* binding */ Slot; },
-/* harmony export */   "Swiper": function() { return /* binding */ Swiper; },
-/* harmony export */   "SwiperItem": function() { return /* binding */ SwiperItem; },
-/* harmony export */   "Switch": function() { return /* binding */ Switch; },
-/* harmony export */   "Text": function() { return /* binding */ Text; },
-/* harmony export */   "Textarea": function() { return /* binding */ Textarea; },
-/* harmony export */   "Video": function() { return /* binding */ Video; },
-/* harmony export */   "View": function() { return /* binding */ View; },
-/* harmony export */   "VoipRoom": function() { return /* binding */ VoipRoom; },
-/* harmony export */   "WebView": function() { return /* binding */ WebView; }
+/* harmony export */   "View": function() { return /* binding */ View; }
 /* harmony export */ });
+/* unused harmony exports Ad, AdCustom, Audio, Block, Camera, Canvas, ChannelLive, ChannelVideo, CustomWrapper, Editor, FunctionalPageNavigator, Icon, KeyboardAccessory, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ShareElement, Slider, Slot, Swiper, SwiperItem, Switch, Text, Textarea, Video, VoipRoom, WebView */
 var View = 'view';
 var Icon = 'icon';
 var Progress = 'progress';

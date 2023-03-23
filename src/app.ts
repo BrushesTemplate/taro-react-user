@@ -8,7 +8,6 @@ class App extends Component<PropsWithChildren> {
 
   componentDidMount () {
     safeArea()
-    console.log(11, process.env.NODE_ENV);
     if(process.env.NODE_ENV === 'development' || Taro.getEnv() === 'WEAPP') {
       return
     }

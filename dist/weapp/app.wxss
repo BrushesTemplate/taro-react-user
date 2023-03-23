@@ -58,7 +58,7 @@
 @font-face {
   font-family: "iconfont";
   /* Project id 3540782 */
-  src: url("//at.alicdn.com/t/c/font_3540782_dctp0zmekq.woff2?t=1678711583271") format("woff2"), url("//at.alicdn.com/t/c/font_3540782_dctp0zmekq.woff?t=1678711583271") format("woff"), url("//at.alicdn.com/t/c/font_3540782_dctp0zmekq.ttf?t=1678711583271") format("truetype");
+  src: url("//at.alicdn.com/t/c/font_3540782_58rex2gowg9.woff2?t=1679557133170") format("woff2"), url("//at.alicdn.com/t/c/font_3540782_58rex2gowg9.woff?t=1679557133170") format("woff"), url("//at.alicdn.com/t/c/font_3540782_58rex2gowg9.ttf?t=1679557133170") format("truetype");
 }
 .iconfont {
   font-family: iconfont;
@@ -71,6 +71,15 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-gongsigonggao:before {
+  content: "\f8dd";
+}
+.icon-weixinzhifu2:before {
+  content: "\e62b";
+}
+.icon-zhifubao:before {
+  content: "\e64f";
 }
 .icon-liulan:before {
   content: "\e61a";
@@ -1490,13 +1499,9 @@ swiper-item {
   font-size: 28rpx;
 }
 .goodsDetail-coupon-popup {
-  padding: 28rpx;
+  padding: 28rpx 28rpx 0;
 }
-.goodsDetail-coupon-popup .stampWrap {
-  max-height: 40vh;
-  overflow-y: scroll;
-}
-.goodsDetail-coupon-popup .stampWrap .stamp {
+.goodsDetail-coupon-popup .stamp {
   width: 100%;
   display: inline-block;
   padding: 20rpx;
@@ -1507,7 +1512,7 @@ swiper-item {
   background-size: 40rpx 40rpx;
   margin-bottom: 28rpx;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp:after {
+.goodsDetail-coupon-popup .stamp:after {
   content: "";
   position: absolute;
   left: 10rpx;
@@ -1516,7 +1521,7 @@ swiper-item {
   bottom: 10rpx;
   z-index: -1;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content {
+.goodsDetail-coupon-popup .stamp .stamp-content {
   height: 240rpx;
   width: 100%;
   background: #1a1922;
@@ -1524,7 +1529,7 @@ swiper-item {
   grid-template-columns: 216rpx 1fr;
   position: relative;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .choose {
+.goodsDetail-coupon-popup .stamp .stamp-content .choose {
   position: absolute;
   top: 20rpx;
   right: 20rpx;
@@ -1532,21 +1537,21 @@ swiper-item {
   border-radius: 100%;
   overflow: hidden;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .price {
+.goodsDetail-coupon-popup .stamp .stamp-content .price {
   border-right: 2rpx dashed #fff;
   text-align: center;
   line-height: 240rpx;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .price .symbol {
+.goodsDetail-coupon-popup .stamp .stamp-content .price .symbol {
   font-size: 46rpx;
   color: #fff;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .price .num {
+.goodsDetail-coupon-popup .stamp .stamp-content .price .num {
   font-size: 66rpx;
   color: #fff;
   text-align: left;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .info {
+.goodsDetail-coupon-popup .stamp .stamp-content .info {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1560,13 +1565,13 @@ swiper-item {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .info .title {
+.goodsDetail-coupon-popup .stamp .stamp-content .info .title {
   margin-bottom: 24rpx;
   font-size: 32rpx;
   color: #fff;
   line-height: 44rpx;
 }
-.goodsDetail-coupon-popup .stampWrap .stamp .stamp-content .info .date {
+.goodsDetail-coupon-popup .stamp .stamp-content .info .date {
   color: rgba(255, 255, 255, 0.45);
 }
 .goodsDetail-coupon-popup .confirm {
@@ -2179,7 +2184,6 @@ swiper-item {
 }
 .couponList {
   background-color: #f6f6f6;
-  overflow: scroll;
 }
 .couponList .couponTab {
   display: grid;

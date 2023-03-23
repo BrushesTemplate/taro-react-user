@@ -32,6 +32,7 @@ export default defineAppConfig({
     'account/mobileLogin/index',
     'account/forgetPwd/index',
     'account/agreement/index',
+    'account/auth/index',
     // 收藏列表
     ...mine,
   ],
