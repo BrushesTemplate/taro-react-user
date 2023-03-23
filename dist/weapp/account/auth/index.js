@@ -25,12 +25,10 @@ var Index = function Index() {
     logo = _useAuth.logo,
     agree = _useAuth.agree,
     agreeFunc = _useAuth.agreeFunc,
-    setAgree = _useAuth.setAgree;
+    setAgree = _useAuth.setAgree,
+    getPhone = _useAuth.getPhone;
   var _useAgreement = (0,_account_hooks__WEBPACK_IMPORTED_MODULE_1__.useAgreement)(),
     goDetail = _useAgreement.goDetail;
-  var getPhone = function getPhone(e) {
-    console.log(17, e);
-  };
   var goLogin = function goLogin() {
     _tarojs_taro__WEBPACK_IMPORTED_MODULE_0___default().navigateTo({
       url: "/account/mobileLogin/index"

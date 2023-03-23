@@ -6,12 +6,9 @@ import './index.scss';
 
 
 const Index = () => {
-  const {bg, logo, agree, agreeFunc, setAgree} = useAuth();
+  const {bg, logo, agree, agreeFunc, setAgree, getPhone} = useAuth();
   const {goDetail} = useAgreement();
 
-  const getPhone = (e) => {
-    console.log(17, e)
-  }
 
   const goLogin = () => {
     Taro.navigateTo({
