@@ -1215,15 +1215,6 @@
     lodash-es "^4.17.21"
     react "^18.0.0"
 
-"@brushes/utils@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.14.tgz#5394e0bc186665910ea0fcbe252098b1bf780f4f"
-  integrity sha512-wpMp0lKrE/bLaT7NJiw6FIQVC9QBGdYqSGzoOaTAEL9h86B/FXxjsjfayFYXxS7YJESqwbvvcHsczz+XDnJBlQ==
-  dependencies:
-    "@tarojs/taro" "^3.6.2"
-    lodash-es "^4.17.21"
-    react "^18.2.0"
-
 "@brushes/utils@^0.0.15":
   version "0.0.15"
   resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.15.tgz#4008df29961ce4ea7bc57bc10944c2449d16a07c"
@@ -4008,10 +3999,10 @@ charenc@0.0.2:
   resolved "https://registry.npmjs.org/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
   integrity sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==
 
-china-division@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.npmjs.org/china-division/-/china-division-2.6.0.tgz#a55dd4e5d18a84a06d90b208444ad69d6efc1e1e"
-  integrity sha512-5ESNNt/xPD9u6uNRXqeRS+a5AcS746mPbA4CDojm/Fx5bNPmmOeRZ/0NGCOrIXWYl2MBO1w/7vWmOjvlVko2Fw==
+china-division@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.npmjs.org/china-division/-/china-division-2.6.1.tgz#a3e3e4609e81077cc97443f78c713e03d66d7fc2"
+  integrity sha512-Iq9YCEWqPcSrD7/7McKpN9QHNbn2iibLmg1NEAxLacijqJzLbytr0sLuKJNY4Exd0LA77N18Pwr9JGgU1p5S6w==
 
 "chokidar@>=3.0.0 <4.0.0", chokidar@^3.3.1, chokidar@^3.5.3:
   version "3.5.3"
@@ -9868,10 +9859,10 @@ qj-b2c-api@^1.0.30:
   dependencies:
     "@brushes/request" "^0.0.17"
 
-qj-mobile-store@^1.0.55:
-  version "1.0.55"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.55.tgz#489598401360af5af0b6c26e7d49436a09812d1f"
-  integrity sha512-ek2Rm6HSXW6Mn+XX9hki8NWtLP4x9FHSF8RgoKrpsk+29goKGowtvnWpxL/2U9AeYULYbdhlftyUSq9ZW8NiBg==
+qj-mobile-store@^1.0.57:
+  version "1.0.57"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.57.tgz#4ad64b44bea3aff73a9b921f8d73e38cec5f0d64"
+  integrity sha512-R6CyGHNCSHGBq3sLqQXZvCjjCwckDjPDdoPA1CEWTgd6jM1zCiPpdEhoJOoUdMMFT4iwfXcGAlmidP5sNO/mLA==
   dependencies:
     "@brushes/utils" "^0.0.15"
     lodash-es "^4.17.21"
@@ -10438,20 +10429,20 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^1.3.9:
-  version "1.3.9"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.9.tgz#eef2006846270f75176379cbda8dcf0c4a005217"
-  integrity sha512-AOtayRU6Ip1D3XDtlA4wbL1FjhCugAlE098LKqvamlIIWlp6NBFZ0YQxpgJOaOJv4+CS7QWppEb8vTO5kwiZuQ==
+s-material-react@^1.3.11:
+  version "1.3.11"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.11.tgz#e16ec38e76407418a168989b72f7688c2b04d7d6"
+  integrity sha512-fo6pBhVXZzCA3TW8C/Bea6/a7HNQBkkBT0tygxprqZvF2hzR+yz+kEsiqk5l1FVgRr4HtgSyTe4/f5jGpIlUrg==
   dependencies:
     "@brushes/simulate-component" "^0.1.20"
-    "@brushes/utils" "^0.0.14"
+    "@brushes/utils" "^0.0.15"
     "@stencil/core" "^3.2.0"
-    china-division "^2.6.0"
+    china-division "^2.6.1"
     classnames "^2.3.2"
     dayjs "^1.11.7"
     lodash-es "^4.17.21"
     qj-b2c-api "^1.0.30"
-    qj-mobile-store "^1.0.55"
+    qj-mobile-store "^1.0.57"
     react "^18.2.0"
 
 safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
