@@ -5,6 +5,13 @@
       "list": [
         {
           "name": "",
+          "pathName": "subpackage/noticedetail/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
           "pathName": "account/auth/index",
           "query": "",
           "launchMode": "default",

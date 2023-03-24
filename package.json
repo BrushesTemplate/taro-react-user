@@ -36,6 +36,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.21.0",
+    "@brushes/request": "^0.0.16",
     "@tarojs/components": "3.6.2",
     "@tarojs/helper": "3.6.2",
     "@tarojs/plugin-framework-react": "3.6.2",
