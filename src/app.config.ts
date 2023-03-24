@@ -25,6 +25,7 @@ export default defineAppConfig({
     'subpackage/ratedetail/index',
     'subpackage/myagreementlist/index',
     'subpackage/mysetting/index',
+    'subpackage/noticedetail/index',
     'append/bindIphone/index',
 
     'account/register/index',

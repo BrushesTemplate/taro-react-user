@@ -1222,6 +1222,15 @@
     lodash-es "^4.17.21"
     react "^18.2.0"
 
+"@brushes/utils@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.15.tgz#4008df29961ce4ea7bc57bc10944c2449d16a07c"
+  integrity sha512-ez5+RkXTjQ9Ri0Ur012gRAg5yE0n0D/Y/b2xlNHRCFpkjN/ccGAk4P3+VutCEov2+RFM6YoK0c7vsPFrrTwABA==
+  dependencies:
+    "@tarojs/taro" "^3.6.2"
+    lodash-es "^4.17.21"
+    react "^18.2.0"
+
 "@csstools/css-parser-algorithms@^2.0.1":
   version "2.0.1"
   resolved "https://registry.npmjs.org/@csstools/css-parser-algorithms/-/css-parser-algorithms-2.0.1.tgz#ff02629c7c95d1f4f8ea84d5ef1173461610535e"
