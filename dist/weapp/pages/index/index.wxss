@@ -1,0 +1,44 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[2]!./node_modules/resolve-url-loader/index.js!./node_modules/@tarojs/webpack5-runner/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[0].use[4]!./src/pages/index/index.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+#noticebar-wrap {
+  height: 72rpx;
+  display: grid;
+  grid-template-columns: 80rpx 1fr;
+  color: #ff6010;
+  background: #fff9ed;
+  line-height: 72rpx;
+  overflow: hidden;
+  border: 2rpx solid #fff3e9;
+  margin-bottom: 20rpx;
+}
+#noticebar-wrap .icon-pre {
+  text-align: center;
+  background-color: #fff9ed;
+  border-color: #fff3e9;
+  color: #ff6010;
+  z-index: 1000;
+  padding-left: 10rpx;
+}
+#noticebar-wrap .scroll-animate {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#noticebar-wrap .scroll-animate-item {
+  margin-right: 40rpx;
+}
+#noticebar-wrap .normal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
+}
+#noticebar-wrap .normal .scroll-animate-item {
+  white-space: nowrap;
+}
