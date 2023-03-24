@@ -9,12 +9,11 @@
 
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
-/* harmony import */ var _brushes_simulate_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @brushes/simulate-component */ "../../qj/qj-mobile-core/packages/simulate-component/dist/index.js");
-/* harmony import */ var _components_baseWrapCommon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components/baseWrapCommon */ "./src/components/baseWrapCommon.tsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/components */ "./src/components/index.tsx");
+/* harmony import */ var _components_baseWrapCommon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/components/baseWrapCommon */ "./src/components/baseWrapCommon.tsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -24,25 +23,14 @@
 var Index = function Index() {
   var _useRouter = (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_0__.useRouter)(),
     path = _useRouter.path;
-  var arr = ['这是 NoticeBar 通告栏，这是 NoticeBar 通告栏', '第二个这是 NoticeBar 通告栏通告栏，通告栏通告栏通告栏通告栏这是 NoticeBar 通告栏', '第3个这是 NoticeBar 通告栏通告栏，通告栏通告栏通告栏通告栏这是 NoticeBar 通告栏', '第4个这是 NoticeBar 通告栏通告栏，通告栏通告栏通告栏通告栏这是 NoticeBar 通告栏', '第5个这是 NoticeBar 通告栏，这是 NoticeBar 通告栏'];
-  var navigator = function navigator(e) {
-    console.log(19, e);
-  };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_4__.View, {
     className: "container",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_components_baseWrapCommon__WEBPACK_IMPORTED_MODULE_1__.BaseWrapCommon, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_brushes_simulate_component__WEBPACK_IMPORTED_MODULE_4__.Noticebar, {
-        icon: 'kefu',
-        content: arr,
-        size: 5,
-        navigator: navigator
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_brushes_simulate_component__WEBPACK_IMPORTED_MODULE_4__.Noticebar, {
-        icon: 'kefu',
-        direction: 'vertical',
-        navigator: navigator,
-        content: arr,
-        size: 5
-      })]
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_baseWrapCommon__WEBPACK_IMPORTED_MODULE_2__.BaseWrapCommon, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        route: path,
+        topPage: true,
+        base: true
+      })
     })
   });
 };

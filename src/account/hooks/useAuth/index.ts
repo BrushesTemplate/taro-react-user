@@ -1,6 +1,9 @@
 import {useEffect, useState} from "react";
-import {queryProappEnvPage} from 'qj-b2c-api';
-
+import Taro from "@tarojs/taro";
+import {queryProappEnvPage, saveUmuserPhoneNoCodeByWX, warrantyLogin} from 'qj-b2c-api';
+import { get } from 'lodash-es'
+import {errorCallback} from '@brushes/request';
+import {stackLength} from '@/account/hooks';
 export const useAuth = () => {
   const [bg, setBg] = useState('');
   const [logo, setLogo] = useState('');
@@ -29,11 +32,52 @@ export const useAuth = () => {
     }
   }
 
+  const getPhone = async (e) => {
+    Taro.login({
+      success: async (res) => {
+        const warrantyResult = await warrantyLogin({
+          'js_code': res.code
+        })
+
+        const { register, userInfo, userOpenid } = get(warrantyResult, 'dataObj');
+
+        if(register === 'true') {
+          const result = await registerImpl(e, userOpenid)
+          setAuthImpl(result.dataObj.ticketTokenid)
+          return
+        }
+
+        const user = JSON.parse(userInfo);
+        setAuthImpl(user.ticketTokenid);
+      }
+    })
+  }
+
+  const registerImpl = (e, userOpenid) => saveUmuserPhoneNoCodeByWX({
+    code: e.detail.code,
+    userOpenid
+  })
+
+  const setAuthImpl = (token) => {
+    Taro.setStorageSync('saas-token', token);
+    callback()
+  }
+
+  const callback = () => {
+    Taro.navigateBack({
+      delta: stackLength(),
+      success: function () {
+        errorCallback()
+      }
+    })
+  }
+
   return {
     bg,
     logo,
     agreeFunc,
     setAgree,
-    agree
+    agree,
+    getPhone
   }
 }

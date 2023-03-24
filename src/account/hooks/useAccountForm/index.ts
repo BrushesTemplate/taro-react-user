@@ -5,6 +5,23 @@ import {saveUmuserPhone, saveUmuserPhoneVCode, login, updateUmuserPw} from 'qj-b
 import {errorCallback} from '@brushes/request';
 import {setStorage} from '@brushes/utils';
 
+export const stackLength = () => {
+  const arr = Taro.getCurrentPages();
+  const obj = {
+    pageIndex: 0
+  }
+  for(let i=0; i<arr.length; i++) {
+    if(arr[i]['$taroPath'].indexOf('/account/')>=0) {
+      if(i===0) {
+        obj.pageIndex = 0
+      }else {
+        obj.pageIndex = arr.length-i
+      }
+      break
+    }
+  }
+  return obj.pageIndex;
+}
 
 export const useAccountForm = (type?: string) => {
   const [form] = Form.useForm();
@@ -116,23 +133,7 @@ export const useAccountForm = (type?: string) => {
     }
   }
 
-  const stackLength = () => {
-    const arr = Taro.getCurrentPages();
-    const obj = {
-      pageIndex: 0
-    }
-    for(let i=0; i<arr.length; i++) {
-      if(arr[i]['$taroPath'].indexOf('/account/')>=0) {
-        if(i===0) {
-          obj.pageIndex = 0
-        }else {
-          obj.pageIndex = arr.length-i
-        }
-        break
-      }
-    }
-    return obj.pageIndex;
-  }
+
 
 
   const goRegister = () => {

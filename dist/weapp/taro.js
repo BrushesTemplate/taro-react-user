@@ -1,10 +1,10 @@
 "use strict";
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["taro"],{
 
-/***/ "../../qj/qj-mobile-core/node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js":
-/*!***************************************************************************************************!*\
-  !*** ../../qj/qj-mobile-core/node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js ***!
-  \***************************************************************************************************/
+/***/ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js ***!
+  \*****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -17,6 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Camera": function() { return /* binding */ Camera; },
 /* harmony export */   "Canvas": function() { return /* binding */ Canvas; },
 /* harmony export */   "ChannelLive": function() { return /* binding */ ChannelLive; },
+/* harmony export */   "ChannelVideo": function() { return /* binding */ ChannelVideo; },
 /* harmony export */   "Checkbox": function() { return /* binding */ Checkbox; },
 /* harmony export */   "CheckboxGroup": function() { return /* binding */ CheckboxGroup; },
 /* harmony export */   "CoverImage": function() { return /* binding */ CoverImage; },
@@ -65,87 +66,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "VoipRoom": function() { return /* binding */ VoipRoom; },
 /* harmony export */   "WebView": function() { return /* binding */ WebView; }
 /* harmony export */ });
-var View = 'view';
-var Icon = 'icon';
-var Progress = 'progress';
-var RichText = 'rich-text';
-var Text = 'text';
-var Button = 'button';
-var Checkbox = 'checkbox';
-var CheckboxGroup = 'checkbox-group';
-var Form = 'form';
-var Input = 'input';
-var Label = 'label';
-var Picker = 'picker';
-var PickerView = 'picker-view';
-var PickerViewColumn = 'picker-view-column';
-var Radio = 'radio';
-var RadioGroup = 'radio-group';
-var Slider = 'slider';
-var Switch = 'switch';
-var CoverImage = 'cover-image';
-var Textarea = 'textarea';
-var CoverView = 'cover-view';
-var MovableArea = 'movable-area';
-var MovableView = 'movable-view';
-var ScrollView = 'scroll-view';
-var Swiper = 'swiper';
-var SwiperItem = 'swiper-item';
-var Navigator = 'navigator';
-var Audio = 'audio';
-var Camera = 'camera';
-var Image = 'image';
-var LivePlayer = 'live-player';
-var Video = 'video';
-var Canvas = 'canvas';
-var Ad = 'ad';
-var WebView = 'web-view';
-var Block = 'block';
-var Map = 'map';
-var Slot = 'slot';
-var NativeSlot = 'native-slot';
-var CustomWrapper = 'custom-wrapper';
-
-// For React.createElement's type
-var Editor = 'editor';
-var MatchMedia = 'match-media';
-var FunctionalPageNavigator = 'functional-page-navigator';
-var LivePusher = 'live-pusher';
-var OfficialAccount = 'official-account';
-var OpenData = 'open-data';
-var NavigationBar = 'navigation-bar';
-var PageMeta = 'page-meta';
-var VoipRoom = 'voip-room';
-var AdCustom = 'ad-custom';
-var PageContainer = 'page-container';
-var ShareElement = 'share-element';
-var KeyboardAccessory = 'keyboard-accessory';
-var RootPortal = 'root-portal';
-var ChannelLive = 'channel-live';
-
-
-/***/ }),
-
-/***/ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js ***!
-  \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Button": function() { return /* binding */ Button; },
-/* harmony export */   "Checkbox": function() { return /* binding */ Checkbox; },
-/* harmony export */   "CheckboxGroup": function() { return /* binding */ CheckboxGroup; },
-/* harmony export */   "CoverImage": function() { return /* binding */ CoverImage; },
-/* harmony export */   "CoverView": function() { return /* binding */ CoverView; },
-/* harmony export */   "Form": function() { return /* binding */ Form; },
-/* harmony export */   "Image": function() { return /* binding */ Image; },
-/* harmony export */   "Input": function() { return /* binding */ Input; },
-/* harmony export */   "Label": function() { return /* binding */ Label; },
-/* harmony export */   "ScrollView": function() { return /* binding */ ScrollView; },
-/* harmony export */   "View": function() { return /* binding */ View; }
-/* harmony export */ });
-/* unused harmony exports Ad, AdCustom, Audio, Block, Camera, Canvas, ChannelLive, ChannelVideo, CustomWrapper, Editor, FunctionalPageNavigator, Icon, KeyboardAccessory, LivePlayer, LivePusher, Map, MatchMedia, MovableArea, MovableView, NativeSlot, NavigationBar, Navigator, OfficialAccount, OpenData, PageContainer, PageMeta, Picker, PickerView, PickerViewColumn, Progress, Radio, RadioGroup, RichText, RootPortal, ShareElement, Slider, Slot, Swiper, SwiperItem, Switch, Text, Textarea, Video, VoipRoom, WebView */
 var View = 'view';
 var Icon = 'icon';
 var Progress = 'progress';

@@ -58,7 +58,7 @@
 @font-face {
   font-family: "iconfont";
   /* Project id 3540782 */
-  src: url("//at.alicdn.com/t/c/font_3540782_58rex2gowg9.woff2?t=1679557133170") format("woff2"), url("//at.alicdn.com/t/c/font_3540782_58rex2gowg9.woff?t=1679557133170") format("woff"), url("//at.alicdn.com/t/c/font_3540782_58rex2gowg9.ttf?t=1679557133170") format("truetype");
+  src: url("//at.alicdn.com/t/c/font_3540782_tk2k34lqfkn.woff2?t=1679627495575") format("woff2"), url("//at.alicdn.com/t/c/font_3540782_tk2k34lqfkn.woff?t=1679627495575") format("woff"), url("//at.alicdn.com/t/c/font_3540782_tk2k34lqfkn.ttf?t=1679627495575") format("truetype");
 }
 .iconfont {
   font-family: iconfont;
@@ -71,6 +71,9 @@
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.icon-gonggao:before {
+  content: "\e607";
 }
 .icon-gongsigonggao:before {
   content: "\f8dd";
@@ -505,6 +508,43 @@
 .rateItem .content {
   color: #333333;
   font-size: 24rpx;
+}
+.noData {
+  height: inherit;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.noData .img {
+  display: block;
+  margin: 0 auto 40rpx;
+}
+.noData .title {
+  color: #ccc;
+  font-size: 32rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.noData .subTitle {
+  color: #ccc;
+  font-size: 32rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.noData .link {
+  color: #aaaaaa;
+  font-size: 40rpx;
+  text-align: center;
+  padding-top: 10rpx;
 }
 .goods {
   background: #fff;
@@ -2371,12 +2411,6 @@ swiper-item {
 .cart {
   background-color: #f6f6f6;
 }
-.cart .noData {
-  font-size: 32rpx;
-  color: #bbb;
-  text-align: center;
-  padding-top: 400rpx;
-}
 .cart .edit {
   text-align: right;
   border-bottom: 2rpx solid #e2e2e2;
@@ -2889,122 +2923,46 @@ swiper-item {
   font-weight: normal !important;
   color: #bcbcbc !important;
 }
-/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
-@font-face {
-  font-family: "iconfont";
-  /* Project id 3540782 */
-  src: url("//at.alicdn.com/t/c/font_3540782_3m3shnpkp65.woff2?t=1677664720312") format("woff2"), url("//at.alicdn.com/t/c/font_3540782_3m3shnpkp65.woff?t=1677664720312") format("woff"), url("//at.alicdn.com/t/c/font_3540782_3m3shnpkp65.ttf?t=1677664720312") format("truetype");
+#noticebar-wrap {
+  height: 72rpx;
+  display: grid;
+  grid-template-columns: 80rpx 1fr;
+  color: #ff6010;
+  background: #fff9ed;
+  line-height: 72rpx;
+  overflow: hidden;
+  border: 2rpx solid #fff3e9;
+  margin-bottom: 20rpx;
 }
-.iconfont {
-  font-family: iconfont;
-  font-variant: normal;
-  font-size: 32rpx;
-  line-height: 1;
-  font-style: normal;
-  vertical-align: middle;
-  text-transform: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#noticebar-wrap .icon-pre {
+  text-align: center;
+  background-color: #fff9ed;
+  border-color: #fff3e9;
+  color: #ff6010;
+  z-index: 1000;
+  padding-left: 10rpx;
 }
-.icon-eyes:before {
-  content: "\e60f";
+#noticebar-wrap .scroll-animate {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
-.icon-coupons:before {
-  content: "\e6ed";
+#noticebar-wrap .scroll-animate-item {
+  margin-right: 40rpx;
 }
-.icon-collect:before {
-  content: "\e793";
+#noticebar-wrap .normal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
 }
-.icon-shouhuodizhi:before {
-  content: "\e64e";
-}
-.icon-shezhi:before {
-  content: "\e602";
-}
-.icon-xiangyou1:before {
-  content: "\e775";
-}
-.icon-dizhi:before {
-  content: "\e66e";
-}
-.icon-kehufuwukefu:before {
-  content: "\e698";
-}
-.icon-daifahuo:before {
-  content: "\e601";
-}
-.icon-yiwancheng:before {
-  content: "\e6a6";
-}
-.icon-daishouhuo:before {
-  content: "\e640";
-}
-.icon-daifukuan:before {
-  content: "\e612";
-}
-.icon-shouhou:before {
-  content: "\e713";
-}
-.icon-xiaochengxu:before {
-  content: "\e619";
-}
-.icon-zhanghu:before {
-  content: "\e611";
-}
-.icon-roundcheck:before {
-  content: "\e657";
-}
-.icon-bianjishuru:before {
-  content: "\e8cc";
-}
-.icon-tianxie:before {
-  content: "\ec88";
-}
-.icon-close-bold:before {
-  content: "\e685";
-}
-.icon-jianqu:before {
-  content: "\e60c";
-}
-.icon-zengjia:before {
-  content: "\e6ea";
-}
-.icon-shanchu:before {
-  content: "\e623";
-}
-.icon-jiangxu:before {
-  content: "\e618";
-}
-.icon-shengxu:before {
-  content: "\e61b";
-}
-.icon-paixusort-jiang:before {
-  content: "\e7c6";
-}
-.icon-paixusort-sheng:before {
-  content: "\e7c7";
-}
-.icon-gouwuche:before {
-  content: "\e73d";
-}
-.icon-kefu:before {
-  content: "\ec2e";
-}
-.icon-my:before {
-  content: "\e66f";
-}
-.icon-fenleiclassify:before {
-  content: "\e7c0";
-}
-.icon-fenxiang:before {
-  content: "\e600";
-}
-.icon-cart:before {
-  content: "\e747";
-}
-.icon-paixu:before {
-  content: "\e610";
+#noticebar-wrap .normal .scroll-animate-item {
+  white-space: nowrap;
 }
 page {
   color: #333333;
