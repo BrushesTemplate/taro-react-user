@@ -45,7 +45,7 @@ var Index = function Index() {
 /* harmony export */   "ExpressInfoStep": function() { return /* binding */ ExpressInfoStep; }
 /* harmony export */ });
 /* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
-/* harmony import */ var qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qj-mobile-store */ "./node_modules/qj-mobile-store/dist/index.js");
+/* harmony import */ var qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qj-mobile-store */ "../qj-api-store/packages/qj-mobile-store/dist/index.js");
 /* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/get.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
@@ -91,7 +91,7 @@ var ExpressInfoStep = function ExpressInfoStep(_ref) {
 /* harmony export */   "ExpressInfoTop": function() { return /* binding */ ExpressInfoTop; }
 /* harmony export */ });
 /* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
-/* harmony import */ var qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qj-mobile-store */ "./node_modules/qj-mobile-store/dist/index.js");
+/* harmony import */ var qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qj-mobile-store */ "../qj-api-store/packages/qj-mobile-store/dist/index.js");
 /* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/get.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);

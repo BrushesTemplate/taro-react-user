@@ -1,4 +1,5 @@
 import {mine} from './routerMap/mine'
+
 export default defineAppConfig({
   pages: [
     'pages/index/index',

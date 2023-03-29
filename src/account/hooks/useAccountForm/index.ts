@@ -5,6 +5,7 @@ import {saveUmuserPhone, saveUmuserPhoneVCode, login, updateUmuserPw, checkVerif
 import {errorCallback} from '@brushes/request';
 import {setStorage} from '@brushes/utils';
 import {accountConst} from "@/account/constans";
+import {routerMap} from "qj-mobile-store";
 
 export const stackLength = () => {
   const arr = Taro.getCurrentPages();
@@ -150,7 +151,7 @@ export const useAccountForm = (type?: string) => {
     if(result.success) {
       console.log(148, result)
       Taro.navigateTo({
-        url: `/account/bindPhone/index?oldUserPhone=${formVal.mobile}`
+        url: `${routerMap.bindPhone}?oldUserPhone=${formVal.mobile}`
       })
     }
   }
@@ -185,25 +186,25 @@ export const useAccountForm = (type?: string) => {
 
   const goRegister = () => {
     Taro.navigateTo({
-      url: 'account/register/index'
+      url: routerMap.register
     })
   }
 
   const goAccountLogin = () => {
     Taro.navigateTo({
-      url: 'account/accountLogin/index'
+      url: routerMap.accountLogin
     })
   }
 
   const goMobileLogin = () => {
     Taro.navigateTo({
-      url: 'account/mobileLogin/index'
+      url: routerMap.mobileLogin
     })
   }
 
   const goForgetPwd = () => {
     Taro.navigateTo({
-      url: 'account/forgetPwd/index'
+      url: routerMap.forgetPwd
     })
   }
 
