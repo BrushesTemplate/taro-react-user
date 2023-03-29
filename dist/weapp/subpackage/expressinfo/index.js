@@ -9,11 +9,10 @@
 
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
 /* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
+/* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components */ "./src/subpackage/expressinfo/components/index.ts");
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './index.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -23,11 +22,11 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 var Index = function Index() {
   var _useRouter = (0,_tarojs_taro__WEBPACK_IMPORTED_MODULE_0__.useRouter)(),
     params = _useRouter.params;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_4__.View, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
     className: "expressInfo",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.ExpressInfoTop, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.ExpressInfoTop, {
       code: params.code
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.ExpressInfoStep, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components__WEBPACK_IMPORTED_MODULE_1__.ExpressInfoStep, {
       code: params.code
     })]
   });
@@ -47,7 +46,7 @@ var Index = function Index() {
 /* harmony export */ });
 /* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
 /* harmony import */ var qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qj-mobile-store */ "./node_modules/qj-mobile-store/dist/index.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/lodash.js");
+/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/get.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
 
@@ -59,8 +58,8 @@ var ExpressInfoStep = function ExpressInfoStep(_ref) {
   var code = _ref.code;
   var _useExpressInfo = (0,qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__.useExpressInfo)(code),
     detail = _useExpressInfo.detail;
-  var message = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(detail, 'message');
-  var list = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(detail, 'data');
+  var message = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(detail, 'message');
+  var list = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(detail, 'data');
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
     className: "expressInfoStep",
     children: message === 'ok' ? list.map(function (item, index) {
@@ -93,7 +92,7 @@ var ExpressInfoStep = function ExpressInfoStep(_ref) {
 /* harmony export */ });
 /* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/plugin-platform-weapp/dist/components-react.js");
 /* harmony import */ var qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! qj-mobile-store */ "./node_modules/qj-mobile-store/dist/index.js");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/lodash.js");
+/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/get.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "webpack/container/remote/react/jsx-runtime");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
 //@ts-nocheck
@@ -107,11 +106,11 @@ var ExpressInfoTop = function ExpressInfoTop(_ref) {
   var _useExpressInfo = (0,qj_mobile_store__WEBPACK_IMPORTED_MODULE_0__.useExpressInfo)(code),
     info = _useExpressInfo.info,
     detail = _useExpressInfo.detail;
-  var bg = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(info, 'packageList[0].contractGoodsList[0].dataPic');
-  var num = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(info, 'packageList.length');
-  var company = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(info, 'packageList[0].expressName');
-  var expressNO = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(info, 'packageList[0].packageBillno');
-  var state = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__.get)(detail, 'result');
+  var bg = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(info, 'packageList[0].contractGoodsList[0].dataPic');
+  var num = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(info, 'packageList.length');
+  var company = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(info, 'packageList[0].expressName');
+  var expressNO = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(info, 'packageList[0].packageBillno');
+  var state = (0,lodash_es__WEBPACK_IMPORTED_MODULE_2__["default"])(detail, 'result');
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {
     className: "expressInfoTop",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_tarojs_components__WEBPACK_IMPORTED_MODULE_3__.View, {

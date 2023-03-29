@@ -25,18 +25,17 @@ require("./runtime");
   \*****************************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
-/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
-/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
-/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
+/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass.js */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits.js */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper.js */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "webpack/container/remote/react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './app.scss'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
-/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _brushes_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @brushes/utils */ "./node_modules/@brushes/utils/dist/index.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils */ "./src/utils/index.ts");
-/* harmony import */ var _brushes_request__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @brushes/request */ "./node_modules/@brushes/request/dist/index.js");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @tarojs/taro */ "webpack/container/remote/@tarojs/taro");
+/* harmony import */ var _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _brushes_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @brushes/utils */ "./node_modules/@brushes/utils/dist/index.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils */ "./src/utils/index.ts");
+/* harmony import */ var _brushes_request__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @brushes/request */ "./node_modules/@brushes/request/dist/index.js");
 /* provided dependency */ var location = __webpack_require__(/*! @tarojs/runtime */ "webpack/container/remote/@tarojs/runtime")["location"];
 
 
@@ -49,25 +48,25 @@ Object(function webpackMissingModule() { var e = new Error("Cannot find module '
 
 
 var App = /*#__PURE__*/function (_Component) {
-  (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_6__["default"])(App, _Component);
-  var _super = (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_7__["default"])(App);
+  (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_inherits_js__WEBPACK_IMPORTED_MODULE_5__["default"])(App, _Component);
+  var _super = (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createSuper_js__WEBPACK_IMPORTED_MODULE_6__["default"])(App);
   function App() {
-    (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_8__["default"])(this, App);
+    (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_classCallCheck_js__WEBPACK_IMPORTED_MODULE_7__["default"])(this, App);
     return _super.apply(this, arguments);
   }
-  (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_9__["default"])(App, [{
+  (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_createClass_js__WEBPACK_IMPORTED_MODULE_8__["default"])(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      (0,_utils__WEBPACK_IMPORTED_MODULE_4__.safeArea)();
+      (0,_utils__WEBPACK_IMPORTED_MODULE_3__.safeArea)();
       if (true) {
         return;
       }
-      _brushes_request__WEBPACK_IMPORTED_MODULE_5__.fly.interceptors.request.use(function (config) {
+      _brushes_request__WEBPACK_IMPORTED_MODULE_4__.fly.interceptors.request.use(function (config) {
         //给所有请求添加自定义header
         config.headers = {
-          'saas-token': (0,_brushes_utils__WEBPACK_IMPORTED_MODULE_3__.getStorage)('saas-token')
+          'saas-token': (0,_brushes_utils__WEBPACK_IMPORTED_MODULE_2__.getStorage)('saas-token')
         };
-        if (_tarojs_taro__WEBPACK_IMPORTED_MODULE_2___default().getEnv() === 'WEB') {
+        if (_tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().getEnv() === 'WEB') {
           config.baseURL = location.origin + '/';
         }
         return config;
@@ -110,7 +109,7 @@ var App = /*#__PURE__*/function (_Component) {
   }, {
     key: "componentDidShow",
     value: function componentDidShow() {
-      console.log(63, (_tarojs_taro__WEBPACK_IMPORTED_MODULE_2___default()));
+      console.log(63, (_tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default()));
     }
   }, {
     key: "componentDidHide",
@@ -161,7 +160,7 @@ var App = /*#__PURE__*/function (_Component) {
 
 
 
-var config = {"pages":["pages/index/index","pages/shopping/index","pages/classify/index","pages/my/index","subpackage/orderlist/index","subpackage/orderdetail/index","subpackage/search/index","subpackage/goodlist/index","subpackage/gooddetail/index","subpackage/orderconfirm/index","subpackage/result/index","subpackage/rate/index","subpackage/paymentmode/index","subpackage/expressinfo/index","subpackage/collectionlist/index","subpackage/footprint/index","subpackage/ratedetail/index","subpackage/myagreementlist/index","subpackage/mysetting/index","subpackage/noticedetail/index","append/bindIphone/index","account/register/index","account/accountLogin/index","account/mobileLogin/index","account/forgetPwd/index","account/agreement/index","account/auth/index","subpackage/addresseditor/index","subpackage/addresslist/index","subpackage/couponlist/index","subpackage/setting/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"custom":true,"color":"#444","selectedColor":"#DC143C","backgroundColor":"#fff","list":[{"pagePath":"pages/index/index","selectedIconPath":"images/tabbar_home_on.png","iconPath":"images/tabbar_home.png","text":"首页"},{"pagePath":"pages/classify/index","selectedIconPath":"images/tabbar_cate_on.png","iconPath":"images/tabbar_cate.png","text":"分类"},{"pagePath":"pages/shopping/index","selectedIconPath":"images/tabbar_cart_on.png","iconPath":"images/tabbar_cart.png","text":"购物车"},{"pagePath":"pages/my/index","selectedIconPath":"images/tabbar_my_on.png","iconPath":"images/tabbar_my.png","text":"个人中心"}]}};
+var config = {"pages":["pages/index/index","pages/shopping/index","pages/classify/index","pages/my/index","subpackage/orderlist/index","subpackage/orderdetail/index","subpackage/search/index","subpackage/goodlist/index","subpackage/gooddetail/index","subpackage/orderconfirm/index","subpackage/result/index","subpackage/rate/index","subpackage/paymentmode/index","subpackage/expressinfo/index","subpackage/collectionlist/index","subpackage/footprint/index","subpackage/ratedetail/index","subpackage/myagreementlist/index","subpackage/mysetting/index","subpackage/noticedetail/index","append/bindIphone/index","account/register/index","account/accountLogin/index","account/mobileLogin/index","account/forgetPwd/index","account/agreement/index","account/auth/index","account/confirmPhone/index","subpackage/addresseditor/index","subpackage/addresslist/index","subpackage/couponlist/index","subpackage/setting/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"custom":true,"color":"#444","selectedColor":"#DC143C","backgroundColor":"#fff","list":[{"pagePath":"pages/index/index","selectedIconPath":"images/tabbar_home_on.png","iconPath":"images/tabbar_home.png","text":"首页"},{"pagePath":"pages/classify/index","selectedIconPath":"images/tabbar_cate_on.png","iconPath":"images/tabbar_cate.png","text":"分类"},{"pagePath":"pages/shopping/index","selectedIconPath":"images/tabbar_cart_on.png","iconPath":"images/tabbar_cart.png","text":"购物车"},{"pagePath":"pages/my/index","selectedIconPath":"images/tabbar_my_on.png","iconPath":"images/tabbar_my.png","text":"个人中心"}]}};
 _tarojs_runtime__WEBPACK_IMPORTED_MODULE_2__.window.__taroAppConfig = config
 var inst = App((0,_tarojs_plugin_framework_react_dist_runtime__WEBPACK_IMPORTED_MODULE_3__.createReactApp)(_node_modules_babel_loader_lib_index_js_ruleSet_1_rules_5_use_0_app_ts__WEBPACK_IMPORTED_MODULE_5__["default"], react__WEBPACK_IMPORTED_MODULE_6__, (react_dom__WEBPACK_IMPORTED_MODULE_7___default()), config))
 

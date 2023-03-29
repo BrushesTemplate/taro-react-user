@@ -1,9 +1,10 @@
 import {useState} from "react";
 import {Form} from 'antd-mobile';
 import Taro from '@tarojs/taro';
-import {saveUmuserPhone, saveUmuserPhoneVCode, login, updateUmuserPw} from 'qj-b2c-api';
+import {saveUmuserPhone, saveUmuserPhoneVCode, login, updateUmuserPw, checkVerificationMa, updateUserPhoneByUserPhone} from 'qj-b2c-api';
 import {errorCallback} from '@brushes/request';
 import {setStorage} from '@brushes/utils';
+import {accountConst} from "@/account/constans";
 
 export const stackLength = () => {
   const arr = Taro.getCurrentPages();
@@ -41,6 +42,12 @@ export const useAccountForm = (type?: string) => {
         break;
       case 'forgetPwd':
         await forgetPwdSubmit(formVal);
+        break;
+      case 'confirmPhone':
+        await confirmPhoneSubmit(formVal);
+        break;
+      case 'bindPhone':
+        await bindPhoneSubmit(formVal);
         break;
     }
   }
@@ -131,6 +138,46 @@ export const useAccountForm = (type?: string) => {
     } finally {
       setSubmitLock(false)
     }
+  }
+
+  const confirmPhoneSubmit = async (formVal) => {
+    const params = {
+      userPhone: formVal.mobile,
+      code: formVal.code,
+    }
+
+    const result = await checkVerificationMa(params);
+    if(result.success) {
+      console.log(148, result)
+      Taro.navigateTo({
+        url: `/account/bindPhone/index?oldUserPhone=${formVal.mobile}`
+      })
+    }
+  }
+
+  const bindPhoneSubmit = async (formVal) => {
+    const params = {
+      newUserPhone: formVal.mobile,
+      code: formVal.code,
+      oldUserPhone: accountConst.oldUserPhone
+    }
+    const result = await updateUserPhoneByUserPhone(params);
+    if(result.success) {
+      Taro.showToast({
+        title: '绑定成功',
+        icon: 'success',
+        duration: 2000,
+        success:() => {
+          setTimeout(() => {
+            Taro.navigateBack({
+              delta: 2
+            })
+          }, 2000);
+        }
+      })
+    }
+
+    console.log(166, result);
   }
 
 

@@ -4,6 +4,7 @@ import {queryProappEnvPage, saveUmuserPhoneNoCodeByWX, warrantyLogin} from 'qj-b
 import { get } from 'lodash-es'
 import {errorCallback} from '@brushes/request';
 import {stackLength} from '@/account/hooks';
+
 export const useAuth = () => {
   const [bg, setBg] = useState('');
   const [logo, setLogo] = useState('');

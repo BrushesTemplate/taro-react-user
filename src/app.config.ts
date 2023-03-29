@@ -34,6 +34,8 @@ export default defineAppConfig({
     'account/forgetPwd/index',
     'account/agreement/index',
     'account/auth/index',
+    'account/confirmPhone/index',
+    'account/bindPhone/index',
     // 收藏列表
     ...mine,
   ],
