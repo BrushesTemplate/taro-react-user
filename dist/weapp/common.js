@@ -94,58 +94,63 @@ var CodeWrap = function CodeWrap(_ref) {
             return _context.abrupt("return");
           case 2:
             mobile = form.getFieldValue('mobile');
-            if (!mobile) (0,_utils_message__WEBPACK_IMPORTED_MODULE_3__.errMessage)('请填写手机号');
+            if (mobile) {
+              _context.next = 6;
+              break;
+            }
+            (0,_utils_message__WEBPACK_IMPORTED_MODULE_3__.errMessage)('请填写手机号');
+            return _context.abrupt("return");
+          case 6:
             pass = type === 'mobileLogin' ? true : _utils__WEBPACK_IMPORTED_MODULE_1__.mobileRex.test(mobile);
             if (pass) {
-              _context.next = 9;
+              _context.next = 12;
               break;
             }
             (0,_utils_message__WEBPACK_IMPORTED_MODULE_3__.errMessage)('请填写正确的手机号');
-            _context.next = 33;
-            break;
-          case 9:
+            return _context.abrupt("return");
+          case 12:
             setLock(true);
-            _context.prev = 10;
+            _context.prev = 13;
             phone = {
               userPhone: mobile
             };
             if (!(type === 'reg')) {
-              _context.next = 19;
+              _context.next = 22;
               break;
             }
-            _context.next = 15;
+            _context.next = 18;
             return (0,qj_b2c_api__WEBPACK_IMPORTED_MODULE_2__.checkUserPhone)(phone);
-          case 15:
+          case 18:
             checkResult = _context.sent;
             if (checkResult.success) {
-              _context.next = 19;
+              _context.next = 22;
               break;
             }
             (0,_utils_message__WEBPACK_IMPORTED_MODULE_3__.errMessage)(checkResult.msg);
             return _context.abrupt("return");
-          case 19:
-            _context.next = 21;
+          case 22:
+            _context.next = 24;
             return (0,qj_b2c_api__WEBPACK_IMPORTED_MODULE_2__.sendPhone)(phone);
-          case 21:
+          case 24:
             result = _context.sent;
             console.log(26, result);
             setTimeFlag(true);
             setTime(seconds);
-            _context.next = 30;
+            _context.next = 33;
             break;
-          case 27:
-            _context.prev = 27;
-            _context.t0 = _context["catch"](10);
-            console.log(_context.t0);
           case 30:
             _context.prev = 30;
-            setLock(false);
-            return _context.finish(30);
+            _context.t0 = _context["catch"](13);
+            console.log(_context.t0);
           case 33:
+            _context.prev = 33;
+            setLock(false);
+            return _context.finish(33);
+          case 36:
           case "end":
             return _context.stop();
         }
-      }, _callee, null, [[10, 27, 30, 33]]);
+      }, _callee, null, [[13, 30, 33, 36]]);
     }));
     return function getMobile() {
       return _ref2.apply(this, arguments);

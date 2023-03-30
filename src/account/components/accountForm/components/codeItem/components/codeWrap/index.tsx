@@ -15,12 +15,16 @@ export const CodeWrap = ({form, type}) => {
   const getMobile = async () => {
     if (lock) return;
     const mobile = form.getFieldValue('mobile');
-    if (!mobile) errMessage('请填写手机号');
+    if (!mobile) {
+      errMessage('请填写手机号');
+      return;
+    }
 
     const pass = type === 'mobileLogin'? true:mobileRex.test(mobile);
 
     if (!pass) {
       errMessage('请填写正确的手机号');
+      return;
     } else {
       setLock(true);
       try {
