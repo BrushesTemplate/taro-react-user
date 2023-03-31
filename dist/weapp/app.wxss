@@ -628,12 +628,14 @@
 }
 /*一行两个*/
 .cube-type2 {
+  height: 400rpx;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20rpx;
 }
 /*一上二下*/
 .cube-type3 {
+  height: 800rpx;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -650,22 +652,18 @@
 }
 /*一左二右*/
 .cube-type4 {
+  height: 800rpx;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 20rpx;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 .cube-type4 .block:nth-child(1) {
-  grid-area: 1/1/3/2;
-}
-.cube-type4 .block:nth-child(2) {
-  grid-area: 1/2/2/3;
-}
-.cube-type4 .block:nth-child(3) {
-  grid-area: 2/2/3/3;
+  grid-row: 1/3;
 }
 /*田字形*/
 .cube-type5 {
+  height: 800rpx;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -684,7 +682,7 @@
   grid-area: 2/2/3/3;
 }
 .block {
-  height: 400rpx;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   background-size: cover;
@@ -1168,7 +1166,6 @@ swiper-item {
   display: block;
   width: 100%;
   height: 340rpx;
-  background-size: cover;
   margin-bottom: 10rpx;
 }
 .goodsList .listWrap .list .listItem .name {
@@ -1340,7 +1337,6 @@ swiper-item {
   font-size: 40rpx;
   font-weight: 600;
   line-height: 56rpx;
-  margin-bottom: 14rpx;
 }
 .GoodsDetailWrap .goodsDetail-topInfo .rPart {
   display: -webkit-flex;
@@ -2060,8 +2056,14 @@ swiper-item {
   grid-template-columns: 50rpx auto 100rpx;
 }
 .placeOrder .chooseAddress .address-info .left-title {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 28rpx;
   margin: 20rpx 0 8rpx 0;
+  -webkit-flex-basis: auto;
+      -ms-flex-preferred-size: auto;
+          flex-basis: auto;
 }
 .placeOrder .chooseAddress .address-info .left-padding {
   padding-left: 10rpx;
@@ -2959,6 +2961,10 @@ swiper-item {
 }
 #noticebar-wrap .normal .scroll-animate-item {
   white-space: nowrap;
+}
+.adm-skeleton-paragraph-line {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 page {
   color: #333333;

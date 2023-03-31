@@ -3,21 +3,33 @@ import HeaderJsx from "@/components/header";
 import {IconMobile} from '@brushes/simulate-component';
 import Taro from '@tarojs/taro';
 import {miniLogout} from 'qj-b2c-api';
+import {routerMap} from "qj-mobile-store";
 import './index.scss'
 
 const Index = () => {
 
   const goBind = () => {
     Taro.navigateTo({
-      url: `/account/confirmPhone/index`
+      url: routerMap.confirmPhone
     })
   }
 
   const logout = async () => {
-    await miniLogout()
-      Taro.switchTab({
-        url: `/pages/index/index`
+    try {
+      await miniLogout()
+      Taro.showToast({
+        title: '操作成功',
+        icon: 'success',
+        duration: 1000
       })
+      setTimeout(() => {
+        Taro.switchTab({
+          url: routerMap.index
+        })
+      }, 1000)
+    }catch (err) {
+      console.log(err)
+    }
   }
 
   return (
