@@ -40,9 +40,10 @@ var Index = function Index() {
       return (0,_Users_joker_Documents_workspace_lowCodeRepo_b2c_cli_mobile_lc_saas_node_modules_babel_runtime_helpers_esm_regeneratorRuntime_js__WEBPACK_IMPORTED_MODULE_6__["default"])().wrap(function _callee$(_context) {
         while (1) switch (_context.prev = _context.next) {
           case 0:
-            _context.next = 2;
+            _context.prev = 0;
+            _context.next = 3;
             return (0,qj_b2c_api__WEBPACK_IMPORTED_MODULE_2__.miniLogout)();
-          case 2:
+          case 3:
             _tarojs_taro__WEBPACK_IMPORTED_MODULE_1___default().showToast({
               title: '操作成功',
               icon: 'success',
@@ -53,11 +54,17 @@ var Index = function Index() {
                 url: qj_mobile_store__WEBPACK_IMPORTED_MODULE_3__.routerMap.index
               });
             }, 1000);
-          case 4:
+            _context.next = 10;
+            break;
+          case 7:
+            _context.prev = 7;
+            _context.t0 = _context["catch"](0);
+            console.log(_context.t0);
+          case 10:
           case "end":
             return _context.stop();
         }
-      }, _callee);
+      }, _callee, null, [[0, 7]]);
     }));
     return function logout() {
       return _ref.apply(this, arguments);

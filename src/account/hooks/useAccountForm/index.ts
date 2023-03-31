@@ -13,7 +13,8 @@ export const stackLength = () => {
     pageIndex: 0
   }
   for(let i=0; i<arr.length; i++) {
-    if(arr[i]['$taroPath'].indexOf('/account/')>=0) {
+    console.log(17, arr[i], arr[i]['$taroPath'].indexOf('/account/'))
+    if(arr[i]['$taroPath'].indexOf('account/')>=0) {
       if(i===0) {
         obj.pageIndex = 0
       }else {
@@ -83,7 +84,7 @@ export const useAccountForm = (type?: string) => {
     try {
       setSubmitLock(true)
       const result = await saveUmuserPhoneVCode(params);
-      setStorage('saas-token', result.dataObj.ticketTokenid)
+      setStorage('saas-token', result.dataObj.ticketTokenid);
       Taro.navigateBack({
         delta: stackLength(),
         success: (res) => {
@@ -147,12 +148,16 @@ export const useAccountForm = (type?: string) => {
       code: formVal.code,
     }
 
-    const result = await checkVerificationMa(params);
-    if(result.success) {
-      console.log(148, result)
-      Taro.navigateTo({
-        url: `${routerMap.bindPhone}?oldUserPhone=${formVal.mobile}`
-      })
+    try {
+      const result = await checkVerificationMa(params);
+      if(result.success) {
+        console.log(148, result)
+        Taro.navigateTo({
+          url: `${routerMap.bindPhone}?oldUserPhone=${formVal.mobile}`
+        })
+      }
+    }catch (err) {
+      console.log(err);
     }
   }
 
@@ -162,23 +167,25 @@ export const useAccountForm = (type?: string) => {
       code: formVal.code,
       oldUserPhone: accountConst.oldUserPhone
     }
-    const result = await updateUserPhoneByUserPhone(params);
-    if(result.success) {
-      Taro.showToast({
-        title: '绑定成功',
-        icon: 'success',
-        duration: 2000,
-        success:() => {
-          setTimeout(() => {
-            Taro.navigateBack({
-              delta: 2
-            })
-          }, 2000);
-        }
-      })
+    try {
+      const result = await updateUserPhoneByUserPhone(params);
+      if(result.success) {
+        Taro.showToast({
+          title: '绑定成功',
+          icon: 'success',
+          duration: 2000,
+          success:() => {
+            setTimeout(() => {
+              Taro.navigateBack({
+                delta: 3
+              })
+            }, 2000);
+          }
+        })
+      }
+    }catch (err) {
+      console.log(err);
     }
-
-    console.log(166, result);
   }
 
 
