@@ -10,7 +10,7 @@ const config = {
     375: 2 / 1
   },
   sourceRoot: 'src',
-  outputRoot: `dist/${process.env.TARO_ENV}`,
+  outputRoot: `localdist/${process.env.TARO_ENV}`,
   plugins: [
     ['@tarojs/plugin-html', {
       pxtransformBlackList: [/am-/, /demo-/, /^body/]
