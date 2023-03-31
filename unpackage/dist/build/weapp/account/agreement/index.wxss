@@ -1,0 +1,1 @@
+.wrap{-webkit-box-sizing:border-box;box-sizing:border-box;height:100vh;overflow-y:auto;padding:40rpx}

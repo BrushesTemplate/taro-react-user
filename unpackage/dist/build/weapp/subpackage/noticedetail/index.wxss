@@ -1,0 +1,1 @@
+.container{-webkit-box-sizing:border-box;box-sizing:border-box;height:100vh;overflow-y:auto;padding:40rpx}.container .title{color:#999;font-size:60rpx;margin-bottom:20rpx}.container .img{display:block;margin:0 auto 20rpx;max-width:100%}.container .content{font-size:32rpx;margin:0 auto 20rpx}

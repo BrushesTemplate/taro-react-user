@@ -10419,10 +10419,10 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^1.3.16:
-  version "1.3.16"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.16.tgz#17b2e393a59e9df58883f9d8ebc145b01fa9c803"
-  integrity sha512-94WACql9x8sZzFrMzw3ZjHovPlVUR2X5M9PSwsnT+vafafEhxkY4nzpYQZKBRkVOJpWsRPLkDEatABpwAT0/sQ==
+s-material-react@^1.3.17:
+  version "1.3.17"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.17.tgz#b5a3553857518cb68fe089c1ab36bfd899dee683"
+  integrity sha512-wBhUiUw+Wsl95iMzRPEtOWyDbfgb4GREoKB2yE0th5c51ideg/C47/OtFQL6zdUqbcjlq/BtCU7z/QVpu7a0Qw==
   dependencies:
     "@brushes/simulate-component" "^0.1.25"
     "@brushes/utils" "^0.0.15"

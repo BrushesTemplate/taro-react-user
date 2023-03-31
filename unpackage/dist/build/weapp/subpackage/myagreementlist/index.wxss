@@ -1,0 +1,1 @@
+.myAgreementList .list .item{-ms-flex-pack:justify;border-bottom:2rpx solid #efefef;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:28rpx;height:100rpx;-webkit-justify-content:space-between;justify-content:space-between;line-height:100rpx;padding:0 20rpx}
