@@ -1,1 +1,0 @@
-.tipWrap{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;padding:0 24rpx 40rpx}.tipWrap .tip .link{color:#b3a07c;display:inline-block}
