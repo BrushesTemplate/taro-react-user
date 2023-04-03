@@ -1,20 +1,28 @@
 import React from "react";
 import Taro from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import {View, ScrollView} from "@tarojs/components";
 
 type BaseWrapCommonProps = {
   children: React.ReactNode;
+  base?: boolean
 };
 
 export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
+  console.log(10, props);
   const safeArea = Taro.getStorageSync('safeArea');
   const tabBarH = Taro.getStorageSync('tabBarHeight');
   return (
-    <View style={{
-      paddingBottom: `${safeArea + tabBarH}px`
-    }}
-    >
-      {props.children}
+    <View>
+      <ScrollView
+        scrollY
+        enhanced
+        show-scrollbar={false}
+        style={{
+          height: `calc(100vh - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
+        }}
+      >
+        {props.children}
+      </ScrollView>
     </View>
   )
 }
