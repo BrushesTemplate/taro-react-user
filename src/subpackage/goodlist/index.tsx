@@ -5,7 +5,6 @@ import CommonJsx from '../../components';
 
 const Index = () => {
   const { path = '/pages/index/index', params } = useRouter();
-  console.log(18, path, params)
   return (
     <View className='container-goods-list'>
       <CommonJsx route={path} {...params} />
