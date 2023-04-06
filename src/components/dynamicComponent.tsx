@@ -1,10 +1,8 @@
 import { get, noop } from 'lodash-es';
 import {View} from '@tarojs/components';
 import * as materials from 's-material-react';
-import Taro from "@tarojs/taro";
 
-const env = Taro.getEnv()
-const DynamicComponent = ({node, base, topPage, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
+const DynamicComponent = ({node, topPage, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
   return (
     <>
       {

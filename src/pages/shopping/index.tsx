@@ -1,9 +1,11 @@
+import {useState} from 'react';
+import {BaseWrapCommon} from "@/components/baseWrapCommon";
 import {useDidShow, useRouter} from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import './index.scss'
 import { refreshCard } from 'qj-mobile-store';
 import CommonJsx from '../../components';
-import {useState} from 'react';
+import './index.scss'
+
 
 const Index = () => {
   const [refreshNum, setRefresh] = useState(0);
@@ -17,7 +19,9 @@ const Index = () => {
   })
   return (
     <View className='container'>
-      <CommonJsx refreshNum={refreshNum} route={path} topPage />
+      <BaseWrapCommon base>
+        <CommonJsx refreshNum={refreshNum} route={path} topPage />
+      </BaseWrapCommon>
     </View>
   )
 }

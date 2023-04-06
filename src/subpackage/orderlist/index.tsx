@@ -1,6 +1,7 @@
 import {useState} from "react";
 import { useRouter, useDidShow } from '@tarojs/taro';
 import { View } from '@tarojs/components';
+import {BaseWrapCommon} from "@/components/baseWrapCommon";
 import './index.scss'
 import CommonJsx from '../../components';
 
@@ -12,7 +13,9 @@ const Index = () => {
   })
   return (
     <View className='container-order'>
-      <CommonJsx route={path} refreshNum={refreshNum} {...params} />
+      <BaseWrapCommon>
+        <CommonJsx route={path} refreshNum={refreshNum} {...params} />
+      </BaseWrapCommon>
     </View>
   )
 }
