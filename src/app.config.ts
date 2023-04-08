@@ -1,44 +1,18 @@
-import {mine} from './routerMap/mine'
+import { menuDefaultValue } from './routerMap/basic'
+import { appendPath } from './routerMap/append'
+import { routerMap } from '@brushes/routemap';
 
+// 所有路由
+const router = Object.values(routerMap) || [];
+// tab
+const list = Object.values(menuDefaultValue) || [];
 export default defineAppConfig({
-  pages: [
-    'pages/index/index',
-    'pages/shopping/index',
-    'pages/classify/index',
-    'pages/my/index',
-     // 订单
-    'subpackage/orderlist/index',
-    'subpackage/orderdetail/index',
-
-    'subpackage/search/index',
-
-    // 商品
-    'subpackage/goodlist/index',
-    'subpackage/gooddetail/index',
-    'subpackage/orderconfirm/index',
-    'subpackage/result/index',
-    'subpackage/rate/index',
-    'subpackage/paymentmode/index',
-
-    'subpackage/expressinfo/index',
-    'subpackage/collectionlist/index',
-    'subpackage/footprint/index',
-    'subpackage/ratedetail/index',
-    'subpackage/myagreementlist/index',
-    'subpackage/mysetting/index',
-    'subpackage/noticedetail/index',
-    'append/bindIphone/index',
-
-    'account/register/index',
-    'account/accountLogin/index',
-    'account/mobileLogin/index',
-    'account/forgetPwd/index',
-    'account/agreement/index',
-    'account/auth/index',
-    'account/confirmPhone/index',
-    'account/bindPhone/index',
-    // 收藏列表
-    ...mine,
+  pages: router,
+  subpackages: [
+    {
+      "root": "packageA",
+      "pages": appendPath
+    }
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -51,31 +25,6 @@ export default defineAppConfig({
     color: '#444',
     selectedColor: '#DC143C',
     backgroundColor: '#fff',
-    list: [
-      {
-        pagePath: 'pages/index/index',
-        selectedIconPath: 'images/tabbar_home_on.png',
-        iconPath: 'images/tabbar_home.png',
-        text: '首页'
-      },
-      {
-        pagePath: 'pages/classify/index',
-        selectedIconPath: 'images/tabbar_cate_on.png',
-        iconPath: 'images/tabbar_cate.png',
-        text: '分类'
-      },
-      {
-        pagePath: 'pages/shopping/index',
-        selectedIconPath: 'images/tabbar_cart_on.png',
-        iconPath: 'images/tabbar_cart.png',
-        text: '购物车'
-      },
-      {
-        pagePath: 'pages/my/index',
-        selectedIconPath: 'images/tabbar_my_on.png',
-        iconPath: 'images/tabbar_my.png',
-        text: '个人中心'
-      }
-    ]
+    list
   }
 })

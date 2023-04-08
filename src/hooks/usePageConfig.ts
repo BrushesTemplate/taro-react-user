@@ -19,7 +19,6 @@ export function usePageConfig(route: string) {
         setNode(nodeResource.nodeGraph)
         return;
       }
-      console.log(menuOpcode)
       const pageConfig = await getPfsModelTagValueByTginfo({
         menuOpcode: menuOpcode,
         proappCode: '025',
@@ -45,11 +44,11 @@ export function usePageConfig(route: string) {
 
 
   async function init(path: string) {
-    let menu = Taro.getStorageSync('menu') || [];
+    let menu: Array<any> = Taro.getStorageSync('menu') || [];
     if(isEmpty(menu)) {
       menu = await loadMenu()
     }
-    const {menuOpcode} = menu.find(item => path.includes(item.menuJspath)) || {};
+    const {menuOpcode} = menu.find(item => path.includes(item.menuJspath || item.pagePath)) || {};
 
     if(!menuOpcode) {
       errMessage('菜单配置有问题');

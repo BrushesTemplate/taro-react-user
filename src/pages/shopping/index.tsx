@@ -11,7 +11,6 @@ const Index = () => {
   const [refreshNum, setRefresh] = useState(0);
   const { path } = useRouter();
   useDidShow(() => {
-    console.log('refreshCard.num', refreshCard.num);
     if(refreshCard.num > 0) {
       refreshCard.num = 0
       setRefresh(prevState => prevState+1)

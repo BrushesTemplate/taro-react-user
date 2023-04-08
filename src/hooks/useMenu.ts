@@ -1,24 +1,17 @@
 import {useEffect, useState} from 'react';
 import Taro from '@tarojs/taro';
-import {queryTginfoMenuTree} from 'qj-b2c-api';
-import {menuDefaultValue} from '@/custom-tab-bar/basic';
+import { queryNewTginfoMenuTree as queryTginfoMenuTree} from 'qj-b2c-api';
+import {appendPath, menuDefaultValue, menuList, tabBar, setMenuList, setTabBar} from '@/routerMap';
 import {errMessage} from '@/utils/message';
 
+let appendPathMap = appendPath;
 export function useMenu() {
   const [menuList, setMenuList] = useState([]);
   const [activePath, setPath] = useState();
   useEffect(() => {
-    console.log(15);
-    // @ts-ignore
     (async () => {
-      const menuData = Taro.getStorageSync('taroMenu')
-      if(menuData) {
-        setMenuList(menuData);
-        initPath()
-        return;
-      }
       try {
-        const menu = await loadMenu()
+        const menu = Taro.getStorageSync('taroMenu') || await loadMenu()
         setMenuList(menu);
         initPath();
       } catch (err) {
@@ -42,23 +35,60 @@ export function useMenu() {
 
 
 export async function loadMenu() {
-  const result = await queryTginfoMenuTree({
-    proappCode: '025',
-    rows: 30,
-    page: 1
-  })
-  const menu = result.map(item => {
-    return {
-      ...menuDefaultValue[item.menuJspath],
-      text: item.tginfoMenuName,
-      menuOpcode: item.menuOpcode
+  try {
+    const {list: result} = await queryTginfoMenuTree({
+      // proappCode: '025',
+      rows: 50,
+      dataState: 2,
+      page: 1
+    })
+
+    // 重新弄一套组装pagePath
+    const tabBarData = fetchTabBarPath(result);
+    const menuPath = fetchMenuPath(result)
+
+    if([[], undefined, null, ''].includes(tabBarData)) {
+      errMessage('租户菜单配置不正确')
+      return;
     }
-  })
-  if([[], undefined, null, ''].includes(menu)) {
-    errMessage('租户菜单配置不正确')
-    return;
+    Taro.setStorageSync('taroMenu', tabBarData);
+    Taro.setStorageSync('menu', tabBarData.concat(menuPath));
+    return tabBarData;
+  } catch (err) {
+    return []
   }
-  Taro.setStorageSync('taroMenu', menu);
-  Taro.setStorageSync('menu', menu.concat(result[0].children));
-  return menu;
+
+}
+
+
+//其他栏目
+const fetchMenuPath = (list: Array<any>) => {
+  const menuData = list.filter((item: any) => item.tginfoMenuPcode !== '-1');
+  return menuData.map(item => ({
+    pagePath: computedMenuPath(item),
+    text: item.tginfoMenuName,
+    menuOpcode: item.menuOpcode
+  }))
+}
+
+// 兼容老的 以后改
+export const computedMenuPath = ({ menuJspath, }) => {
+  return menuJspath || appendPathMap.unshift();
+}
+
+
+// 底部菜单
+const fetchTabBarPath = (list: Array<any>) => {
+  const tabBarData = list.filter((item: any) => item.tginfoMenuPcode === '-1');
+  return tabBarData.map(item => ({
+    ...menuDefaultValue[computedTabBarPath(item.menuOpcode)],
+    text: item.tginfoMenuName,
+    menuOpcode: item.menuOpcode
+  }))
+}
+
+// 兼容老的 以后改
+export const computedTabBarPath = (menuOpcode: string) => {
+  const flag = menuDefaultValue.hasOwnProperty(menuOpcode)
+  return flag ? menuOpcode : 'five';
 }

@@ -1,5 +1,5 @@
 {
-  "miniprogramRoot": "",
+  "miniprogramRoot": "./",
   "projectname": "taro-mobile-react",
   "description": "",
   "appid": "wx195a67e3956e9501",

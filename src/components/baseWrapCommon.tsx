@@ -8,7 +8,6 @@ type BaseWrapCommonProps = {
 };
 
 export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
-  console.log(10, props);
   const safeArea = Taro.getStorageSync('safeArea');
   const tabBarH = Taro.getStorageSync('tabBarHeight');
   return (

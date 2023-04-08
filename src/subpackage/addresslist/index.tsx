@@ -6,7 +6,7 @@ import CommonJsx from '../../components';
 
 const Index = () => {
   const [refreshNum, setRefreshNum] = useState(0);
-  const { path = '/pages/index/index' } = useRouter();
+  const { path } = useRouter();
   useDidShow(() => {
     setRefreshNum(prevState => ++prevState)
   })
