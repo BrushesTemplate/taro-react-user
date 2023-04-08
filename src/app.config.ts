@@ -6,6 +6,7 @@ import { routerMap } from '@brushes/routemap';
 const router = Object.values(routerMap) || [];
 // tab
 const list = Object.values(menuDefaultValue) || [];
+
 export default defineAppConfig({
   pages: router,
   subpackages: [

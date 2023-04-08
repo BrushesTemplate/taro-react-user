@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import Taro from '@tarojs/taro';
 import { queryNewTginfoMenuTree as queryTginfoMenuTree} from 'qj-b2c-api';
-import {appendPath, menuDefaultValue, menuList, tabBar, setMenuList, setTabBar} from '@/routerMap';
+import {appendPath, menuDefaultValue} from '@/routerMap';
 import {errMessage} from '@/utils/message';
 
 let appendPathMap = appendPath;
