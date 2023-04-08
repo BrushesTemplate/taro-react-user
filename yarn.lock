@@ -1180,17 +1180,6 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@brushes/request@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.17.tgz#8b7c7a9e103abde6e182d3a259e72ea5c2989932"
-  integrity sha512-O/x5WXMp6eO9m0nROZYKKu27WUSW5ZQ99ipMbUZQQzstUPq5f/HtTFYGriyL3uVWP8tBHzlBn/WH8DREbvTo4Q==
-  dependencies:
-    "@brushes/utils" "^0.0.15"
-    "@tarojs/taro" "^3.6.2"
-    flyio "^0.6.14"
-    lodash-es "^4.17.21"
-    qs "^6.11.0"
-
 "@brushes/request@^0.0.18":
   version "0.0.18"
   resolved "https://registry.npmjs.org/@brushes/request/-/request-0.0.18.tgz#ae65825a024ddbab36e6968f5488745cf24601b0"
@@ -9867,14 +9856,7 @@ pupa@^2.1.1:
   dependencies:
     escape-goat "^2.0.0"
 
-qj-b2c-api@^1.0.30:
-  version "1.0.30"
-  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.30.tgz#03a0456cc109d210ac2f66b4d2d6afc68f0d8ee0"
-  integrity sha512-kBcv02ujkZ2mjABok9Rd4+POb6hP1q5g8ysvZSd+/JUlbBwO0FMcPOINBC9isi1CX6Csd1CngwY///30aQW6/g==
-  dependencies:
-    "@brushes/request" "^0.0.17"
-
-qj-b2c-api@^1.0.32:
+qj-b2c-api@^1.0.30, qj-b2c-api@^1.0.32:
   version "1.0.32"
   resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.32.tgz#e698bf1213058212579d34a94749bf335c05cce6"
   integrity sha512-BmtpgWIumySWE8UeX7oSui3QTvz/yBUdOE8TmuBMXEPUukv1eLdNpZX8WiYxfv88+K0Cxw6reqjrBymlmWUx1A==
