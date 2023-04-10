@@ -1,5 +1,5 @@
 import { menuDefaultValue } from './routerMap/basic'
-import { appendPath } from './routerMap/append'
+// import { appendPath } from './routerMap/append'
 import { routerMap } from '@brushes/routemap';
 
 // 所有路由
@@ -9,12 +9,12 @@ const list = Object.values(menuDefaultValue) || [];
 
 export default defineAppConfig({
   pages: router,
-  subpackages: [
-    {
-      "root": "packageA",
-      "pages": appendPath
-    }
-  ],
+  // subpackages: [
+  //   {
+  //     "root": "packageA",
+  //     "pages": appendPath
+  //   }
+  // ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
