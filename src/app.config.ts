@@ -1,9 +1,9 @@
-import { menuDefaultValue } from './routerMap/basic'
 // import { appendPath } from './routerMap/append'
 import { routerMap } from '@brushes/routemap';
+import { menuDefaultValue } from './routerMap/basic'
 
 // 所有路由
-const router = Object.values(routerMap) || [];
+const router:Array<string> = Object.values(routerMap) || [];
 // tab
 const list = Object.values(menuDefaultValue) || [];
 

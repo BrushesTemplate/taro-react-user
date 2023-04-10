@@ -1,17 +1,15 @@
-import {useRouter} from '@tarojs/taro';
-import {View} from '@tarojs/components';
-import {ExpressInfoStep, ExpressInfoTop} from './components';
-import './index.scss';
-
+import { useRouter } from "@tarojs/taro";
+import { View } from "@tarojs/components";
+import CommonJsx from "../../components";
 
 const Index = () => {
-  const { params } = useRouter();
+  const { path = "/pages/index/index", params } = useRouter();
+  const { code } = params;
   return (
     <View className='expressInfo'>
-      <ExpressInfoTop code={params.code} />
-      <ExpressInfoStep code={params.code} />
+      <CommonJsx route={path} code={code} />
     </View>
-  )
-}
+  );
+};
 
 export default Index;
