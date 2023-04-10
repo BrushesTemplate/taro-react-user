@@ -3,7 +3,7 @@ import { Button  } from 'antd-mobile';
 import { FormInstance } from 'antd-mobile/es/components/form'
 import { sendPhone } from 'qj-b2c-api';
 import { useMountedRef } from '@/hooks';
-import {sucMessage} from '@/utils/message';
+import {taroMessage} from '@brushes/utils';
 
 const CodeJsx = ({ form }: { form: FormInstance }) => {
   const [dataTime, setDataTime] = useState(0);
@@ -31,7 +31,7 @@ const CodeJsx = ({ form }: { form: FormInstance }) => {
       sendPhone({ userPhone })
         .then((res) => {
           if(res.success) {
-            sucMessage(res);
+            taroMessage(res);
           }
           setDataTime(1 * 60);
         })

@@ -2,7 +2,7 @@ import {useEffect, useRef, useState} from "react";
 import {View} from '@tarojs/components';
 import {mobileRex} from "@/utils";
 import {sendPhone, checkUserPhone} from 'qj-b2c-api';
-import {errMessage} from "@/utils/message";
+import {taroMessage} from "@brushes/utils";
 
 const seconds = 60;
 
@@ -16,14 +16,14 @@ export const CodeWrap = ({form, type}) => {
     if (lock) return;
     const mobile = form.getFieldValue('mobile');
     if (!mobile) {
-      errMessage('请填写手机号');
+      taroMessage('请填写手机号', 'error');
       return;
     }
 
     const pass = type === 'mobileLogin'? true:mobileRex.test(mobile);
 
     if (!pass) {
-      errMessage('请填写正确的手机号');
+      taroMessage('请填写正确的手机号', 'error');
       return;
     } else {
       setLock(true);
@@ -34,7 +34,7 @@ export const CodeWrap = ({form, type}) => {
         if(type === 'reg') {
           const checkResult = await checkUserPhone(phone);
           if(!checkResult.success) {
-            errMessage(checkResult.msg);
+            taroMessage(checkResult.msg, 'error');
             return
           }
         }

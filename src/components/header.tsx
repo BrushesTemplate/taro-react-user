@@ -1,5 +1,5 @@
 import {ReactNode, useEffect, useMemo, useState} from 'react';
-import {navigatorBackImpl, navigatorImpl} from '@brushes/utils';
+import {navigatorBackImpl, navigatorHandler} from '@brushes/utils';
 import {IconMobile} from '@brushes/simulate-component';
 import {View} from '@tarojs/components';
 import Taro, {useRouter} from '@tarojs/taro';
@@ -23,10 +23,10 @@ const HeaderJsx = ({slot}: { slot?: ReactNode }) => {
     setTitle(navigationBarTitleText);
   }, [path])
 
-  const navigatorHandler = () => {
+  const navigator = () => {
     const flag = isTopPage();
     if(flag) {
-      navigatorImpl('/pages/index/index')
+      navigatorHandler('index')
       return
     }
     navigatorBackImpl(-1)
@@ -36,7 +36,7 @@ const HeaderJsx = ({slot}: { slot?: ReactNode }) => {
     <>
       {isHiddenHeader ? null :
         <View className='header'>
-          <IconMobile style={{fontSize: 20}} value='xiangzuo' onClick={navigatorHandler} />
+          <IconMobile style={{fontSize: 20}} value='xiangzuo' onClick={navigator} />
           <View className='title'>{title}</View>
           <View>{slot}</View>
         </View>

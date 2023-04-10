@@ -1,20 +1,27 @@
-import { menuDefaultValue } from './routerMap/basic'
+import { tabBarList } from './routerMap/basic'
 import { appendPath } from './routerMap/append'
+import { account } from './routerMap/account';
 import { routerMap } from '@brushes/routemap';
 
 // 所有路由
 const router = Object.values(routerMap) || [];
-// tab
-const list = Object.values(menuDefaultValue) || [];
 
 export default defineAppConfig({
-  pages: router,
-  subpackages: [
-    {
-      "root": "packageA",
-      "pages": appendPath
-    }
-  ],
+  pages: [
+    'pages/index/index',
+    'pages/shopping/index',
+    'pages/classify/index',
+    'pages/my/index',
+    'pages/dynamicTab/index',
+    ...account,
+    ...appendPath
+],
+  // subpackages: [
+  //   {
+  //     "root": "packageA",
+  //     "pages": appendPath
+  //   }
+  // ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
@@ -26,6 +33,6 @@ export default defineAppConfig({
     color: '#444',
     selectedColor: '#DC143C',
     backgroundColor: '#fff',
-    list
+    list: tabBarList
   }
 })

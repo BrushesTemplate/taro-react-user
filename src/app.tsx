@@ -2,13 +2,20 @@ import { Component, PropsWithChildren } from 'react'
 import './app.scss'
 import { View } from '@tarojs/components';
 import Taro from '@tarojs/taro';
-import { getStorage } from '@brushes/utils';
+import { getStorage, setTaro } from '@brushes/utils';
 import {safeArea} from "./utils";
 import { fly } from "@brushes/request";
 
 class App extends Component<PropsWithChildren> {
 
   componentDidMount () {
+
+
+    /**
+     * 初始化
+     */
+    setTaro(Taro)
+
     safeArea()
     if(process.env.NODE_ENV === 'development' || Taro.getEnv() === 'WEAPP') {
       return

@@ -1,5 +1,5 @@
 import {View, Image, CheckboxGroup, Checkbox} from '@tarojs/components';
-import {navigatorImpl} from "@brushes/utils";
+import {navigatorHandler} from "@brushes/utils";
 
 export const Footprint = ({item, edit}) => {
   return (
@@ -18,7 +18,9 @@ export const Footprint = ({item, edit}) => {
                       <Checkbox value={footprintItem.footprintCode}></Checkbox>
                     </View> : null
                 }
-                <View className='rPart' onClick={() => navigatorImpl(`/subpackage/gooddetail/index?skuCode=${footprintItem.footprintOpcode}`)}>
+                <View className='rPart' onClick={() => navigatorHandler('gooddetail', {
+                  skuCode: footprintItem.footprintOpcode
+                })}>
                   <Image src={footprintItem.footprintOppic} className='img' />
                   <View className='info'>
                     <View className='title'>{footprintItem.footprintOpcont}</View>

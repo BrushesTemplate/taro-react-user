@@ -1,13 +1,13 @@
 import {useEffect, useState} from 'react';
 import Taro from '@tarojs/taro';
 import { queryNewTginfoMenuTree as queryTginfoMenuTree} from 'qj-b2c-api';
-import {appendPath, menuDefaultValue} from '@/routerMap';
-import {errMessage} from '@/utils/message';
+import {appendPath, tabBarList} from '@/routerMap';
+import {taroMessage, setRouterMap} from '@brushes/utils';
 
 let appendPathMap = appendPath;
 export function useMenu() {
   const [menuList, setMenuList] = useState([]);
-  const [activePath, setPath] = useState();
+  const [activePath, setPath] = useState('');
   useEffect(() => {
     (async () => {
       try {
@@ -36,6 +36,7 @@ export function useMenu() {
 
 export async function loadMenu() {
   try {
+    console.log(39, 'queryTginfoMenuTree')
     const {list: result} = await queryTginfoMenuTree({
       // proappCode: '025',
       rows: 50,
@@ -45,14 +46,11 @@ export async function loadMenu() {
 
     // 重新弄一套组装pagePath
     const tabBarData = fetchTabBarPath(result);
-    const menuPath = fetchMenuPath(result)
-
     if([[], undefined, null, ''].includes(tabBarData)) {
-      errMessage('租户菜单配置不正确')
+      taroMessage('租户菜单配置不正确', 'error')
       return;
     }
     Taro.setStorageSync('taroMenu', tabBarData);
-    Taro.setStorageSync('menu', tabBarData.concat(menuPath));
     return tabBarData;
   } catch (err) {
     return []
@@ -60,35 +58,41 @@ export async function loadMenu() {
 
 }
 
+const routerMapInit = (list: Array<any>) => {
+  const routerMap = {}
 
-//其他栏目
-const fetchMenuPath = (list: Array<any>) => {
-  const menuData = list.filter((item: any) => item.tginfoMenuPcode !== '-1');
-  return menuData.map(item => ({
-    pagePath: computedMenuPath(item),
-    text: item.tginfoMenuName,
-    menuOpcode: item.menuOpcode
-  }))
+  list.forEach((item: any) => {
+    routerMap[item.menuOpcode] = computedMenuPath(item)
+  })
+
+  setRouterMap(routerMap)
 }
 
-// 兼容老的 以后改
-export const computedMenuPath = ({ menuJspath, }) => {
-  return menuJspath || appendPathMap.unshift();
+const computedMenuPath = ({ tginfoMenuPcode, tginfoMenuName }) => {
+  return {
+    text: tginfoMenuName,
+    level: tginfoMenuPcode === '-1' ? 1 : 2,
+    pagePath: tginfoMenuPcode !== '-1' ? appendPathMap.shift() : tabBarList.shift()?.pagePath
+  }
 }
-
 
 // 底部菜单
 const fetchTabBarPath = (list: Array<any>) => {
   const tabBarData = list.filter((item: any) => item.tginfoMenuPcode === '-1');
-  return tabBarData.map(item => ({
-    ...menuDefaultValue[computedTabBarPath(item.menuOpcode)],
-    text: item.tginfoMenuName,
-    menuOpcode: item.menuOpcode
-  }))
-}
 
-// 兼容老的 以后改
-export const computedTabBarPath = (menuOpcode: string) => {
-  const flag = menuDefaultValue.hasOwnProperty(menuOpcode)
-  return flag ? menuOpcode : 'five';
+  console.log(82, tabBarData[0].menuOpcode)
+  //初始化menuOpcode
+  Taro.setStorageSync('menuOpcode', tabBarData[0].menuOpcode)
+
+  const result = tabBarData.map((item, indx) => ({
+    ...tabBarList[indx],
+    level: 1,
+    menuOpcode: item.menuOpcode,
+    text: item.tginfoMenuName,
+  }))
+
+  // 初始化routerMap
+  routerMapInit(list);
+
+  return result
 }
