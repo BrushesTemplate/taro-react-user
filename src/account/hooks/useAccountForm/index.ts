@@ -13,7 +13,6 @@ export const stackLength = () => {
     pageIndex: 0
   }
   for(let i=0; i<arr.length; i++) {
-    console.log(17, arr[i], arr[i]['$taroPath'].indexOf('/account/'))
     if(arr[i]['$taroPath'].indexOf('account/')>=0) {
       if(i===0) {
         obj.pageIndex = 0

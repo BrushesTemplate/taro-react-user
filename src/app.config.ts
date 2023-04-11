@@ -1,10 +1,6 @@
 import { tabBarList } from './routerMap/basic'
 import { appendPath } from './routerMap/append'
 import { account } from './routerMap/account';
-import { routerMap } from '@brushes/routemap';
-
-// 所有路由
-const router = Object.values(routerMap) || [];
 
 export default defineAppConfig({
   pages: [
