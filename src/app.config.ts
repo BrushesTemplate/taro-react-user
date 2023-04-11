@@ -1,6 +1,6 @@
-import { tabBarList } from './routerMap/basic'
-import { appendPath } from './routerMap/append'
-import { account } from './routerMap/account';
+import {tabBarList} from './routerMap/basic'
+import {appendPath} from './routerMap/append'
+import {account} from './routerMap/account';
 
 export default defineAppConfig({
   pages: [
@@ -11,7 +11,7 @@ export default defineAppConfig({
     'pages/dynamicTab/index',
     ...account,
     ...appendPath
-],
+  ],
   // subpackages: [
   //   {
   //     "root": "packageA",

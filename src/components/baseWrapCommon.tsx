@@ -15,7 +15,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
 
   const [refreshNum, setRefresh] = useState(0);
 
-  const { safeArea, tabBarH, menuOpcode } = useMemo(() => {
+  const { safeArea, tabBarH, menuOpcode, windowH } = useMemo(() => {
 
     // h5环境特殊处理
     const isWeb = Taro.getEnv() === 'WEB';
@@ -27,11 +27,12 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
         Taro.setStorageSync('menuOpcode', menuOpcode)
       }
     }
-
+    const windowH = Taro.getSystemInfoSync().windowHeight;
     const menuOpcode = Taro.getStorageSync('menuOpcode');
     const safeArea = Taro.getStorageSync('safeArea');
     const tabBarH = Taro.getStorageSync('tabBarHeight');
     return {
+      windowH,
       safeArea,
       tabBarH,
       menuOpcode
@@ -58,7 +59,6 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
       setRefresh(prevState => prevState+1)
     }
   });
-
   return (
     <View>
       <ScrollView
@@ -66,7 +66,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
         enhanced
         show-scrollbar={false}
         style={{
-          height: `calc(100vh - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
+          height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
         <CommonJsx refreshNum={refreshNum} route={path} {...params} />

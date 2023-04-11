@@ -3,7 +3,7 @@ module.exports = {
   env: {
     platform: '"user"',
     NODE_ENV: '"production"',
-    REACT_APP_BASE_URL: '"https://b2cweappe8eb6d08db90471bb2c65312fc896b66.saas.qjclouds.com/"',
+    REACT_APP_BASE_URL: '"https://b2cweappf6d532c175f74af48e5dc4db203ab087.saas.qjclouds.com/"',
     REACT_APP_SESSION_KEY: '"saas-token"',
     REACT_APP_APPLICATION: '""',
   },
