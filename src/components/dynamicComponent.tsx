@@ -1,5 +1,4 @@
 import { get, noop } from 'lodash-es';
-import {View} from '@tarojs/components';
 import * as materials from 's-material-react';
 import {Fragment} from 'react';
 

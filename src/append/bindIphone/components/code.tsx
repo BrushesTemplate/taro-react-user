@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button  } from 'antd-mobile';
 import { FormInstance } from 'antd-mobile/es/components/form'
 import { sendPhone } from 'qj-b2c-api';
-import { useMountedRef } from '@/hooks';
-import {taroMessage} from '@brushes/utils';
+import {taroMessage, useMountedRef} from '@brushes/utils';
 
 const CodeJsx = ({ form }: { form: FormInstance }) => {
   const [dataTime, setDataTime] = useState(0);

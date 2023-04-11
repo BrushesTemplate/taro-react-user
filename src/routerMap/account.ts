@@ -6,5 +6,8 @@ export const account = [
   'account/agreement/index',
   'account/auth/index',
   'account/confirmPhone/index',
-  'account/bindPhone/index'
+  'account/bindPhone/index',
+  'account/mySetting/index',
+  'account/setting/index',
+  'account/myagreementlist/index'
 ]

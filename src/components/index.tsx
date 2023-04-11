@@ -1,4 +1,4 @@
-import {usePageConfig} from '@/hooks';
+import {usePageConfig} from '@brushes/taro-hooks';
 import HeaderJsx from '@/components/header';
 import DynamicComponent from './dynamicComponent';
 import {Fragment} from 'react';
