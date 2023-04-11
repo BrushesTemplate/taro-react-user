@@ -1,8 +1,8 @@
 import {useDidShow, useRouter} from '@tarojs/taro';
 import { View } from '@tarojs/components';
-import './index.scss'
 import CommonJsx from '@/components';
 import {useState} from 'react';
+import './index.scss'
 
 const Index = () => {
   const [refreshNum, setRefresh] = useState(0);

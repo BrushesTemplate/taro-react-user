@@ -10,6 +10,7 @@ type BaseWrapCommonProps = {
 export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
   const safeArea = Taro.getStorageSync('safeArea');
   const tabBarH = Taro.getStorageSync('tabBarHeight');
+  const windowH = Taro.getSystemInfoSync().windowHeight;
   return (
     <View>
       <ScrollView
@@ -17,7 +18,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
         enhanced
         show-scrollbar={false}
         style={{
-          height: `calc(100vh - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
+          height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
         {props.children}
