@@ -12,12 +12,6 @@ export default defineAppConfig({
     ...account,
     ...appendPath
   ],
-  // subpackages: [
-  //   {
-  //     "root": "packageA",
-  //     "pages": appendPath
-  //   }
-  // ],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',

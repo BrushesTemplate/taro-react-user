@@ -1,54 +1,49 @@
 import { Component, PropsWithChildren } from 'react'
 import './app.scss'
-import { setTaro } from '@brushes/utils';
+import { getStorage } from '@brushes/utils';
 import {safeArea} from "./utils";
-import { requestInit } from "@brushes/request";
+import Taro from '@tarojs/taro';
+import { fly } from "@brushes/request";
 import { initApplication } from '@brushes/taro-hooks';
 import {appendPath, tabBarList} from '@/routerMap';
 import { queryNewTginfoMenuTree, getPfsModelTagValueByTginfo } from 'qj-b2c-api';
-import Taro,
-{ getStorageSync, setNavigationBarTitle, setStorageSync, showToast, removeStorageSync, createSelectorQuery }
-from '@tarojs/taro';
-class App extends Component<PropsWithChildren> {
+
+class App extends Component<PropsWithChildren, any> {
 
   componentDidMount () {
     /**
-     * 初始化
-     * taro
-     * request
-     * 应用
+     * 初始化应用
      */
-    setTaro(Object.assign(Taro,
-      { getStorageSync, setNavigationBarTitle, setStorageSync, showToast, removeStorageSync, createSelectorQuery }
-    ));
 
-    requestInit({
-      isWechat: Taro.getEnv() === 'WEAPP',
-      baseUrl: Taro.getEnv() === 'WEAPP' ? process.env.WEAPP : process.env.WEB
-    });
-
+    //@ts-ignore
     initApplication({
       tabBar: tabBarList,
       subpackage: appendPath,
       menuTreeIo: queryNewTginfoMenuTree,
       pageInfoIo: getPfsModelTagValueByTginfo
     });
+
     safeArea()
-    // if(process.env.NODE_ENV === 'development' || Taro.getEnv() === 'WEAPP') {
-    //   return
-    // }
+
+    if(Taro.getEnv() === 'WEB'){
+      fly.engine= XMLHttpRequest
+    }
+
+    if(process.env.NODE_ENV === 'development' || Taro.getEnv() === 'WEAPP') {
+      return
+    }
+
     //
-    // const fly = flyInit();
-    // fly.interceptors.request.use((config) => {
-    //   //给所有请求添加自定义header
-    //   config.headers = {
-    //     'saas-token': getStorage('saas-token'),
-    //   }
-    //   if(Taro.getEnv() === 'WEB') {
-    //     config.baseURL = location.origin + '/'
-    //   }
-    //   return config;
-    // })
+    fly.interceptors.request.use((config) => {
+      //给所有请求添加自定义header
+      config.headers = {
+        'saas-token': getStorage('saas-token'),
+      }
+      if(Taro.getEnv() === 'WEB') {
+        config.baseURL = location.origin + '/'
+      }
+      return config;
+    })
     // /**
     //  * 初次加载判断网络情况
     //  * 无网络状态下根据实际情况进行调整
@@ -87,7 +82,6 @@ class App extends Component<PropsWithChildren> {
   }
 
   componentDidShow () {
-    console.log(63, Taro);
   }
 
   componentDidHide () {}
