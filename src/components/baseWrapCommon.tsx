@@ -12,7 +12,7 @@ type BaseWrapCommonProps = {
 
 export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
   const { path, params } = useRouter();
-
+  const [title, setTitle] = useState('');
   const [refreshNum, setRefresh] = useState(0);
 
   const { safeArea, tabBarH, menuOpcode, windowH } = useMemo(() => {
@@ -21,7 +21,6 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
     const isWeb = Taro.getEnv() === 'WEB';
     if(isWeb) {
       const taroMenu = Taro.getStorageSync('taroMenu') || [];
-      console.log(24, taroMenu);
       const { menuOpcode } = taroMenu.find(item => path.includes(item.pagePath)) || {}
       if(menuOpcode) {
         Taro.setStorageSync('menuOpcode', menuOpcode)
@@ -44,7 +43,8 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
     const {text = '首页'} = routerMap[menuOpcode] || {};
     Taro.setNavigationBarTitle({
       title: text
-    })
+    });
+    setTitle(text);
   }, [])
 
   useDidShow(() => {
@@ -59,6 +59,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
       setRefresh(prevState => prevState+1)
     }
   });
+
   return (
     <View>
       <ScrollView
@@ -69,7 +70,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
-        <CommonJsx refreshNum={refreshNum} route={path} {...params} />
+        <CommonJsx navigationBarTitle={title} refreshNum={refreshNum} route={path} {...params} />
       </ScrollView>
     </View>
   )

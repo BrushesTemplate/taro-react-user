@@ -11,6 +11,8 @@ import { queryNewTginfoMenuTree, getPfsModelTagValueByTginfo } from 'qj-b2c-api'
 class App extends Component<PropsWithChildren, any> {
 
   componentDidMount () {
+    Taro.clearStorageSync()
+    console.log(85, '================ componentDidShow ==============')
     /**
      * 初始化应用
      */
@@ -82,6 +84,7 @@ class App extends Component<PropsWithChildren, any> {
   }
 
   componentDidShow () {
+
   }
 
   componentDidHide () {}
