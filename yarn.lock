@@ -1204,19 +1204,10 @@
     lodash-es "^4.17.21"
     react "^18.0.0"
 
-"@brushes/taro-hooks@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.1.2.tgz#7000176c9d000294fbfadaa8f089677d58b16099"
-  integrity sha512-WNGZyZMzSy05hpxN7ju0Eawbk2mcsOQCuKFMZwk87suulLA7SKr8YywrUn1qRRU072Xv8HtSAbSR8WaYV5QlqQ==
-  dependencies:
-    "@brushes/utils" "^0.0.20"
-    lodash-es "^4.17.21"
-    react "^18.2.0"
-
-"@brushes/utils@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.npmjs.org/@brushes/utils/-/utils-0.0.20.tgz#3dcefb07dd7a2141885e6f730f9bef1eafb93999"
-  integrity sha512-KOpdP2PuZNsfccyWKNwVhAvdkk5RujyTejxFK32iCMhJQcnyVtkk6c8iXUPsUbZBSBnSM4gMyfdZfoSUwSJkXQ==
+"@brushes/taro-hooks@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.1.4.tgz#8e3d950d059d13af0f9aaf88e05288c32a92e96a"
+  integrity sha512-+KmExUiVKIfNJuOXzydI/UpW4pJkxaj2Rbiz+daPQ/8cGB3CH7+zj/2skSMlZFmJxdgPgqsh5Sqf791/QC5iwQ==
   dependencies:
     lodash-es "^4.17.21"
     react "^18.2.0"
