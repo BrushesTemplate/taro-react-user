@@ -9,5 +9,5 @@ export const account = [
   'account/bindPhone/index',
   'account/mySetting/index',
   'account/setting/index',
-  'account/myagreementlist/index'
+  'account/myAgreementList/index'
 ]
