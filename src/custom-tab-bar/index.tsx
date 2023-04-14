@@ -9,8 +9,8 @@ const Index = () => {
   const { path } = useRouter()
   const [color,] = useState('#b8b8b8');
   const [selectedColor,] = useState('#000000');
-
   const menuList = useMenu();
+
   const switchTab = (menuOpcode) => {
     navigatorHandler(menuOpcode)
   }
