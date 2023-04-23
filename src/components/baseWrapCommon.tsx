@@ -50,6 +50,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
   useDidShow(() => {
     const pagesRefreshStore = getPagesRefreshStore();
     const { num } = get(pagesRefreshStore, [menuOpcode], 0);
+    console.log('menuOpcode', menuOpcode, num);
     if(num > 0) {
       updatePagesRefreshStore({
         [menuOpcode]: {
