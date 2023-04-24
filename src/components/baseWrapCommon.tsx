@@ -4,6 +4,7 @@ import { get } from 'lodash-es'
 import {View, ScrollView} from "@tarojs/components";
 import CommonJsx from '@/components/index';
 import {getPagesRefreshStore, updatePagesRefreshStore} from '@brushes/utils';
+import TabBarWeb from '@/custom-tab-web/index';
 
 type BaseWrapCommonProps = {
   base?: boolean
@@ -14,7 +15,6 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
   const { path, params } = useRouter();
   const [title, setTitle] = useState('');
   const [refreshNum, setRefresh] = useState(0);
-
   const { safeArea, tabBarH, menuOpcode, windowH } = useMemo(() => {
 
     // h5环境特殊处理
@@ -73,6 +73,7 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
       >
         <CommonJsx navigationBarTitle={title} refreshNum={refreshNum} route={path} {...params} />
       </ScrollView>
+      <TabBarWeb base={props.base || false}/>
     </View>
   )
 }

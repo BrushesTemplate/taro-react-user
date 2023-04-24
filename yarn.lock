@@ -1211,10 +1211,10 @@
     lodash-es "^4.17.21"
     react "^18.0.0"
 
-"@brushes/taro-hooks@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.1.4.tgz#8e3d950d059d13af0f9aaf88e05288c32a92e96a"
-  integrity sha512-+KmExUiVKIfNJuOXzydI/UpW4pJkxaj2Rbiz+daPQ/8cGB3CH7+zj/2skSMlZFmJxdgPgqsh5Sqf791/QC5iwQ==
+"@brushes/taro-hooks@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.1.5.tgz#7628b827c95e3a9f981aebff6174cdc4e32d79f9"
+  integrity sha512-5DdeU1YuANlcT9KpD1aOs5VVFEjWUuPSuiiSpEsaknm/SXV0nFmDDkgA0ky59Twhk+EQA7iCDN+wd8FTH0i9lA==
   dependencies:
     lodash-es "^4.17.21"
     react "^18.2.0"
@@ -9814,9 +9814,9 @@ pupa@^2.1.1:
     escape-goat "^2.0.0"
 
 qj-b2c-api@latest:
-  version "1.0.38"
-  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.38.tgz#51d963b800f53425f7324e1bd97fa7c8f4e1f426"
-  integrity sha512-v4GtTgKi8jpGo1tIk2u0Et136OINxXyEN+F5P/Cp1c6O/zxvSRy8/lyWICJFySYF0iyc4KpHOF/HMys9vtVHoQ==
+  version "1.0.39"
+  resolved "https://registry.npmjs.org/qj-b2c-api/-/qj-b2c-api-1.0.39.tgz#eb075d76c3c2a59d76b4d4ba01a59fb66dfa0ff1"
+  integrity sha512-UEkKMg+PWlgwFCqw8QuUlQgRJVmxVAqX+ABrsmV/iIDWa+SgZDWnfDttyun+YEtd2Mq246QdGnjB9XBHa5uUbA==
   dependencies:
     "@brushes/optimize" latest
 
