@@ -1,19 +1,17 @@
 import { Component, PropsWithChildren } from 'react'
-import './app.scss'
 import { getStorage } from '@brushes/utils';
-import {safeArea} from "./utils";
 import Taro from '@tarojs/taro';
 import { fly } from "@brushes/request";
 import { initApplication } from '@brushes/taro-hooks';
 import {appendPath, tabBarList} from '@/routerMap';
 import { queryNewTginfoMenuTree, getPfsModelTagValueByTginfo } from 'qj-b2c-api';
+import {safeArea} from "./utils";
+import './app.scss'
 
 class App extends Component<PropsWithChildren, any> {
 
   componentDidMount () {
-    // Taro.clearStorageSync()
     Taro.removeStorageSync('routerMap')
-    Taro.removeStorageSync('pagesRefreshStore')
     Taro.removeStorageSync('menuOpcode')
     Taro.removeStorageSync('taroMenu')
     console.log(85, '================ componentDidShow ==============')

@@ -16,7 +16,10 @@ const Index = () => {
 
   const logout = async () => {
     try {
-      await miniLogout()
+      await miniLogout();
+      Taro.removeStorage({
+        key: 'saas-token'
+      })
       Taro.showToast({
         title: '操作成功',
         icon: 'success',
