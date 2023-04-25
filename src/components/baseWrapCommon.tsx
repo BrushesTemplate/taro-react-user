@@ -71,9 +71,11 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
-        <CommonJsx navigationBarTitle={title} refreshNum={refreshNum} route={path} {...params} />
+        <View>
+          <CommonJsx navigationBarTitle={title} refreshNum={refreshNum} route={path} {...params} />
+        </View>
       </ScrollView>
-      <TabBarWeb base={props.base || false}/>
+      <TabBarWeb base={props.base || false} />
     </View>
   )
 }
