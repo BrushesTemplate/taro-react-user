@@ -1198,10 +1198,10 @@
     lodash-es "^4.17.21"
     qs "^6.11.0"
 
-"@brushes/simulate-component@^0.1.32":
-  version "0.1.33"
-  resolved "https://registry.npmjs.org/@brushes/simulate-component/-/simulate-component-0.1.33.tgz#ffcabe58b134bcbbca88aeb08bcb8eacb1d1bfcf"
-  integrity sha512-VlL09jNE784dI4FQ4GLgEhI+ZNPsHuZ20RSjqiVUKPQFpL/1NyQOpu+HN14dQuOXoZtNQZNbVQUImg07EgJraQ==
+"@brushes/simulate-component@^0.1.35":
+  version "0.1.35"
+  resolved "https://registry.npmjs.org/@brushes/simulate-component/-/simulate-component-0.1.35.tgz#281f8143eda21eac058ade1d1b6b6efd6d8201d2"
+  integrity sha512-eIpxeecmrPO6TioC8m6ZdxQVwbdg3hiYovFgLNCXyogEi142S+LLIWEfWBRkfl9RiPLycpj+p9yFgCNZ5lfVOQ==
   dependencies:
     "@brushes/utils" latest
     "@tarojs/components" "3.6.2"
@@ -9793,6 +9793,11 @@ psl@^1.1.28, psl@^1.1.33:
   resolved "https://registry.npmjs.org/psl/-/psl-1.9.0.tgz"
   integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
 
+pubsub-js@^1.9.4:
+  version "1.9.4"
+  resolved "https://registry.npmjs.org/pubsub-js/-/pubsub-js-1.9.4.tgz#5c8678600e34e95b1269e96c17e1b51dab3ecb5a"
+  integrity sha512-hJYpaDvPH4w8ZX/0Fdf9ma1AwRgU353GfbaVfPjfJQf1KxZ2iHaHl3fAUw1qlJIR5dr4F3RzjGaWohYUEyoh7A==
+
 pump@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/pump/-/pump-3.0.0.tgz"
@@ -9821,12 +9826,12 @@ qj-b2c-api@latest:
     "@brushes/optimize" latest
 
 qj-mobile-store@latest:
-  version "1.0.67"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.0.67.tgz#3ca8224b1b84b46883537c0ad75f965aa15adea4"
-  integrity sha512-Zx1hRPiAgxAsJEgmG9FI3C0vkqD3HVCkD4U+1/s8UavmIqP3LPhfdFpA13XH7pHRvyfulLt1InfA8bIFUGuiyA==
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.1.0.tgz#5ae9690ccf95d3a87576c11ea9d5571f73944205"
+  integrity sha512-M6C4P85Fxcmgirf2KFoW2vyhZYOJN5gW9CVRdT8ixXf6BJupDIyBC3sMPwZ5xLl4ZnZ72+clr5yzJKoJJ+Qz/Q==
   dependencies:
-    "@brushes/utils" latest
     lodash-es "^4.17.21"
+    pubsub-js "^1.9.4"
     qj-b2c-api latest
     react "^18.2.0"
 
@@ -10390,13 +10395,12 @@ rxjs@^6.4.0, rxjs@^6.6.0:
   dependencies:
     tslib "^1.9.0"
 
-s-material-react@^1.3.31:
-  version "1.3.31"
-  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.31.tgz#decf6b6d1166d6d06655b18252a8fad4b39f8961"
-  integrity sha512-WPFxbLPnJoIc8ZQhC51NGTIU/VUHwiyPZEziyY9L9a2OtAHIoeH11O3888l+tqkDSCkuma2GP2I1gvNWqmeYaQ==
+s-material-react@^1.3.32:
+  version "1.3.32"
+  resolved "https://registry.npmjs.org/s-material-react/-/s-material-react-1.3.32.tgz#a102b4976c4eab4d0cf649e95288715d39fdd2eb"
+  integrity sha512-THORYmRPT0PJNMsMgZ/3jVknO1eKDYq+W5R9wzV9CNvtaOTBw3L+FW9Oif8fJIg08AKu6Hw2MU6rhsLmwuF0PA==
   dependencies:
-    "@brushes/simulate-component" "^0.1.32"
-    "@brushes/utils" latest
+    "@brushes/simulate-component" "^0.1.35"
     "@stencil/core" "^3.2.0"
     china-division "^2.6.1"
     classnames "^2.3.2"
