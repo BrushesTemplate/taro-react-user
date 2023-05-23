@@ -1,17 +1,22 @@
-import React, {useEffect, useMemo, useState} from "react";
+import React, {createContext, useEffect, useMemo, useState} from "react";
 import Taro, {useDidShow, useRouter} from "@tarojs/taro";
 import { get } from 'lodash-es'
 import {View, ScrollView} from "@tarojs/components";
 import CommonJsx from '@/components/index';
 import {getPagesRefreshStore, updatePagesRefreshStore} from '@brushes/utils';
 import TabBarWeb from '@/custom-tab-web/index';
+import {useGoTop} from 'qj-mobile-store';
 
 type BaseWrapCommonProps = {
   base?: boolean
 };
 
+export const allContext = createContext({});
+
 
 export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
+
+  const {goTop, scrollTop} = useGoTop();
   const { path, params } = useRouter();
   const [title, setTitle] = useState('');
   const [refreshNum, setRefresh] = useState(0);
@@ -62,20 +67,25 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
   });
 
   return (
-    <View>
+    <allContext.Provider
+      value={goTop}
+    >
       <ScrollView
         scrollY
         enhanced
         show-scrollbar={false}
+        scrollTop={scrollTop}
+        scrollWithAnimation
+        scrollAnimationDuration='800'
         style={{
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
         <View>
-          <CommonJsx navigationBarTitle={title} refreshNum={refreshNum} route={path} {...params} />
+          <CommonJsx navigationBarTitle={title} goTop={goTop} refreshNum={refreshNum} route={path} {...params} />
         </View>
       </ScrollView>
       <TabBarWeb base={props.base || false} />
-    </View>
+    </allContext.Provider>
   )
 }
