@@ -6,6 +6,8 @@ import { initApplication } from '@brushes/taro-hooks';
 import {appendPath, tabBarList} from '@/routerMap';
 import { queryNewTginfoMenuTree, getPfsModelTagValueByTginfo } from 'qj-b2c-api';
 import {safeArea} from "./utils";
+
+
 import './app.scss'
 
 class App extends Component<PropsWithChildren, any> {

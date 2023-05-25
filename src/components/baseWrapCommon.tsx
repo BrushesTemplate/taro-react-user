@@ -4,14 +4,15 @@ import {ScrollView} from "@tarojs/components";
 import CommonJsx from '@/components/index';
 import TabBarWeb from '@/custom-tab-web/index';
 import {TaroContextProvider} from '@brushes/taro-hooks'
+import { ApplicationContext, useApplicationContext } from 'qj-mobile-store';
 
 type BaseWrapCommonProps = {
   base?: boolean
 };
 
-
-export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
+const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
   const {path, params} = useRouter();
+  const [{scrollTop = 0}] = useApplicationContext();
   const [title, setTitle] = useState('');
   const {safeArea, tabBarH, menuOpcode, windowH} = useMemo(() => {
     const windowH = Taro.getSystemInfoSync().windowHeight;
@@ -40,6 +41,9 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
       <ScrollView
         scrollY
         enhanced
+        scrollTop={scrollTop}
+        scrollWithAnimation
+        scrollAnimationDuration='800'
         show-scrollbar={false}
         style={{
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
@@ -51,5 +55,13 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
       </ScrollView>
       <TabBarWeb base={props.base || false}/>
     </Fragment>
+  )
+}
+
+export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
+  return (
+    <ApplicationContext>
+      <BaseWrapCommonInner {...props}/>
+    </ApplicationContext>
   )
 }
