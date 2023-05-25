@@ -1,0 +1,1 @@
+"use strict";(wx["webpackJsonp"]=wx["webpackJsonp"]||[]).push([[9999],{1635:function(n,e,t){var a=t(2180),c=t(2987),r=t(2269),o=function(){return(0,r.jsx)(c.H,{base:!0})},u=o,i={};Page((0,a.createPageConfig)(u,"pages/dynamicTab/index",{root:{cn:[]}},i||{}))}},function(n){var e=function(e){return n(n.s=e)};n.O(0,[2107,1216,8592],(function(){return e(1635)}));n.O()}]);

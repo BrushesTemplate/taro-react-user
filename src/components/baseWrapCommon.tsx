@@ -1,10 +1,9 @@
-import React, {useEffect, useMemo, useState} from "react";
-import Taro, {useDidShow, useRouter} from "@tarojs/taro";
-import { get } from 'lodash-es'
-import {View, ScrollView} from "@tarojs/components";
+import React, {Fragment, useEffect, useMemo, useState} from "react";
+import Taro, {useRouter} from "@tarojs/taro";
+import {ScrollView} from "@tarojs/components";
 import CommonJsx from '@/components/index';
-import {getPagesRefreshStore, updatePagesRefreshStore} from '@brushes/utils';
 import TabBarWeb from '@/custom-tab-web/index';
+import {TaroContextProvider} from '@brushes/taro-hooks'
 
 type BaseWrapCommonProps = {
   base?: boolean
@@ -12,20 +11,9 @@ type BaseWrapCommonProps = {
 
 
 export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
-  const { path, params } = useRouter();
+  const {path, params} = useRouter();
   const [title, setTitle] = useState('');
-  const [refreshNum, setRefresh] = useState(0);
-  const { safeArea, tabBarH, menuOpcode, windowH } = useMemo(() => {
-
-    // h5环境特殊处理
-    const isWeb = Taro.getEnv() === 'WEB';
-    if(isWeb) {
-      const taroMenu = Taro.getStorageSync('taroMenu') || [];
-      const { menuOpcode } = taroMenu.find(item => path.includes(item.pagePath)) || {}
-      if(menuOpcode) {
-        Taro.setStorageSync('menuOpcode', menuOpcode)
-      }
-    }
+  const {safeArea, tabBarH, menuOpcode, windowH} = useMemo(() => {
     const windowH = Taro.getSystemInfoSync().windowHeight;
     const menuOpcode = Taro.getStorageSync('menuOpcode');
     const safeArea = Taro.getStorageSync('safeArea');
@@ -47,22 +35,8 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
     setTitle(text);
   }, [])
 
-  useDidShow(() => {
-    const pagesRefreshStore = getPagesRefreshStore();
-    const { num } = get(pagesRefreshStore, [menuOpcode], 0);
-    console.log('menuOpcode', menuOpcode, num);
-    if(num > 0) {
-      updatePagesRefreshStore({
-        [menuOpcode]: {
-          num: 0
-        }
-      })
-      setRefresh(prevState => prevState+1)
-    }
-  });
-
   return (
-    <View>
+    <Fragment>
       <ScrollView
         scrollY
         enhanced
@@ -71,11 +45,11 @@ export const BaseWrapCommon = (props: BaseWrapCommonProps) => {
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
-        <View>
-          <CommonJsx navigationBarTitle={title} refreshNum={refreshNum} route={path} {...params} />
-        </View>
+        <TaroContextProvider>
+          <CommonJsx navigationBarTitle={title} route={path} {...params} />
+        </TaroContextProvider>
       </ScrollView>
-      <TabBarWeb base={props.base || false} />
-    </View>
+      <TabBarWeb base={props.base || false}/>
+    </Fragment>
   )
 }

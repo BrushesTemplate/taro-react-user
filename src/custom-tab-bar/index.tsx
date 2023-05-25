@@ -1,5 +1,5 @@
-import TabBar from './custom-common';
-
+import TabBar from '@/components/custom-common';
+import './index.scss';
 const Index = () => {
   return <TabBar />
 }

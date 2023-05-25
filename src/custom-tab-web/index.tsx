@@ -1,7 +1,7 @@
-import TabBar from './custom-common';
+import TabBar from '@/components/custom-common';
 import { useMemo } from 'react';
 import Taro from '@tarojs/taro';
-
+import './index.scss';
 const TabBarWeb = ({base} : { base: boolean }) => {
 
   const isShow = useMemo(() => {

@@ -1,0 +1,1 @@
+.tip{-ms-flex-pack:justify;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-between;justify-content:space-between;padding:0 24rpx 40rpx}

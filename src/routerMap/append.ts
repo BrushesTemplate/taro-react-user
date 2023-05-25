@@ -25,5 +25,17 @@ export const appendPath = [
   "package/twenty-four/index",
   "package/twenty-five/index",
   "package/twenty-six/index",
-  "package/twenty-senven/index",
+  "package/twenty-seven/index",
+  "package/twenty-eight/index",
+  "package/twenty-nine/index",
+  "package/thirty/index",
+  "package/thirty-one/index",
+  "package/thirty-two/index",
+  "package/thirty-three/index",
+  "package/thirty-four/index",
+  "package/thirty-five/index",
+  "package/thirty-six/index",
+  "package/thirty-seven/index",
+  "package/thirty-eight/index",
+  "package/thirty-nine/index"
 ]

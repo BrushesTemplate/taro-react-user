@@ -1,0 +1,1 @@
+"use strict";(wx["webpackJsonp"]=wx["webpackJsonp"]||[]).push([[23],{9210:function(n,t,o){var e=o(2180),r=o(5516),u=o(2269),c=function(){return(0,u.jsx)(r.Z,{})},i=c;Component((0,e.createComponentConfig)(i,"custom-tab-bar/index"))}},function(n){var t=function(t){return n(n.s=t)};n.O(0,[2107,1216,8592],(function(){return t(9210)}));n.O()}]);
