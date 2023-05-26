@@ -1,15 +1,14 @@
-import {usePageConfig} from '@brushes/taro-hooks';
+import {TaroContextProvider, usePageConfig} from '@brushes/taro-hooks';
 import HeaderJsx from '@/components/header';
 import DynamicComponent from './dynamicComponent';
-import {Fragment} from 'react';
 
 const CommonJsx = ({route, navigationBarTitle, ...rest}: { route : string; navigationBarTitle: string; [v:string]: any}) => {
-  const node = usePageConfig(route);
+  const {node, initialValue} = usePageConfig(route);
   return (
-    <Fragment>
+    <TaroContextProvider initialValue={initialValue}>
       <HeaderJsx navigationBarTitle={navigationBarTitle}/>
       <DynamicComponent node={node} {...rest} />
-    </Fragment>
+    </TaroContextProvider>
   )
 }
 

@@ -3,7 +3,6 @@ import Taro, {useRouter} from "@tarojs/taro";
 import {ScrollView} from "@tarojs/components";
 import CommonJsx from '@/components/index';
 import TabBarWeb from '@/custom-tab-web/index';
-import {TaroContextProvider} from '@brushes/taro-hooks'
 import { ApplicationContext, useApplicationContext } from 'qj-mobile-store';
 
 type BaseWrapCommonProps = {
@@ -49,9 +48,7 @@ const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px)`
         }}
       >
-        <TaroContextProvider>
-          <CommonJsx navigationBarTitle={title} route={path} {...params} />
-        </TaroContextProvider>
+        <CommonJsx navigationBarTitle={title} route={path} {...params} />
       </ScrollView>
       <TabBarWeb base={props.base || false}/>
     </Fragment>
