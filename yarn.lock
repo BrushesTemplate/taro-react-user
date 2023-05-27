@@ -1112,9 +1112,9 @@
     regenerator-runtime "^0.13.11"
 
 "@babel/runtime@^7.18.0", "@babel/runtime@^7.18.3":
-  version "7.21.5"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.21.5.tgz#8492dddda9644ae3bda3b45eabe87382caee7200"
-  integrity sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==
+  version "7.22.0"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.22.0.tgz#b7ca53ae391c404037540724186038afd83e26f9"
+  integrity sha512-TT6NB0oszYQ4oxLNUdG+FNHIc3MohXVCKA2BeyQ4WeM2VCSC6wBZ6P0Yfkdzxv+87D8Xk0LJyHeCKlWMvpZt0g==
   dependencies:
     regenerator-runtime "^0.13.11"
 
@@ -1218,10 +1218,10 @@
     lodash-es "^4.17.21"
     react "^18.0.0"
 
-"@brushes/taro-hooks@^0.1.9":
-  version "0.1.9"
-  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.1.9.tgz#b89084fb8fa1e81a1fc81cc47eef58c1bee6b09d"
-  integrity sha512-7oP0nz7JGKpgkxussrdkdwu3PIZepzUq2Cbu3CC33jzlHjQcIiFjGJssjmRyKmTlbcUgazzQUXXnqLbe0jYVfQ==
+"@brushes/taro-hooks@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.2.0.tgz#3c64284dde900a01cf3c4ae415168d378e91abaf"
+  integrity sha512-bSD9eKHLxmouREFolmIjSzEZTPRfJpc2r4SB3ZAb5otyGURxJx8bdFrTarZXjHYuo9TxpDeoHCG+HEVdIiELPA==
   dependencies:
     lodash-es "^4.17.21"
     react "^18.2.0"
@@ -1634,15 +1634,6 @@
     "@babel/runtime" "^7.14.5"
     "@tarojs/runtime" "3.6.2"
 
-"@tarojs/api@3.6.6":
-  version "3.6.6"
-  resolved "https://registry.npmjs.org/@tarojs/api/-/api-3.6.6.tgz#ef70b9d71af623cb5fe14ab5c61aebb49c53352e"
-  integrity sha512-IzOl2pdwL52MkFiVW2WA6iiRzzdBgYWERxsgqDPBlcWTwUypjFIOC+Q6jdxoizDYDW9UrQQJuj63W1EktiG7Pg==
-  dependencies:
-    "@babel/runtime" "^7.14.5"
-    "@tarojs/runtime" "3.6.6"
-    "@tarojs/shared" "3.6.6"
-
 "@tarojs/cli@3.6.2":
   version "3.6.2"
   resolved "https://registry.npmjs.org/@tarojs/cli/-/cli-3.6.2.tgz"
@@ -1885,14 +1876,6 @@
     "@tarojs/shared" "3.6.2"
     lodash-es "4.17.21"
 
-"@tarojs/runtime@3.6.6":
-  version "3.6.6"
-  resolved "https://registry.npmjs.org/@tarojs/runtime/-/runtime-3.6.6.tgz#27613d5d067cfc2d7075d0408cfa8766d4e606f4"
-  integrity sha512-tHqU7/iohzTSKl+cJ2EkVqM3YWE/2kb2rDkqpzHaBYTBe39ClJjlsCNQnQwW6Thxo+jdZw98HXtjdAczj5/u0w==
-  dependencies:
-    "@tarojs/shared" "3.6.6"
-    lodash-es "4.17.21"
-
 "@tarojs/service@3.6.2":
   version "3.6.2"
   resolved "https://registry.npmjs.org/@tarojs/service/-/service-3.6.2.tgz"
@@ -1912,11 +1895,6 @@
   version "3.6.2"
   resolved "https://registry.npmjs.org/@tarojs/shared/-/shared-3.6.2.tgz"
   integrity sha512-Qrsjq+0+0n+xdmAzRcmTUoYN/G+Y51uL+Avxqxz5rYuA9pvIYTR0XXUfzZWyKGRqa5sm3XuABndfsefWj5hXRQ==
-
-"@tarojs/shared@3.6.6":
-  version "3.6.6"
-  resolved "https://registry.npmjs.org/@tarojs/shared/-/shared-3.6.6.tgz#ac79a23076ba0c11c1b18934eb71ec1a31cd079e"
-  integrity sha512-8OwrMReJSAKVyHaUM/pcqEP1V9SD+U3mIyYKIfePuXjAd3YzdXkJxt5JRUjk4ElrJ96yrLPUfISmaE84AYBWmQ==
 
 "@tarojs/taro-h5@3.6.2":
   version "3.6.2"
@@ -1950,14 +1928,6 @@
   dependencies:
     "@tarojs/api" "3.6.2"
     "@tarojs/runtime" "3.6.2"
-
-"@tarojs/taro@^3.6.2":
-  version "3.6.6"
-  resolved "https://registry.npmjs.org/@tarojs/taro/-/taro-3.6.6.tgz#25cd95a198dd19aaa1051e9dd4ba44cb9531d53d"
-  integrity sha512-24s1JKL0wTmTx0jp21JMY/qO2z+3GbNm2Ch+sCrrr5kihxZdyfMpRByjS0zldGa8aXGJiQklq5iEXCRWCOyXoQ==
-  dependencies:
-    "@tarojs/api" "3.6.6"
-    "@tarojs/runtime" "3.6.6"
 
 "@tarojs/taroize@3.6.2":
   version "3.6.2"
@@ -9835,9 +9805,9 @@ qj-b2c-api@latest:
     "@brushes/optimize" latest
 
 qj-mobile-store@latest:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.2.0.tgz#6c33afd18fbe6ac6a03bc973a2b1afa453ae428c"
-  integrity sha512-Jbq7F2ME81wCOfbVifpv8a2XjFUr1mppvxntoh+iVTBSuNK3OXwC2Xerh2Xd5lhjYi5J4diMngWaD1qi+aIBSg==
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/qj-mobile-store/-/qj-mobile-store-1.2.1.tgz#e3abd896d56355a6cd24255e9915296d8c4f9b69"
+  integrity sha512-P7Hy4ceSvA8m83l+15Y6HZJmJ01gk8zbddyoKb/Q0kQFsUGCIB06bCA9qWxoCjmq5P+3S9nAcwScaTMjLFNMSg==
   dependencies:
     immer "^10.0.1"
     lodash-es "^4.17.21"
