@@ -1,1 +1,0 @@
-"use strict";(wx["webpackJsonp"]=wx["webpackJsonp"]||[]).push([[6977],{9285:function(n,t,e){var c=e(2180),r=e(2987),o=e(2269),u=function(){return(0,o.jsx)(r.H,{})},a=u,i={};Page((0,c.createPageConfig)(a,"package/twenty-eight/index",{root:{cn:[]}},i||{}))}},function(n){var t=function(t){return n(n.s=t)};n.O(0,[2107,1216,8592],(function(){return t(9285)}));n.O()}]);

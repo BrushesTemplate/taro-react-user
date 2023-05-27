@@ -1,1 +1,0 @@
-"use strict";(wx["webpackJsonp"]=wx["webpackJsonp"]||[]).push([[2241],{6586:function(n,e,t){var c=t(2180),r=t(2987),s=t(2269),a=function(){return(0,s.jsx)(r.H,{base:!0})},o=a,u={};Page((0,c.createPageConfig)(o,"pages/classify/index",{root:{cn:[]}},u||{}))}},function(n){var e=function(e){return n(n.s=e)};n.O(0,[2107,1216,8592],(function(){return e(6586)}));n.O()}]);
