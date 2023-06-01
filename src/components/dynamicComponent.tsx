@@ -9,39 +9,42 @@ const ComponentWithContext = memo(
   ({
      component_devil_type,
      withPageStore,
-     style,
      ...rest } : {
     component_devil_type: string;
-    style: Object;
     withPageStore: Map<string, any>;
   }) => {
   const MaterialsComponent = get(materials, component_devil_type, noop);
   const storeProps = useDataSourceWithContext(withPageStore);
-    return <View style={style}><MaterialsComponent {...rest} {...storeProps} /></View>
+    return <MaterialsComponent {...rest} {...storeProps} />
 })
 
 const ComponentNoContext = memo((
   {
     component_devil_type,
-    style,
     ...rest
   } : {
     component_devil_type: string;
-    style:Object
   }) => {
   const MaterialsComponent = get(materials, component_devil_type, noop);
-  return <View style={style}><MaterialsComponent {...rest} /></View>
+  return <MaterialsComponent {...rest} />
 })
 
-const ComponentItem = ({ type, props, style,  ...rest } : {type: string; props: Object; style: Object}) => {
+const ComponentItem = ({ type, props,  ...rest } : {type: string; props: Object;}) => {
   const {propsType, withPageStore} = useDataSource(type, props, rest);
   return (
     <Fragment>
       {
-        withPageStore.size > 0 ? <ComponentWithContext {...{...propsType, style}} /> : <ComponentNoContext {...{...propsType, style}}  />
+        withPageStore.size > 0 ? <ComponentWithContext {...propsType} /> : <ComponentNoContext {...propsType}  />
       }
     </Fragment>
   )
+}
+
+const getDistance = (base: any) => {
+  if(base) {
+    return `${getStorage('safeArea') + getStorage('tabBarHeight')}px`
+  }
+  return `${getStorage('safeArea')}px`
 }
 
 const DynamicComponent = ({node, topPage, base, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
@@ -49,28 +52,31 @@ const DynamicComponent = ({node, topPage, base, ...rest}: { node: Array<any>; [v
     <>
       {
         node.map(({id, props = {}, type}) => {
-          let stickyDistance = '';
-
-          if(props.sticky) {
-            if(base) {
-              stickyDistance = `${getStorage('safeArea') + getStorage('tabBarHeight')}px`
-            }else {
-              stickyDistance = `${getStorage('safeArea')}px`
-            }
-          } else {
-            stickyDistance = '0'
+          if(['CartOperate'].includes(type)) {
+            const stickyDistance = getDistance(base)
+            return (
+              <View
+                key={id}
+                style={{
+                  marginBottom: stickyDistance,
+                  position: 'fixed',
+                  width: '100%',
+                  bottom: 0
+                }}
+              >
+                <ComponentItem
+                  type={type}
+                  props={props}
+                  {...rest}
+                />
+              </View>
+            )
           }
+
           return (
             <ComponentItem
-              key={id}
               type={type}
               props={props}
-              style={{
-                marginBottom: stickyDistance,
-                position: props.sticky? 'fixed': 'static',
-                width: '100%',
-                bottom: 0
-              }}
               {...rest}
             />
           )
