@@ -52,7 +52,7 @@ const DynamicComponent = ({node, topPage, base, ...rest}: { node: Array<any>; [v
     <>
       {
         node.map(({id, props = {}, type}) => {
-          if(['CartOperate', 'PlaceOrderOperate'].includes(type)) {
+          if(['CartOperate', 'PlaceOrderOperate', 'AddressListBtn'].includes(type)) {
             const stickyDistance = getDistance(base)
             return (
               <View
@@ -61,7 +61,8 @@ const DynamicComponent = ({node, topPage, base, ...rest}: { node: Array<any>; [v
                   marginBottom: stickyDistance,
                   position: 'fixed',
                   width: '100%',
-                  bottom: 0
+                  bottom: 0,
+                  zIndex: 998
                 }}
               >
                 <ComponentItem

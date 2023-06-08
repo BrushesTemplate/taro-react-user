@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
 import {View, Button, Image, Input, Form, Label} from '@tarojs/components';
 import Taro from "@tarojs/taro";
+import { getPagesRefreshStore, updatePagesRefreshStore } from '@brushes/utils';
+
 import './index.scss'
 
 const Index = () => {
@@ -24,9 +26,13 @@ const Index = () => {
     const val = e.detail.value.nickName;
     Taro.setStorageSync('userNickname', val);
     setNickname(val);
-    Taro.switchTab({
-      url: '/pages/my/index'
-    })
+    const { MineData = 0 } = getPagesRefreshStore();
+    updatePagesRefreshStore({
+      MineData: MineData + 1
+    });
+    Taro.navigateBack({
+      delta: 1
+    });
   }
 
   return (
