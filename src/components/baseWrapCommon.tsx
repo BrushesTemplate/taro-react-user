@@ -13,11 +13,13 @@ const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
   const {path, params} = useRouter();
   const [{scrollTop = 0}] = useApplicationContext();
   const [title, setTitle] = useState('');
+
   const {safeArea, tabBarH, menuOpcode, windowH} = useMemo(() => {
     const windowH = Taro.getSystemInfoSync().windowHeight;
     const menuOpcode = Taro.getStorageSync('menuOpcode');
     const safeArea = Taro.getStorageSync('safeArea');
     const tabBarH = Taro.getStorageSync('tabBarHeight');
+
     return {
       windowH,
       safeArea,

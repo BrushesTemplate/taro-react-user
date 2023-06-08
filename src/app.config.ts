@@ -9,6 +9,7 @@ export default defineAppConfig({
     'pages/classify/index',
     'pages/my/index',
     'pages/dynamicTab/index',
+    'subpackage/result/index',
     ...account,
     ...appendPath
   ],
