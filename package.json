@@ -56,11 +56,7 @@
     "@tarojs/taro": "3.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
     "s-material-react": "^1.4.14"
-=======
-    "s-material-react": "^1.4.4"
->>>>>>> 0fd9d61e6e2a8706766f4aac704df78e36427655
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
