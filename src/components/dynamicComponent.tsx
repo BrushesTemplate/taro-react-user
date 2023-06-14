@@ -13,8 +13,8 @@ const ComponentWithContext = memo(
     component_devil_type: string;
     withPageStore: Map<string, any>;
   }) => {
-  const MaterialsComponent = get(materials, component_devil_type, noop);
-  const storeProps = useDataSourceWithContext(withPageStore);
+    const MaterialsComponent = get(materials, component_devil_type, noop);
+    const storeProps = useDataSourceWithContext(withPageStore);
     return <MaterialsComponent {...rest} {...storeProps} />
 })
 
@@ -25,6 +25,7 @@ const ComponentNoContext = memo((
   } : {
     component_devil_type: string;
   }) => {
+  console.log(28, 'isRender');
   const MaterialsComponent = get(materials, component_devil_type, noop);
   return <MaterialsComponent {...rest} />
 })
@@ -34,7 +35,7 @@ const ComponentItem = ({ type, props,  ...rest } : {type: string; props: Object;
   return (
     <Fragment>
       {
-        withPageStore.size > 0 ? <ComponentWithContext {...propsType} /> : <ComponentNoContext {...propsType}  />
+        withPageStore.size > 0 ? <ComponentWithContext {...propsType} /> : <ComponentNoContext {...propsType}/>
       }
     </Fragment>
   )
@@ -76,6 +77,7 @@ const DynamicComponent = ({node, topPage, base, ...rest}: { node: Array<any>; [v
 
           return (
             <ComponentItem
+              key={id}
               type={type}
               props={props}
               {...rest}
