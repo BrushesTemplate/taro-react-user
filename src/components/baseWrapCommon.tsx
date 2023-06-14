@@ -32,10 +32,14 @@ const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
   useEffect(() => {
     const routerMap = Taro.getStorageSync('routerMap');
     const {text = '首页'} = routerMap[menuOpcode] || {};
+
+    // 支付结果
+    const isResult = path.includes('subpackage/result/index');
+    const title = isResult ? '支付结果页' : text;
     Taro.setNavigationBarTitle({
-      title: text
+      title
     });
-    setTitle(text);
+    setTitle(title);
     getStickyDomHeight()
   }, [])
 

@@ -3,7 +3,7 @@ import * as materials from 's-material-react';
 import {Fragment, memo} from 'react';
 import {useDataSource, useDataSourceWithContext} from '@brushes/taro-hooks';
 import {View} from "@tarojs/components";
-import {getStorage} from "@brushes/utils";
+import Taro from '@tarojs/taro';
 
 const ComponentWithContext = memo(
   ({
@@ -42,9 +42,9 @@ const ComponentItem = ({ type, props,  ...rest } : {type: string; props: Object;
 
 const getDistance = (base: any) => {
   if(base) {
-    return `${getStorage('safeArea') + getStorage('tabBarHeight')}px`
+    return `${Taro.getStorageSync('safeArea') + Taro.getStorageSync('tabBarHeight')}px`
   }
-  return `${getStorage('safeArea')}px`
+  return `${Taro.getStorageSync('safeArea')}px`
 }
 
 const DynamicComponent = ({node, topPage, base, ...rest}: { node: Array<any>; [v: string]: unknown }) => {
