@@ -25,7 +25,6 @@ const ComponentNoContext = memo((
   } : {
     component_devil_type: string;
   }) => {
-  console.log(28, 'isRender');
   const MaterialsComponent = get(materials, component_devil_type, noop);
   return <MaterialsComponent {...rest} />
 })
