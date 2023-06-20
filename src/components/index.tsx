@@ -1,16 +1,21 @@
-import {usePageConfig, FastContextProvider } from '@brushes/taro-hooks';
+import {TaroContextProvider, usePageConfig} from '@brushes/taro-hooks';
 import HeaderJsx from '@/components/header';
 import DynamicComponent from './dynamicComponent';
-// import { FastContextProvider } from '@brushes';
+import {useEffect} from 'react';
+import Taro from '@tarojs/taro';
 
-const CommonJsx = ({route, navigationBarTitle, ...rest}: { route : string; navigationBarTitle: string; [v:string]: any}) => {
-  const {node, initialValue} = usePageConfig(route);
-  console.log(7, initialValue);
+const CommonJsx = ({route, ...rest}: { route : string; [v:string]: any}) => {
+  const {node, initialValue, title} = usePageConfig(route);
+  useEffect(() => {
+    Taro.setNavigationBarTitle({
+      title: title || '首页'
+    });
+  }, [title])
   return (
-    <FastContextProvider value={initialValue}>
-      <HeaderJsx navigationBarTitle={navigationBarTitle}/>
+    <TaroContextProvider initialValue={initialValue}>
+      <HeaderJsx navigationBarTitle={title}/>
       <DynamicComponent node={node} {...rest} />
-    </FastContextProvider>
+    </TaroContextProvider>
   )
 }
 

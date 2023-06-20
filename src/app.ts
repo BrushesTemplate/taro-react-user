@@ -13,9 +13,6 @@ import './app.scss'
 class App extends Component<PropsWithChildren, any> {
 
   componentDidMount () {
-    Taro.removeStorageSync('routerMap')
-    Taro.removeStorageSync('menuOpcode')
-    Taro.removeStorageSync('taroMenu')
     console.log(85, '================ componentDidShow ==============')
     /**
      * 初始化应用

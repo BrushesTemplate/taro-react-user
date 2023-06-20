@@ -12,12 +12,10 @@ type BaseWrapCommonProps = {
 const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
   const {path, params} = useRouter();
   const [{scrollTop = 0}] = useApplicationContext();
-  const [title, setTitle] = useState('');
   const [stickyHeight, setStickyHeight] = useState(0);
 
-  const {safeArea, tabBarH, menuOpcode, windowH} = useMemo(() => {
+  const {safeArea, tabBarH, windowH} = useMemo(() => {
     const windowH = Taro.getSystemInfoSync().windowHeight;
-    const menuOpcode = Taro.getStorageSync('menuOpcode');
     const safeArea = Taro.getStorageSync('safeArea');
     const tabBarH = Taro.getStorageSync('tabBarHeight');
 
@@ -25,21 +23,10 @@ const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
       windowH,
       safeArea,
       tabBarH,
-      menuOpcode
     }
   }, []);
 
   useEffect(() => {
-    const routerMap = Taro.getStorageSync('routerMap');
-    const {text = '首页'} = routerMap[menuOpcode] || {};
-
-    // 支付结果
-    const isResult = path.includes('subpackage/result/index');
-    const title = isResult ? '支付结果页' : text;
-    Taro.setNavigationBarTitle({
-      title
-    });
-    setTitle(title);
     getStickyDomHeight()
   }, [])
 
@@ -75,7 +62,7 @@ const BaseWrapCommonInner = (props: BaseWrapCommonProps) => {
           height: `calc(${windowH}px - ${safeArea}px - ${props.base ? tabBarH : 0}px - ${stickyHeight}px)`
         }}
       >
-        <CommonJsx navigationBarTitle={title} route={path} base={props.base} {...params} />
+        <CommonJsx route={path} base={props.base} {...params} />
       </ScrollView>
       <TabBarWeb base={props.base || false} />
     </Fragment>
