@@ -15,6 +15,7 @@ export const tabBarList = [
   }, {
     pagePath: 'pages/dynamicTab/index',
     text: '自定义页面'
-  }]
+  }
+  ]
 
 
