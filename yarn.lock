@@ -1218,15 +1218,13 @@
     lodash-es "^4.17.21"
     react "^18.0.0"
 
-"@brushes/taro-hooks@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.2.3.tgz#e28c4d61ab12fee802a1582d585d34ec427b30c4"
-  integrity sha512-7oFdUdZ2vLyrpZ3Wh7mLSgROJBcIu6EeN6OufAPv9e0TsA0urh+r2tWc6bunf3e41p51ED/A6kuyLrYHDEFYOA==
+"@brushes/taro-hooks@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.npmjs.org/@brushes/taro-hooks/-/taro-hooks-0.2.4.tgz#810b6d48fab2f2b47aa2dc0311ddfcca021bf759"
+  integrity sha512-t+AMdzkFNyRPTGZJKxG5309musAjdjw98VrGd5z0KugX8kMzxVgv3oiOMTIdkyfLokOOKLzddk7v1wrpB6bV2w==
   dependencies:
     lodash-es "^4.17.21"
     react "^18.2.0"
-    scheduler "^0.23.0"
-    use-context-selector "^1.4.1"
 
 "@brushes/utils@latest":
   version "0.1.6"
@@ -11908,11 +11906,6 @@ url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/url-to-options/-/url-to-options-1.0.1.tgz"
   integrity sha512-0kQLIzG4fdk/G5NONku64rSH/x32NOA39LVQqlK8Le6lvTF6GGRJpqaQFGgU+CLwySIqBSMdwYM0sYcW9f6P4A==
-
-use-context-selector@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.npmjs.org/use-context-selector/-/use-context-selector-1.4.1.tgz#eb96279965846b72915d7f899b8e6ef1d768b0ae"
-  integrity sha512-Io2ArvcRO+6MWIhkdfMFt+WKQX+Vb++W8DS2l03z/Vw/rz3BclKpM0ynr4LYGyU85Eke+Yx5oIhTY++QR0ZDoA==
 
 use-sync-external-store@^1.2.0:
   version "1.2.0"

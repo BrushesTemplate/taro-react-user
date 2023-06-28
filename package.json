@@ -38,7 +38,7 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.21.0",
-    "@brushes/taro-hooks": "^0.2.3",
+    "@brushes/taro-hooks": "^0.2.4",
     "@tarojs/components": "3.6.2",
     "@tarojs/helper": "3.6.2",
     "@tarojs/plugin-framework-react": "3.6.2",

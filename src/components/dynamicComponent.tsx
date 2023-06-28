@@ -15,12 +15,13 @@ const ComponentWithContext = memo(
   }) => {
     const MaterialsComponent = get(materials, component_devil_type, noop);
     const storeProps = useDataSourceWithContext(withPageStore);
-    return <MaterialsComponent {...rest} {...storeProps} />
-})
+    return <MaterialsComponent {...rest} $_dataSource={storeProps} />
+  })
 
 const ComponentNoContext = memo((
   {
     component_devil_type,
+    withPageStore,
     ...rest
   } : {
     component_devil_type: string;
@@ -34,7 +35,7 @@ const ComponentItem = ({ type, props,  ...rest } : {type: string; props: Object;
   return (
     <Fragment>
       {
-        withPageStore.size > 0 ? <ComponentWithContext {...propsType} /> : <ComponentNoContext {...propsType}/>
+        withPageStore.size > 0 ? <ComponentWithContext {...propsType} /> : <ComponentNoContext {...propsType} />
       }
     </Fragment>
   )
