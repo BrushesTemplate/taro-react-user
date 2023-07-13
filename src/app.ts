@@ -1,14 +1,16 @@
 import { Component, PropsWithChildren } from 'react'
-import { getStorage } from '@brushes/utils';
-import Taro from '@tarojs/taro';
-import { fly } from "@brushes/request";
+import { setTaro, getStorage } from '@brushes/utils';
+import { fly, wxEngine } from "@brushes/request";
 import { initApplication } from '@brushes/taro-hooks';
 import {appendPath, tabBarList} from '@/routerMap';
 import { queryNewTginfoMenuTree, getPfsModelTagValueByTginfo } from 'qj-b2c-api';
 import {safeArea} from "./utils";
-
-
 import './app.scss'
+
+// eslint-disable-next-line import/no-commonjs
+const Taro = require('@tarojs/taro');
+
+setTaro(Taro);
 
 class App extends Component<PropsWithChildren, any> {
 
@@ -17,7 +19,6 @@ class App extends Component<PropsWithChildren, any> {
     /**
      * 初始化应用
      */
-
     //@ts-ignore
     initApplication({
       tabBar: tabBarList,
@@ -30,20 +31,20 @@ class App extends Component<PropsWithChildren, any> {
 
     if(Taro.getEnv() === 'WEB'){
       fly.engine= XMLHttpRequest
+    } else {
+      wxEngine()
     }
-
-    if(process.env.NODE_ENV === 'development' || Taro.getEnv() === 'WEAPP') {
-      return
-    }
-
     //
     fly.interceptors.request.use((config) => {
       //给所有请求添加自定义header
       config.headers = {
         'saas-token': getStorage('saas-token'),
       }
-      if(Taro.getEnv() === 'WEB') {
+      if(Taro.getEnv() === 'WEB' && process.env.NODE_ENV === 'production') {
         config.baseURL = location.origin + '/'
+      } else {
+        config.baseURL = process.env.REACT_APP_BASE_URL;
+        config.headers['Saas-Agent'] = 'qj-wemini';
       }
       return config;
     })
