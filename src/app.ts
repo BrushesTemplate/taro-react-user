@@ -40,11 +40,14 @@ class App extends Component<PropsWithChildren, any> {
       config.headers = {
         'saas-token': getStorage('saas-token'),
       }
+
+      config.baseURL = process.env.REACT_APP_BASE_URL;
+
+      if(Taro.getEnv() !== 'WEB') {
+        config.headers['Saas-Agent'] = 'qj-wemini';
+      }
       if(Taro.getEnv() === 'WEB' && process.env.NODE_ENV === 'production') {
         config.baseURL = location.origin + '/'
-      } else {
-        config.baseURL = process.env.REACT_APP_BASE_URL;
-        config.headers['Saas-Agent'] = 'qj-wemini';
       }
       return config;
     })
