@@ -21,7 +21,10 @@
     "build:jd": "taro build --type jd",
     "build:quickapp": "taro build --type quickapp",
     "dev:weapp": "npm run build:weapp -- --watch",
+<<<<<<< HEAD
     "start": "npm run build:weapp -- --watch",
+=======
+>>>>>>> fbeab967f2ed5c387ca52bb76724a5070ba16389
     "dev:swan": "npm run build:swan -- --watch",
     "dev:alipay": "npm run build:alipay -- --watch",
     "dev:tt": "npm run build:tt -- --watch",
@@ -74,7 +77,10 @@
     "@typescript-eslint/parser": "^5.56.0",
     "babel-preset-taro": "3.6.2",
     "eslint": "^8.36.0",
+<<<<<<< HEAD
     "eslint-config-custom": "*",
+=======
+>>>>>>> fbeab967f2ed5c387ca52bb76724a5070ba16389
     "eslint-config-taro": "3.6.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
@@ -82,7 +88,10 @@
     "postcss": "^8.4.21",
     "react-refresh": "^0.14.0",
     "stylelint": "15.3.0",
+<<<<<<< HEAD
     "tsconfig": "*",
+=======
+>>>>>>> fbeab967f2ed5c387ca52bb76724a5070ba16389
     "typescript": "5.0.2",
     "webpack": "5.76.3"
   }
