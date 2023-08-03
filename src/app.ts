@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 //@ts-nocheck
 import { Component, PropsWithChildren } from 'react'
-import { setTaro, getStorage, getTaro } from '@brushes/utils';
-=======
-import { Component, PropsWithChildren } from 'react'
 import { setTaro, getStorage } from '@brushes/utils';
->>>>>>> fbeab967f2ed5c387ca52bb76724a5070ba16389
 import { fly, wxEngine } from "@brushes/request";
 import { initApplication } from '@brushes/taro-hooks';
 import {appendPath, tabBarList} from '@/routerMap';
@@ -17,10 +12,6 @@ import './app.scss'
 const Taro = require('@tarojs/taro');
 
 setTaro(Taro);
-<<<<<<< HEAD
-=======
-
->>>>>>> fbeab967f2ed5c387ca52bb76724a5070ba16389
 class App extends Component<PropsWithChildren, any> {
 
   componentDidMount () {
@@ -94,10 +85,6 @@ class App extends Component<PropsWithChildren, any> {
     //     wx.hideToast()
     //   }
     // })
-<<<<<<< HEAD
-=======
-
->>>>>>> fbeab967f2ed5c387ca52bb76724a5070ba16389
   }
 
   componentDidShow () {
